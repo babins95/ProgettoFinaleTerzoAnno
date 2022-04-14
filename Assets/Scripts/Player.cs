@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -30,5 +31,15 @@ public class Player : MonoBehaviour
     void OnSwap()
     {
         swap = !swap;
+    }
+
+    void OnReset()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    void OnDeleteSave()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
