@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Player player;
-    [SerializeField] Vector3 spawnPosition;
+    [SerializeField] Vector3 baseSpawnPosition;
 
     float playerX;
     float playerY;
@@ -13,15 +13,18 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //se è presente un file di salvataggio
         if (PlayerPrefs.GetInt("saved") == 1)
         {
+            //setta la posizione del giocatore a quella dell'ultimo checkpoint toccato
             playerX = PlayerPrefs.GetFloat("checkpointX");
             playerY = PlayerPrefs.GetFloat("checkpointY");
             player.transform.position = new Vector3(playerX, playerY, 0);
         }
         else
         {
-            player.transform.position = spawnPosition;
+            //altrimenti parti dalla posizione di inizio gioco
+            player.transform.position = baseSpawnPosition;
         }
     }
 

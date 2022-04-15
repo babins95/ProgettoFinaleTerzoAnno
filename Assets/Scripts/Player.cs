@@ -35,11 +35,13 @@ public class Player : MonoBehaviour
 
     void OnReset()
     {
+        //ricarica la scena, messo solo per il debug, da togliere in futuro
         SceneManager.LoadScene("SampleScene");
     }
 
     void OnDeleteSave()
     {
+        //cancella i file salvati, messo solo per i debug, da togliere in futuro
         PlayerPrefs.DeleteAll();
     }
 }
