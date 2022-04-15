@@ -7,12 +7,12 @@ public class Swap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //se in fase "positiva" il primo figlio è attivo e il secondo no
+        //se in fase "negativa" il secondo figlio è attivo e il primo no
         if(GameManager.swap)
         {
             transform.GetChild(0).gameObject.SetActive(false);
         }
-        //se in fase "negativa" il contrario
+        //se in fase "positiva" il contrario
         else
         {
             transform.GetChild(1).gameObject.SetActive(false);
