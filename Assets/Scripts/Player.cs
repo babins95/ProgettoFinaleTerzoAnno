@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     Vector2 moveVector;
     public int speed = 6;
-    public static bool swap = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +29,7 @@ public class Player : MonoBehaviour
 
     void OnSwap()
     {
-        swap = !swap;
+        GameManager.swap = !GameManager.swap;
     }
 
     void OnReset()
