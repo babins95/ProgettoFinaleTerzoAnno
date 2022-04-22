@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static Canvas pauseMenu;
     public static bool swap = false;
     public Player player;
     [SerializeField] Vector3 baseSpawnPosition;
@@ -12,8 +15,10 @@ public class GameManager : MonoBehaviour
     float playerY;
 
     // Start is called before the first frame update
+    
     void Start()
     {
+        pauseMenu = PauseMenu.thisPauseMenu;
         //se è presente un file di salvataggio
         if (PlayerPrefs.GetInt("saved") == 1)
         {
@@ -29,11 +34,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnPause()
     {
-        
+        if(Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            pauseMenu.gameObject.SetActive(false);
+        }
+        else
+        {
+            Time.timeScale = 0;
+            pauseMenu.gameObject.SetActive(true);
+        }
     }
+
 
 
 }
