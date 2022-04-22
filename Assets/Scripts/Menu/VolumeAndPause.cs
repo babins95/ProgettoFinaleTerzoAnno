@@ -9,7 +9,7 @@ public class VolumeAndPause : MonoBehaviour
     public AudioMixer effectsAudioMixer;
     public Canvas pauseMenu;
 
-
+    //Gestione dei volumi e del pulsante di pausa
     public void SetMusicVolume(float volume)
     {
         musicAudioMixer.SetFloat("volume", volume);

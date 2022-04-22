@@ -5,19 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    //Cancello i salvataggi poi carico la scena
     public void NewGame()
     {
-        //if(GameManager.instance != null)
-        //{
-        //    Destroy(GameManager.instance.gameObject);
-        //    Time.timeScale = 1;
-        //}
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Continue()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    //Il debug è solo per capire se viene premuto visto che funziona solo nella build
     public void QuitGame()
     {
         Debug.Log("QUIT!");
