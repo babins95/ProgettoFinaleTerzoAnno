@@ -235,52 +235,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &282850866
+--- !u!1001 &137990781
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 166991585861440292, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 166991585861440292, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 968306403911614600, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 968306403911614600, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 968306403911614600, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082639570510912124, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082639571538245096, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082639571563234142, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 715580778033098296, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
+      propertyPath: sfxSlider
+      value: 
+      objectReference: {fileID: 460880968}
+    - target: {fileID: 715580778033098296, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
+      propertyPath: musicSlider
+      value: 
+      objectReference: {fileID: 1937816093}
+    - target: {fileID: 715580778033098296, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
+      propertyPath: generalSlider
+      value: 
+      objectReference: {fileID: 907336818}
+    - target: {fileID: 1082639570510912126, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 869681532655809342, guid: 108c119a9c28f334290b5281be23609f, type: 2}
+    - target: {fileID: 1082639571563234144, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 869681532655809342, guid: 108c119a9c28f334290b5281be23609f, type: 2}
     - target: {fileID: 1082639571832391106, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
       propertyPath: m_Name
       value: PauseMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082639571832391106, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1082639571832391109, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
       propertyPath: m_RootOrder
@@ -326,46 +310,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1082639572139246166, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082639572391814391, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4244663446485678741, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4244663446485678741, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4244663446485678741, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+    - target: {fileID: 1082639572139246168, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
+      propertyPath: OutputAudioMixerGroup
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4244663446485678741, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4244663446485678741, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4244663446485678741, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4244663446485678741, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7091661893777660192, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-      propertyPath: pauseMenu
-      value: 
-      objectReference: {fileID: 2033161342}
+      objectReference: {fileID: 869681532655809342, guid: 108c119a9c28f334290b5281be23609f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
 --- !u!1 &309735550
@@ -589,6 +537,17 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &460880968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7422988253593276425, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
+  m_PrefabInstance: {fileID: 137990781}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +740,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &907336818 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6158426892484461398, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
+  m_PrefabInstance: {fileID: 137990781}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1155612874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,6 +1311,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1937816093 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 848658814406412523, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
+  m_PrefabInstance: {fileID: 137990781}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1978450497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,8 +1431,3 @@ Transform:
   m_Father: {fileID: 309735551}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!223 &2033161342 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 1082639572436900493, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
-  m_PrefabInstance: {fileID: 282850866}
-  m_PrefabAsset: {fileID: 0}

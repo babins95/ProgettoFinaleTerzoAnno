@@ -8,7 +8,9 @@ public class MainMenu : MonoBehaviour
     //Cancello i salvataggi poi carico la scena
     public void NewGame()
     {
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("checkpointX");
+        PlayerPrefs.DeleteKey("checkpointY");
+        PlayerPrefs.DeleteKey("saved");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Continue()
@@ -25,5 +27,13 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
+    }
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+    public void FullScreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
     }
 }

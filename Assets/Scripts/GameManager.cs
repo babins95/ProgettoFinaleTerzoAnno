@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     void OnPause()
     {
-        //se premi pausa il tempo si ferma e il gameobject si attiva altrimenti succede il contrario
+        //se premi il pulsante di pausa il tempo si ferma e il gameobject si attiva altrimenti succede il contrario
         if(Time.timeScale == 0)
         {
             Time.timeScale = 1;

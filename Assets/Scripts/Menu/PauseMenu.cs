@@ -19,4 +19,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
+    public void Unpause()
+    {
+        Time.timeScale = 1;
+        thisPauseMenu.gameObject.SetActive(false);
+    }
 }
