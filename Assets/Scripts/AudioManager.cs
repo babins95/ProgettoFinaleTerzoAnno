@@ -10,13 +10,10 @@ public class AudioManager : MonoBehaviour
     public Slider sfxSlider;
     private void Start()
     {
-
+        //Cambio il valore degli slider a seconda dei salvataggi
         generalSlider.value = PlayerPrefs.GetFloat("generalVolume", 1);
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume", 1);
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume", 1);
-        //generalAudioMixer.SetFloat("GeneralVolume", Mathf.Log10(PlayerPrefs.GetFloat("generalVolume") * 20f));
-        //generalAudioMixer.SetFloat("SFXVolume", Mathf.Log10(PlayerPrefs.GetFloat("sfxVolume") * 20f));
-        //generalAudioMixer.SetFloat("MusicVolume", Mathf.Log10(PlayerPrefs.GetFloat("musicVolume") * 20f));
     }
     //Gestione dei volumi,Mathf perchè l'audio è gestito in maniera diversa rispetto agli slider
     public void SetMusicVolume(float volume)
