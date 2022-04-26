@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public new GameObject newGameBannerText;
     //Cancello i salvataggi poi carico la scena
     public void NewGame()
     {
@@ -35,5 +37,17 @@ public class MainMenu : MonoBehaviour
     public void FullScreen()
     {
         Screen.fullScreen = !Screen.fullScreen;
+    }
+    public void NewGameBanner()
+    {
+        if (PlayerPrefs.GetInt("saved") == 1)
+        {
+            newGameBannerText.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(newGameBannerText.transform.GetChild(2).gameObject);
+        }
+        else
+        {
+            NewGame();
+        }
     }
 }
