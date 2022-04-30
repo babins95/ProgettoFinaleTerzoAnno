@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Spawn()
+    public void Spawn()
     {
         playerX = PlayerPrefs.GetFloat("checkpointX");
         playerY = PlayerPrefs.GetFloat("checkpointY");
@@ -75,7 +75,10 @@ public class GameManager : MonoBehaviour
         playerScale.x = player.transform.localScale.x;
         playerScale.y = player.transform.localScale.y;
         //stessa cosa per l'actionmap
-        input.SwitchCurrentActionMap("Player");
+        //input.SwitchCurrentActionMap("Player");
+        player.rb.constraints = RigidbodyConstraints2D.None;
+        player.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        swap = false;
     }
 
 
@@ -92,7 +95,8 @@ public class GameManager : MonoBehaviour
                 //se stai cadendo interrompo il movimento e cambio l'actionmap ad una vuota
                 //togliendo al giocatore la possibilità di agire
                 player.moveVector = Vector2.zero;
-                input.SwitchCurrentActionMap("Disabled");
+                player.rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                //input.SwitchCurrentActionMap("Disabled");
                 //e diminuisco i valore della scale fino ad arrivare alla dimensione
                 //da fine caduta
                 if (playerScale.x > scaleTarget)
