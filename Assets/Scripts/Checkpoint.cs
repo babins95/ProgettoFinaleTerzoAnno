@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    public SwitchCounter switchCounter;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +25,8 @@ public class Checkpoint : MonoBehaviour
         PlayerPrefs.SetFloat("checkpointY", this.transform.position.y);
         PlayerPrefs.SetInt("saved", 1);
         PlayerPrefs.Save();
-        switchCounter.ResetCounter();
+
+
+        SwitchCounter.isOnCheckpoint = true;
     }
 }
