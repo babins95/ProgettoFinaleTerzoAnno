@@ -24,24 +24,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Reset",
-                    "type": "Button",
-                    "id": "85712b7e-f36d-4151-8f21-cd4fe12eed00",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "DeleteSave",
-                    "type": "Button",
-                    "id": "ec901e66-71ae-412d-a571-7173a51be6c8",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "4bb3150a-13c7-4210-bc02-219fbd177a55",
@@ -124,28 +106,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Swap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ef3bdb9b-9e0e-4832-aa07-fb6c9c8bec93",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Reset",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "99abb2d0-df12-4992-b738-59a263c43605",
-                    "path": "<Keyboard>/v",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "DeleteSave",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -684,34 +644,6 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Disabled",
-            "id": "0d8962c8-7c76-4dbb-97ef-e813e38f9bae",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "9e6c3c21-67ff-4097-ad7f-de56c155fb3e",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "3e68e0c5-4408-4cdd-8fe4-51d85f1f4dc3",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
         playerScale.x = player.transform.localScale.x;
         playerScale.y = player.transform.localScale.y;
         //stessa cosa per l'actionmap
-        input.SwitchCurrentActionMap("Player");
+        player.GetComponent<PlayerInput>().ActivateInput();
     }
 
 
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
                 //se stai cadendo interrompo il movimento e cambio l'actionmap ad una vuota
                 //togliendo al giocatore la possibilità di agire
                 player.moveVector = Vector2.zero;
-                input.SwitchCurrentActionMap("Disabled");
+                player.GetComponent<PlayerInput>().DeactivateInput();
                 //e diminuisco i valore della scale fino ad arrivare alla dimensione
                 //da fine caduta
                 if (playerScale.x > scaleTarget)

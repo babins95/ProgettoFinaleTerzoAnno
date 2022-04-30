@@ -30,7 +30,6 @@ public class FallingTerrain : MonoBehaviour
     //se esci dall'area prima dell'inizio della caduta interrompe il processo
     private void OnTriggerExit2D(Collider2D collision)
     {
-        manager.falling = false;
         stillFalling = false;
         StopCoroutine(SetFalling());
     }
