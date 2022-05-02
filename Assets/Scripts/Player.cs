@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public SwitchCounter SwitchCounter;
+    public Rigidbody2D rb;
     public Vector2 moveVector;
     public int speed = 6;
 
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
     void OnSwap()
     {
         GameManager.swap = !GameManager.swap;
+        SwitchCounter.SwitchUsed();
     }
 
     void OnInteract()

@@ -25,5 +25,8 @@ public class Checkpoint : MonoBehaviour
         PlayerPrefs.SetFloat("checkpointY", this.transform.position.y);
         PlayerPrefs.SetInt("saved", 1);
         PlayerPrefs.Save();
+
+
+        SwitchCounter.isOnCheckpoint = true;
     }
 }

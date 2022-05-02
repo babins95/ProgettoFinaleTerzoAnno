@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Spawn()
+    public void Spawn()
     {
         playerX = PlayerPrefs.GetFloat("checkpointX");
         playerY = PlayerPrefs.GetFloat("checkpointY");
