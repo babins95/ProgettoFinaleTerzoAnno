@@ -9,7 +9,7 @@ public class ClimbableWall : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //dopo il gamemanager.swap diventerà gameobject.getcomponent<Teen>()
-        if(GameManager.swap)
+        if(GameManager.swap && collision.GetComponentInParent<Player>())
         {
             SetPos(collision);
         }
@@ -17,19 +17,22 @@ public class ClimbableWall : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(GameManager.swap)
+        if(GameManager.swap && collision.GetComponentInParent<Player>())
         {
             SetPos(collision);
         }
-        else
+        else if(!GameManager.swap && collision.GetComponentInParent<Player>())
         {
-            collision.GetComponent<Player>().climbPosition = Vector2.zero;
+            collision.GetComponentInParent<Player>().climbPosition = Vector2.zero;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        collision.GetComponent<Player>().climbPosition = Vector2.zero;
+        if (collision.GetComponentInParent<Player>())
+        {
+            collision.GetComponentInParent<Player>().climbPosition = Vector2.zero;
+        }
     }
 
     void SetPos(Collider2D collision)
@@ -37,11 +40,11 @@ public class ClimbableWall : MonoBehaviour
         int lastChild = gameObject.transform.parent.childCount - 1;
         if (this.gameObject == gameObject.transform.parent.GetChild(lastChild).gameObject)
         {
-            collision.GetComponent<Player>().climbPosition = gameObject.transform.parent.GetChild(0).position;
+            collision.GetComponentInParent<Player>().climbPosition = gameObject.transform.parent.GetChild(0).position;
         }
         else
         {
-            collision.GetComponent<Player>().climbPosition = gameObject.transform.parent.GetChild(1).position;
+            collision.GetComponentInParent<Player>().climbPosition = gameObject.transform.parent.GetChild(1).position;
         }
     }
 }

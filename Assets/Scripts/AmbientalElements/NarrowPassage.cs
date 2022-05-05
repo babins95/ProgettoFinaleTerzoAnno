@@ -8,8 +8,8 @@ public class NarrowPassage : MonoBehaviour
     //con lo swap
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //dopo il !gamemanager.swap diventerà gameobject.getcomponent<Teen>()
-        if(!GameManager.swap)
+        //dopo il !gamemanager.swap diventerà gameobject.getcomponent<Child>()
+        if(!GameManager.swap && collision.GetComponentInParent<Player>())
         {
             SetPos(collision);
         }
@@ -17,19 +17,22 @@ public class NarrowPassage : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(!GameManager.swap)
+        if (!GameManager.swap && collision.GetComponentInParent<Player>())
         {
             SetPos(collision);
         }
-        else
+        else if (GameManager.swap && collision.GetComponentInChildren<Player>())
         {
-            collision.GetComponent<Player>().narrowPosition = Vector2.zero;
+            collision.GetComponentInParent<Player>().narrowPosition = Vector2.zero;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        collision.GetComponent<Player>().narrowPosition = Vector2.zero;
+        if (collision.GetComponentInParent<Player>())
+        {
+            collision.GetComponentInParent<Player>().narrowPosition = Vector2.zero;
+        }
     }
 
     void SetPos(Collider2D collision)
@@ -37,11 +40,11 @@ public class NarrowPassage : MonoBehaviour
         int lastChild = gameObject.transform.parent.childCount - 1;
         if (this.gameObject == gameObject.transform.parent.GetChild(lastChild).gameObject)
         {
-            collision.GetComponent<Player>().narrowPosition = gameObject.transform.parent.GetChild(0).position;
+            collision.GetComponentInParent<Player>().narrowPosition = gameObject.transform.parent.GetChild(0).position;
         }
         else
         {
-            collision.GetComponent<Player>().narrowPosition = gameObject.transform.parent.GetChild(1).position;
+            collision.GetComponentInParent<Player>().narrowPosition = gameObject.transform.parent.GetChild(1).position;
         }
     }
 }

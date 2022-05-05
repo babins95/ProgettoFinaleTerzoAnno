@@ -76,6 +76,13 @@ public class GameManager : MonoBehaviour
         playerScale.y = player.transform.localScale.y;
         //stessa cosa per l'actionmap
         player.GetComponent<PlayerInput>().ActivateInput();
+
+        //tolgo il riferimento alla cassa se sei morto mentre ne spostavi una
+        if(player.crate != null)
+        {
+            player.crate.GetComponent<Crate>().CrateInteraction(player.gameObject);
+            player.stopRotation = false;
+        }
     }
 
 

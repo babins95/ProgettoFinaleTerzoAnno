@@ -29,4 +29,9 @@ public class Checkpoint : MonoBehaviour
 
         SwitchCounter.isOnCheckpoint = true;
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        SwitchCounter.isOnCheckpoint = false;
+    }
 }

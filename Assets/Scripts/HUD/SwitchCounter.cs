@@ -40,6 +40,5 @@ public class SwitchCounter : MonoBehaviour
         {
             gameObject.transform.GetChild(i).gameObject.SetActive(true);
         }
-        isOnCheckpoint = false;
     }
 }
