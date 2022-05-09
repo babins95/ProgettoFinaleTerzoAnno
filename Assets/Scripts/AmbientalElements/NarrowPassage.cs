@@ -15,18 +15,6 @@ public class NarrowPassage : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (!GameManager.swap && collision.GetComponentInParent<Player>())
-        {
-            SetPos(collision);
-        }
-        else if (GameManager.swap && collision.GetComponentInChildren<Player>())
-        {
-            collision.GetComponentInParent<Player>().narrowPosition = Vector2.zero;
-        }
-    }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.GetComponentInParent<Player>())

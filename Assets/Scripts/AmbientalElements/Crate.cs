@@ -57,7 +57,6 @@ public class Crate : MonoBehaviour
         joint.enabled = true;
         joint.connectedBody = pickingUp.GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.None;
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         pickedUp = true;
     }
 
