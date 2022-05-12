@@ -11,7 +11,7 @@ public class FallingTerrain : MonoBehaviour
     {
         //se il giocatore collide con l'oggetto metto a true il fatto che stai cadendo
         //se sei nella versione sbagliata e se non è già iniziata la caduta
-        if(collision.GetComponent<Player>() && GameManager.swap && !manager.falling)
+        if(collision.GetComponent<Adult>() && !manager.falling)
         {
             StartCoroutine("SetFalling");
             stillFalling = true;
@@ -20,7 +20,7 @@ public class FallingTerrain : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.GetComponent<Player>() && GameManager.swap && !manager.falling)
+        if (collision.GetComponent<Adult>() && !manager.falling)
         {
             StartCoroutine("SetFalling");
             stillFalling = true;

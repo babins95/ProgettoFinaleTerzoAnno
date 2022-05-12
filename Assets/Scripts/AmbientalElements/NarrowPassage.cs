@@ -8,8 +8,7 @@ public class NarrowPassage : MonoBehaviour
     //con lo swap
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //dopo il !gamemanager.swap diventerà gameobject.getcomponent<Child>()
-        if(!GameManager.swap && collision.GetComponentInParent<Player>())
+        if(collision.GetComponentInParent<Child>())
         {
             SetPos(collision);
         }
@@ -17,9 +16,9 @@ public class NarrowPassage : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponentInParent<Player>())
+        if (collision.GetComponentInParent<Child>())
         {
-            collision.GetComponentInParent<Player>().narrowPosition = Vector2.zero;
+            collision.GetComponentInParent<Child>().narrowPosition = Vector2.zero;
         }
     }
 
@@ -28,11 +27,11 @@ public class NarrowPassage : MonoBehaviour
         int lastChild = gameObject.transform.parent.childCount - 1;
         if (this.gameObject == gameObject.transform.parent.GetChild(lastChild).gameObject)
         {
-            collision.GetComponentInParent<Player>().narrowPosition = gameObject.transform.parent.GetChild(0).position;
+            collision.GetComponentInParent<Child>().narrowPosition = gameObject.transform.parent.GetChild(0).position;
         }
         else
         {
-            collision.GetComponentInParent<Player>().narrowPosition = gameObject.transform.parent.GetChild(1).position;
+            collision.GetComponentInParent<Child>().narrowPosition = gameObject.transform.parent.GetChild(1).position;
         }
     }
 }
