@@ -18,7 +18,7 @@ public class NarrowPassage : MonoBehaviour
     {
         if (collision.GetComponentInParent<Child>())
         {
-            collision.GetComponentInParent<Child>().narrowPosition = Vector2.zero;
+            collision.GetComponentInParent<Player>().interactableObject = null;
         }
     }
 
@@ -27,11 +27,11 @@ public class NarrowPassage : MonoBehaviour
         int lastChild = gameObject.transform.parent.childCount - 1;
         if (this.gameObject == gameObject.transform.parent.GetChild(lastChild).gameObject)
         {
-            collision.GetComponentInParent<Child>().narrowPosition = gameObject.transform.parent.GetChild(0).position;
+            collision.GetComponentInParent<Player>().interactableObject = gameObject.transform.parent.GetChild(0).gameObject;
         }
         else
         {
-            collision.GetComponentInParent<Child>().narrowPosition = gameObject.transform.parent.GetChild(1).position;
+            collision.GetComponentInParent<Player>().interactableObject = gameObject.transform.parent.GetChild(1).gameObject;
         }
     }
 }

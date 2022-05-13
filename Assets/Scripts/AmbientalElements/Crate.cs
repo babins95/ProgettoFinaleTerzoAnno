@@ -16,25 +16,25 @@ public class Crate : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<Player>())
+        if(collision.GetComponentInParent<Adult>())
         {
-            collision.GetComponentInParent<Player>().crate = gameObject;
+            collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponentInParent<Player>() && !pickedUp)
+        if (collision.GetComponentInParent<Adult>() && !pickedUp)
         {
-            collision.GetComponentInParent<Player>().crate = null;
+            collision.GetComponentInParent<Player>().interactableObject = null;
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<Player>())
+        if(collision.GetComponentInParent<Adult>())
         {
-            collision.GetComponentInParent<Player>().crate = gameObject;
+            collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
     }
 
@@ -67,6 +67,6 @@ public class Crate : MonoBehaviour
         joint.enabled = false;
         joint.connectedBody = null;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        puttingDown.GetComponentInParent<Player>().crate = null;
+        puttingDown.GetComponent<Player>().interactableObject = null;
     }
 }

@@ -17,11 +17,7 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public bool stopRotation;
     [HideInInspector]
-    public GameObject column;
-    [HideInInspector]
-    public GameObject crate;
-
-    bool stop;
+    public GameObject interactableObject;
 
     // Start is called before the first frame update
     void Start()
@@ -50,33 +46,18 @@ public class Player : MonoBehaviour
 
     void OnInteract()
     {
-        stop = false;
-        if (!stop)
-            CrateInteract();
-        if (!stop)
-            BreakColumn();
-    }
-
-    void CrateInteract()
-    {
-        if (crate != null)
+        if (interactableObject != null)
         {
-            //stopRotation poi sarà per bloccare l'animazione sul personaggio che
-            //spinge la cassa, per ora blocca la rotazione
-            crate.GetComponent<Crate>().CrateInteraction(gameObject);
-            stopRotation = !stopRotation;
-            stop = true;
+            BreakColumn();
         }
     }
 
-
     void BreakColumn()
     {
-        if (column != null && isFacing)
+        if (interactableObject.GetComponentInParent<Column>() != null && isFacing)
         {
             //animazione
-            column.GetComponentInParent<Column>().BreakDownColumn();
-            stop = true;
+            interactableObject.GetComponentInParent<Column>().BreakDownColumn();
         }
     }
 

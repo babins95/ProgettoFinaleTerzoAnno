@@ -9,7 +9,7 @@ public class ColumnTrigger : MonoBehaviour
     {
         if (collision.GetComponentInParent<Player>())
         {
-            collision.GetComponentInParent<Player>().column = gameObject.transform.parent.gameObject;
+            collision.GetComponentInParent<Player>().interactableObject = gameObject.transform.parent.gameObject;
         }
     }
 
@@ -17,7 +17,7 @@ public class ColumnTrigger : MonoBehaviour
     {
         if (collision.GetComponentInParent<Player>())
         {
-            collision.GetComponentInParent<Player>().column = null;
+            collision.GetComponentInParent<Player>().interactableObject = null;
         }
     }
 }

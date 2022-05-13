@@ -20,12 +20,15 @@ public class GameManager : MonoBehaviour
     //scale del giocatore alla fine della caduta
     float scaleTarget = 0.5f;
 
+    [HideInInspector]
     public bool falling;
     [SerializeField] int fallTimer = 5;
 
     public SwitchCounter SwitchCounter;
     public GameObject child;
     public GameObject adult;
+
+    public float trasparenza;
 
     void Start()
     {       
@@ -79,15 +82,17 @@ public class GameManager : MonoBehaviour
         playerScale.y = adult.transform.localScale.y;
         adult.GetComponent<PlayerInput>().ActivateInput();
 
-
-        //tolgo il riferimento alla cassa se sei morto mentre ne spostavi una
-        if (child.GetComponent<Player>().crate != null)
+        if (child.GetComponent<Player>().interactableObject != null)
         {
-            PutDownCrate(child);
-        }
-        else if(adult.GetComponent<Player>().crate != null)
-        {
-            PutDownCrate(adult);
+            //tolgo il riferimento alla cassa se sei morto mentre ne spostavi una
+            if (child.GetComponent<Player>().interactableObject.GetComponent<Crate>() != null)
+            {
+                PutDownCrate(child);
+            }
+            else if (adult.GetComponent<Player>().interactableObject.GetComponent<Crate>() != null)
+            {
+                PutDownCrate(adult);
+            }
         }
     }
 
@@ -136,9 +141,12 @@ public class GameManager : MonoBehaviour
         if (swap)
         {
             //vecchio
-            if (child.GetComponent<Player>().crate != null)
+            if (child.GetComponent<Player>().interactableObject != null)
             {
-                PutDownCrate(child);
+                if (child.GetComponent<Player>().interactableObject.GetComponent<Crate>() != null)
+                {
+                    PutDownCrate(child);
+                }
             }
             TurnOff(child);
             TurnOn(adult);
@@ -146,9 +154,12 @@ public class GameManager : MonoBehaviour
         else if (swap == false)
         {
             //giovane
-            if (adult.GetComponent<Player>().crate != null)
+            if (adult.GetComponent<Player>().interactableObject != null)
             {
-                PutDownCrate(adult);
+                if (adult.GetComponent<Player>().interactableObject.GetComponent<Crate>() != null)
+                {
+                    PutDownCrate(adult);
+                }
             }
             TurnOff(adult);
             TurnOn(child);
@@ -157,10 +168,11 @@ public class GameManager : MonoBehaviour
 
     void TurnOff(GameObject toTurnOff)
     {
+        toTurnOff.GetComponent<Player>().moveVector = Vector2.zero;
         toTurnOff.GetComponent<PlayerInput>().enabled = false;
         toTurnOff.GetComponent<BoxCollider2D>().enabled = false;
         Color newColor = toTurnOff.GetComponent<SpriteRenderer>().color;
-        newColor.a = 0.2f;
+        newColor.a = trasparenza;
         toTurnOff.GetComponent<SpriteRenderer>().color = newColor;
         toTurnOff.transform.GetChild(0).gameObject.SetActive(false);
     }
@@ -177,7 +189,7 @@ public class GameManager : MonoBehaviour
 
     void PutDownCrate(GameObject puttingDown)
     {
-        puttingDown.GetComponent<Player>().crate.GetComponent<Crate>().CrateInteraction(puttingDown);
+        puttingDown.GetComponent<Player>().interactableObject.GetComponent<Crate>().CrateInteraction(puttingDown);
         puttingDown.GetComponent<Player>().stopRotation = false;
     }
 }

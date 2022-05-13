@@ -40,15 +40,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "HoldingInteract",
-                    "type": "PassThrough",
-                    "id": "584c5523-e371-46c0-a59b-b47c67f23edc",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -110,7 +101,7 @@
                 {
                     "name": "",
                     "id": "96e8ed5f-174d-4d5e-9f2b-3f4e7709ac2a",
-                    "path": "<Keyboard>/k",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -137,17 +128,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2c4d3f33-c183-4aa8-ac34-3058f23aa894",
-                    "path": "<Keyboard>/e",
-                    "interactions": "Hold",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HoldingInteract",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

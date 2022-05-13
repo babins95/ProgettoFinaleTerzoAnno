@@ -768,14 +768,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d900d3ebdef12a4b9ad3d4a9efa737e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerChild: {fileID: 0}
-  playerAdult: {fileID: 0}
   baseSpawnPosition: {x: 0, y: 0, z: 0}
   falling: 0
   fallTimer: 5
   SwitchCounter: {fileID: 1474436250}
   child: {fileID: 551211531}
   adult: {fileID: 864750216}
+  trasparenza: 0.4
 --- !u!4 &1155612876
 Transform:
   m_ObjectHideFlags: 0
@@ -2090,9 +2089,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8052661630595790858, guid: 25e53b41b176fd344b5c6e79db0080a9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8052661630595790859, guid: 25e53b41b176fd344b5c6e79db0080a9, type: 3}
       propertyPath: m_Name
       value: PlayerAdult
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052661630595790859, guid: 25e53b41b176fd344b5c6e79db0080a9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8052661630595790863, guid: 25e53b41b176fd344b5c6e79db0080a9, type: 3}
       propertyPath: gameManager
