@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviour
     public static Canvas pauseMenu;
     //di base è nella versione giovane, quindi se swap = true ha cambiato ad adolescente
     public static bool swap = false;
-    public Child playerChild;
-    public Adult playerAdult;
     [SerializeField] Vector3 baseSpawnPosition;
 
     float playerX;
