@@ -82,14 +82,10 @@ public class GameManager : MonoBehaviour
         playerScale.y = adult.transform.localScale.y;
         adult.GetComponent<PlayerInput>().ActivateInput();
 
-        if (child.GetComponent<Player>().interactableObject != null)
+        if (adult.GetComponent<Player>().interactableObject != null)
         {
             //tolgo il riferimento alla cassa se sei morto mentre ne spostavi una
-            if (child.GetComponent<Player>().interactableObject.GetComponent<Crate>() != null)
-            {
-                PutDownCrate(child);
-            }
-            else if (adult.GetComponent<Player>().interactableObject.GetComponent<Crate>() != null)
+            if (adult.GetComponent<Player>().interactableObject.GetComponent<Crate>() != null)
             {
                 PutDownCrate(adult);
             }
