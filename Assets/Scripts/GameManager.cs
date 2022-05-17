@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public bool falling;
     [SerializeField] int fallTimer = 5;
 
-    public SwitchCounter SwitchCounter;
+    //public SwitchCounter SwitchCounter;
     public GameObject child;
     public GameObject adult;
 
@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour
     public void Swap()
     {
         swap = !swap;
-        SwitchCounter.SwitchUsed();
+        //SwitchCounter.SwitchUsed();
         if (swap)
         {
             //vecchio
