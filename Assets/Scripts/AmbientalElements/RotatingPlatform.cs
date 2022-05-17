@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class RotatingPlatform : MonoBehaviour
 {
+    public bool IsConnectedWithButton;
     public float rotationSpeed;
     private float firstAngle;
     public float rotationAngle;
@@ -11,15 +12,28 @@ public class RotatingPlatform : MonoBehaviour
     public float timer;
     private float currentTimer;
     public Transform swappedPlatform;
-    // Start is called before the first frame update
     //Per lo swap,metto la posizione della piattaforma a quella della piattaforma che era attiva prima
     private void OnEnable()
     {
-        gameObject.transform.rotation = swappedPlatform.rotation;
-        currentAngle = swappedPlatform.gameObject.GetComponent<RotatingPlatform>().currentAngle;
-        angleToReach = swappedPlatform.gameObject.GetComponent<RotatingPlatform>().angleToReach;
-        currentTimer = 0;
-        isRotating = true;
+        if (IsConnectedWithButton == false)
+        {
+            gameObject.transform.rotation = swappedPlatform.rotation;
+            currentAngle = swappedPlatform.gameObject.GetComponent<RotatingPlatform>().currentAngle;
+            angleToReach = swappedPlatform.gameObject.GetComponent<RotatingPlatform>().angleToReach;
+            currentTimer = 0;
+            isRotating = true;
+        }
+        else
+        {
+            IsConnectedWithButton = false;
+        }
+    }
+    private void OnDisable()
+    {
+        if (IsConnectedWithButton == true)
+        {
+            IsConnectedWithButton = false;
+        }
     }
     void Start()
     {
@@ -38,6 +52,7 @@ public class RotatingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        IsConnectedWithButton = false;
         if (isRotating == true)
         {
             Rotation();

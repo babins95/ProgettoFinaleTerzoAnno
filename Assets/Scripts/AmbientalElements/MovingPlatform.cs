@@ -8,13 +8,24 @@ public class MovingPlatform : MonoBehaviour
     public float timer;
     private float currentTimer;
     public Transform swappedPlatform;
+    public bool IsConnectedWithButton;
 
     Vector3 nextPosition;
     //Per lo swap,metto la posizione della piattaforma a quella della piattaforma che era attiva prima
     private void OnEnable()
     {
-        gameObject.transform.position = swappedPlatform.position;
-        nextPosition = swappedPlatform.gameObject.GetComponent<MovingPlatform>().nextPosition;
+        if (IsConnectedWithButton == false)
+        {
+            gameObject.transform.position = swappedPlatform.position;
+            nextPosition = swappedPlatform.gameObject.GetComponent<MovingPlatform>().nextPosition;
+        }
+    }
+    private void OnDisable()
+    {
+        if (IsConnectedWithButton == true)
+        {
+            IsConnectedWithButton = false;
+        }
     }
     void Start()
     {

@@ -386,6 +386,7 @@ MonoBehaviour:
   startPosition: {fileID: 174524672}
   timer: 1
   swappedPlatform: {fileID: 599156087}
+  IsConnectedWithButton: 0
 --- !u!212 &253499678
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1007,6 +1008,7 @@ MonoBehaviour:
   startPosition: {fileID: 1163747823}
   timer: 1
   swappedPlatform: {fileID: 253499675}
+  IsConnectedWithButton: 0
 --- !u!61 &599156089
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1139,7 +1141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aeee28b1442f1e43ba7ffac4214b1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchForActivatingPlatform: 0
+  switchForActivatingPlatform: 1
   objectToChange: {fileID: 253499674}
 --- !u!61 &632914875
 BoxCollider2D:
@@ -1465,6 +1467,10 @@ PrefabInstance:
     - target: {fileID: 2603284088326523485, guid: 95921b6a9fb8b154eb4428c651fd50f4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636116170010161766, guid: 95921b6a9fb8b154eb4428c651fd50f4, type: 3}
+      propertyPath: switchForActivatingPlatform
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7417835784784738378, guid: 95921b6a9fb8b154eb4428c651fd50f4, type: 3}
       propertyPath: m_RootOrder
@@ -2221,7 +2227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aeee28b1442f1e43ba7ffac4214b1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchForActivatingPlatform: 0
+  switchForActivatingPlatform: 1
   objectToChange: {fileID: 599156085}
 --- !u!61 &1389260162
 BoxCollider2D:
@@ -3099,6 +3105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonWithRotatingPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 2636116170010161766, guid: 95921b6a9fb8b154eb4428c651fd50f4, type: 3}
+      propertyPath: switchForActivatingPlatform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7417835784784738378, guid: 95921b6a9fb8b154eb4428c651fd50f4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3153,6 +3163,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7913742907213330585, guid: 95921b6a9fb8b154eb4428c651fd50f4, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913742907213330587, guid: 95921b6a9fb8b154eb4428c651fd50f4, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7913742907213330591, guid: 95921b6a9fb8b154eb4428c651fd50f4, type: 3}
