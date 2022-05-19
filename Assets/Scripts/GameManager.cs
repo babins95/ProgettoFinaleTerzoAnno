@@ -9,10 +9,8 @@ public class GameManager : MonoBehaviour
     public static Canvas pauseMenu;
     //di base è nella versione giovane, quindi se swap = true ha cambiato ad adolescente
     public static bool swap = false;
-    [SerializeField] Vector3 baseSpawnPosition;
-
-    float playerX;
-    float playerY;
+    public Transform childSpawnPos;
+    public Transform adultSpwanPos;
 
     //scale di default del giocatore e scale attuale del giocatore
     Vector3 defaultPlayerScale;
@@ -29,9 +27,11 @@ public class GameManager : MonoBehaviour
     public GameObject adult;
 
     public float trasparenza;
+    Scene currentScene;
 
     void Start()
-    {       
+    {
+        currentScene = SceneManager.GetActiveScene();
         defaultPlayerScale = child.transform.localScale;
         playerScale.x= child.transform.localScale.x;
         playerScale.y= child.transform.localScale.y;
@@ -46,8 +46,8 @@ public class GameManager : MonoBehaviour
         else
         {
             //altrimenti parti dalla posizione di inizio gioco
-            child.transform.position = baseSpawnPosition;
-            adult.transform.position = baseSpawnPosition;
+            child.transform.position = childSpawnPos.position;
+            adult.transform.position = adultSpwanPos.position;
         }
 
         TurnOff(adult);
@@ -70,26 +70,14 @@ public class GameManager : MonoBehaviour
 
     public void Spawn()
     {
-        playerX = PlayerPrefs.GetFloat("checkpointX");
-        playerY = PlayerPrefs.GetFloat("checkpointY");
-        child.transform.position = new Vector3(playerX, playerY, 0);
-        adult.transform.position = new Vector3(playerX, playerY, 0);
+        float childX = PlayerPrefs.GetFloat("xChild");
+        float childY = PlayerPrefs.GetFloat("yChild");
+        float adultX = PlayerPrefs.GetFloat("xAdult");
+        float adultY = PlayerPrefs.GetFloat("yAdult");
 
-        //resetto la scala al defalt, nel caso tu sia "morto" da caduta
-
-        adult.transform.localScale = defaultPlayerScale;
-        playerScale.x = adult.transform.localScale.x;
-        playerScale.y = adult.transform.localScale.y;
-        adult.GetComponent<PlayerInput>().ActivateInput();
-
-        if (adult.GetComponent<Player>().interactableObject != null)
-        {
-            //tolgo il riferimento alla cassa se sei morto mentre ne spostavi una
-            if (adult.GetComponent<Player>().interactableObject.GetComponent<Crate>() != null)
-            {
-                PutDownCrate(adult);
-            }
-        }
+        child.transform.position = new Vector3(childX, childY, 0);
+        adult.transform.position = new Vector3(adultX, adultY, 0);
+        
     }
 
 
@@ -119,9 +107,7 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    falling = false;
-                    fallTimer = 5;
-                    Spawn();
+                    ResetRoom();
                 }
             }
         }
@@ -187,5 +173,11 @@ public class GameManager : MonoBehaviour
     {
         puttingDown.GetComponent<Player>().interactableObject.GetComponent<Crate>().CrateInteraction(puttingDown);
         puttingDown.GetComponent<Player>().stopRotation = false;
+    }
+
+    void ResetRoom()
+    {
+        swap = false;
+        SceneManager.LoadScene(currentScene.name);
     }
 }
