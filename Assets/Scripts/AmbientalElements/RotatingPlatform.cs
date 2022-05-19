@@ -15,25 +15,11 @@ public class RotatingPlatform : MonoBehaviour
     //Per lo swap,metto la posizione della piattaforma a quella della piattaforma che era attiva prima
     private void OnEnable()
     {
-        if (IsConnectedWithButton == false)
-        {
-            gameObject.transform.rotation = swappedPlatform.rotation;
-            currentAngle = swappedPlatform.gameObject.GetComponent<RotatingPlatform>().currentAngle;
-            angleToReach = swappedPlatform.gameObject.GetComponent<RotatingPlatform>().angleToReach;
-            currentTimer = 0;
-            isRotating = true;
-        }
-        else
-        {
-            IsConnectedWithButton = false;
-        }
-    }
-    private void OnDisable()
-    {
-        if (IsConnectedWithButton == true)
-        {
-            IsConnectedWithButton = false;
-        }
+        gameObject.transform.rotation = swappedPlatform.rotation;
+        currentAngle = swappedPlatform.gameObject.GetComponent<RotatingPlatform>().currentAngle;
+        angleToReach = swappedPlatform.gameObject.GetComponent<RotatingPlatform>().angleToReach;
+        currentTimer = 0;
+        isRotating = true;
     }
     void Start()
     {
@@ -52,31 +38,33 @@ public class RotatingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        IsConnectedWithButton = false;
-        if (isRotating == true)
+        if (IsConnectedWithButton == true)
         {
-            Rotation();
-        }
-        //alla fine del timer isRotating viene messo a true,
-        //cambio l'angolo di destinazione e resetto il timer
-        if (currentTimer >= timer)
-        {
-            angleToReach = angleToReach + rotationAngle;
-            isRotating = true;
-            currentTimer = 0;
-        }
-        //se l'angolo corrente è maggiore o uguale all'angolo di destinazione
-        //isRotating è false e parte il timer
-        //se è sopra a 360 gradi resetto per non avere numeri troppo alti
-        if (currentAngle >= angleToReach)
-        {
-            if (currentAngle >= 360)
+            if (isRotating == true)
             {
-                currentAngle = firstAngle;
-                angleToReach = currentAngle;
+                Rotation();
             }
-            currentTimer += Time.deltaTime;
-            isRotating = false;
+            //alla fine del timer isRotating viene messo a true,
+            //cambio l'angolo di destinazione e resetto il timer
+            if (currentTimer >= timer)
+            {
+                angleToReach = angleToReach + rotationAngle;
+                isRotating = true;
+                currentTimer = 0;
+            }
+            //se l'angolo corrente è maggiore o uguale all'angolo di destinazione
+            //isRotating è false e parte il timer
+            //se è sopra a 360 gradi resetto per non avere numeri troppo alti
+            if (currentAngle >= angleToReach)
+            {
+                if (currentAngle >= 360)
+                {
+                    currentAngle = firstAngle;
+                    angleToReach = currentAngle;
+                }
+                currentTimer += Time.deltaTime;
+                isRotating = false;
+            }
         }
     }
     //aumento l'angolo e setto il transform rotation di conseguenza
