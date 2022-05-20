@@ -5,19 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    public bool childIn;
-    public bool adultIn;
+    bool childIn;
+    bool adultIn;
+
+    public bool changeScene;
+
+    public Transform newCameraPosition;
+    public Camera camera;
+    public float cameraSpeed;
+    bool moveCamera;
+
+    public Transform newChildSpawn;
+    public Transform newAdultSpawn;
+
+    Child child;
+    Adult adult;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.GetComponentInParent<Child>())
         {
             childIn = true;
+            child = collision.GetComponentInParent<Child>();
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }     
         if(collision.GetComponentInParent<Adult>())
         {
             adultIn = true;
+            adult = collision.GetComponentInParent<Adult>();
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
     }
@@ -48,11 +64,42 @@ public class NextLevel : MonoBehaviour
 
     public void GoNextLevel()
     {
-        //se entrambi i giocatori sono sul trigger l'interazione ti manda al prossimo livello
-        if(childIn && adultIn)
+        if (changeScene)
         {
-            //eventuale animazione? non so come lo vogliono fare di preciso
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //se entrambi i giocatori sono sul trigger l'interazione ti manda al prossimo livello
+            if (childIn && adultIn)
+            {
+                //eventuale animazione? non so come lo vogliono fare di preciso
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+        }
+        else
+        {
+            if(childIn && adultIn)
+            {
+                moveCamera = true;
+                //camera.transform.position = newCameraPosition.position;
+                child.transform.position = newChildSpawn.position;
+                adult.transform.position = newAdultSpawn.position;
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (moveCamera)
+        {
+            float interp = cameraSpeed * Time.deltaTime;
+
+            Vector3 position = camera.transform.position;
+            position.x = Mathf.Lerp(camera.transform.position.x, newCameraPosition.position.x, interp);
+            position.y = Mathf.Lerp(camera.transform.position.y, newCameraPosition.position.y, interp);
+            camera.transform.position = position;
+        }
+
+        if(camera.transform.position == newCameraPosition.position)
+        {
+            moveCamera = false;
         }
     }
 }

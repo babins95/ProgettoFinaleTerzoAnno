@@ -12,8 +12,6 @@ public class GameManager : MonoBehaviour
     public Transform childSpawnPos;
     public Transform adultSpwanPos;
 
-    //scale di default del giocatore e scale attuale del giocatore
-    Vector3 defaultPlayerScale;
     Vector3 playerScale;
     //scale del giocatore alla fine della caduta
     float scaleTarget = 0.5f;
@@ -32,7 +30,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
-        defaultPlayerScale = child.transform.localScale;
         playerScale.x= child.transform.localScale.x;
         playerScale.y= child.transform.localScale.y;
 
