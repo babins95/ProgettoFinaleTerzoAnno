@@ -676,7 +676,11 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
@@ -686,30 +690,30 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: -2.5244127e-29
-      e01: -46803.75
-      e02: -7.8275907e-26
-      e03: 9.1676045e-10
-      e10: 8.32e-43
+      e00: 2.5244127e-29
+      e01: -1.10176264e-32
+      e02: -2.5355205e-29
+      e03: -9.667867e-10
+      e10: 5.69e-43
       e11: 4.5905e-41
-      e12: 8.32e-43
-      e13: 8.32e-43
+      e12: 5.7e-43
+      e13: 5.68e-43
       e20: 6e-45
-      e21: -4.7236466e-14
-      e22: -4.7233484e-14
-      e23: -4.7233484e-14
+      e21: -3.999487e+32
+      e22: -3.9991467e+32
+      e23: -3.9991467e+32
       e30: 0
-      e31: 1.51e-43
-      e32: 1.51e-43
-      e33: 1.51e-43
+      e31: 7e-44
+      e32: 7e-44
+      e33: 7e-44
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: -7.8275907e-26, g: -7.8275907e-26, b: -7.8275907e-26, a: -7.8275907e-26}
+    m_Data: {r: -2.5355205e-29, g: -2.5355205e-29, b: -2.5355205e-29, a: -2.5355205e-29}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -13, y: 0, z: 0}
-  m_Size: {x: 13, y: 3, z: 1}
+  m_Origin: {x: -13, y: -10, z: 0}
+  m_Size: {x: 13, y: 13, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -936,7 +940,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700402157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 11.9, y: 11.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 531439910}
@@ -1048,7 +1052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d900d3ebdef12a4b9ad3d4a9efa737e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpawnPosition: {x: 0, y: 0, z: 0}
+  childSpawnPos: {fileID: 0}
+  adultSpwanPos: {fileID: 0}
   falling: 0
   fallTimer: 5
   child: {fileID: 1171787341}

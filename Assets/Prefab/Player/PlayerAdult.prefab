@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e8963922d6b3e8a469bcd389fb51f460, type: 3}
-  m_Color: {r: 1, g: 0.4481132, b: 0.4481132, a: 1}
+  m_Sprite: {fileID: -9207048833179524762, guid: f550065323d7ac143b68b1440747d620, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -105,7 +105,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 0.93, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -183,8 +183,7 @@ MonoBehaviour:
   speed: 6
   isFacing: 0
   stopRotation: 0
-  column: {fileID: 0}
-  crate: {fileID: 0}
+  interactableObject: {fileID: 0}
 --- !u!114 &8052661630595790856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2130af7e57c13649b6a06c1a671f030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  climbPosition: {x: 0, y: 0}
 --- !u!1 &8052661632341612421
 GameObject:
   m_ObjectHideFlags: 0
