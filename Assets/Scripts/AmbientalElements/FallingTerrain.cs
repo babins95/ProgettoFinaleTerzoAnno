@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FallingTerrain : MonoBehaviour
 {
-    public GameManager manager;
+    [SerializeField] GameManager manager;
     bool stillFalling;
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -9,6 +9,8 @@ public class Crate : MonoBehaviour
     Rigidbody2D rb;
     public bool pickedUp;
 
+    bool onCratere;
+
     private void Start()
     {
         joint = GetComponent<FixedJoint2D>();
@@ -20,6 +22,11 @@ public class Crate : MonoBehaviour
         {
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
+
+        if(collision.GetComponent<Cratere>())
+        {
+            onCratere = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -27,6 +34,11 @@ public class Crate : MonoBehaviour
         if (collision.GetComponentInParent<Adult>() && !pickedUp)
         {
             collision.GetComponentInParent<Player>().interactableObject = null;
+        }
+
+        if (collision.GetComponent<Cratere>())
+        {
+            onCratere = false;
         }
     }
 
@@ -42,7 +54,10 @@ public class Crate : MonoBehaviour
     {
         if(!pickedUp)
         {
-            PickUpCrate(pickingUp);
+            if (gameObject.GetComponent<BoxCollider2D>().isTrigger == false)
+            {
+                PickUpCrate(pickingUp);
+            }
         }
         else
         {
@@ -68,5 +83,10 @@ public class Crate : MonoBehaviour
         joint.connectedBody = null;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         puttingDown.GetComponent<Player>().interactableObject = null;
+
+        if(onCratere)
+        {
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        }
     }
 }

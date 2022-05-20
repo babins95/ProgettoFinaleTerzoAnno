@@ -17,7 +17,9 @@ public class GameManager : MonoBehaviour
     float scaleTarget = 0.5f;
 
     [HideInInspector]
-    public bool falling;
+    public bool falling;   
+    [HideInInspector]
+    public bool onCrate;
     [SerializeField] int fallTimer = 5;
 
     //public SwitchCounter SwitchCounter;
@@ -80,7 +82,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(falling)
+        if(falling && !onCrate)
         {
             if(fallTimer > 0)
             {
@@ -88,23 +90,44 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                //se stai cadendo interrompo il movimento e disattivo l'actionmap
-                //togliendo al giocatore la possibilità di agire
-                adult.GetComponent<Player>().moveVector = Vector2.zero;
-                adult.GetComponent<Player>().GetComponent<PlayerInput>().DeactivateInput();
-                //e diminuisco i valore della scale fino ad arrivare alla dimensione
-                //da fine caduta
-                if (playerScale.x > scaleTarget)
+                if (swap)
                 {
-                    playerScale.x -= 0.01f;
-                    playerScale.y -= 0.01f;
+                    //se stai cadendo interrompo il movimento e disattivo l'actionmap
+                    //togliendo al giocatore la possibilità di agire
+                    adult.GetComponent<Player>().moveVector = Vector2.zero;
+                    adult.GetComponent<Player>().GetComponent<PlayerInput>().DeactivateInput();
+                    //e diminuisco i valore della scale fino ad arrivare alla dimensione
+                    //da fine caduta
+                    if (playerScale.x > scaleTarget)
+                    {
+                        playerScale.x -= 0.01f;
+                        playerScale.y -= 0.01f;
 
-                    adult.transform.localScale = new Vector3(playerScale.x, playerScale.y, 1);
-                    fallTimer = 5;
+                        adult.transform.localScale = new Vector3(playerScale.x, playerScale.y, 1);
+                        fallTimer = 5;
+                    }
+                    else
+                    {
+                        ResetRoom();
+                    }
                 }
-                else
+                else if(!swap)
                 {
-                    ResetRoom();
+                    child.GetComponent<Player>().moveVector = Vector2.zero;
+                    child.GetComponent<Player>().GetComponent<PlayerInput>().DeactivateInput();
+
+                    if(playerScale.x > scaleTarget)
+                    {
+                        playerScale.x -= 0.01f;
+                        playerScale.y -= 0.01f;
+
+                        child.transform.localScale = new Vector3(playerScale.x, playerScale.y, 1);
+                        fallTimer = 5;
+                    }
+                    else
+                    {
+                        ResetRoom();
+                    }
                 }
             }
         }
