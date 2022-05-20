@@ -92,44 +92,35 @@ public class GameManager : MonoBehaviour
             {
                 if (swap)
                 {
-                    //se stai cadendo interrompo il movimento e disattivo l'actionmap
-                    //togliendo al giocatore la possibilità di agire
-                    adult.GetComponent<Player>().moveVector = Vector2.zero;
-                    adult.GetComponent<Player>().GetComponent<PlayerInput>().DeactivateInput();
-                    //e diminuisco i valore della scale fino ad arrivare alla dimensione
-                    //da fine caduta
-                    if (playerScale.x > scaleTarget)
-                    {
-                        playerScale.x -= 0.01f;
-                        playerScale.y -= 0.01f;
-
-                        adult.transform.localScale = new Vector3(playerScale.x, playerScale.y, 1);
-                        fallTimer = 5;
-                    }
-                    else
-                    {
-                        ResetRoom();
-                    }
+                    Fall(adult);
                 }
-                else if(!swap)
+                else
                 {
-                    child.GetComponent<Player>().moveVector = Vector2.zero;
-                    child.GetComponent<Player>().GetComponent<PlayerInput>().DeactivateInput();
-
-                    if(playerScale.x > scaleTarget)
-                    {
-                        playerScale.x -= 0.01f;
-                        playerScale.y -= 0.01f;
-
-                        child.transform.localScale = new Vector3(playerScale.x, playerScale.y, 1);
-                        fallTimer = 5;
-                    }
-                    else
-                    {
-                        ResetRoom();
-                    }
+                    Fall(child);
                 }
             }
+        }
+    }
+
+    void Fall(GameObject fallingPlayer)
+    {
+        //se stai cadendo interrompo il movimento e disattivo l'actionmap
+        //togliendo al giocatore la possibilità di agire
+        fallingPlayer.GetComponent<Player>().moveVector = Vector2.zero;
+        fallingPlayer.GetComponent<Player>().GetComponent<PlayerInput>().DeactivateInput();
+        //e diminuisco i valore della scale fino ad arrivare alla dimensione
+        //da fine caduta
+        if (playerScale.x > scaleTarget)
+        {
+            playerScale.x -= 0.01f;
+            playerScale.y -= 0.01f;
+
+            fallingPlayer.transform.localScale = new Vector3(playerScale.x, playerScale.y, 1);
+            fallTimer = 5;
+        }
+        else
+        {
+            ResetRoom();
         }
     }
 
@@ -139,7 +130,6 @@ public class GameManager : MonoBehaviour
     public void Swap()
     {
         swap = !swap;
-        //SwitchCounter.SwitchUsed();
         if (swap)
         {
             //vecchio

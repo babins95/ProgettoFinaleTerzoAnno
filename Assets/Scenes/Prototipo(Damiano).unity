@@ -1571,6 +1571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1155612875}
+  stillOnCrate: 0
 --- !u!1 &967326734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,17 +2041,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5920164664464549069, guid: 6264084abc2e204439c6dcdaf87ed142, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5920164664464549070, guid: 6264084abc2e204439c6dcdaf87ed142, type: 3}
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5920164664464549070, guid: 6264084abc2e204439c6dcdaf87ed142, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.83
+      value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 5920164664464549070, guid: 6264084abc2e204439c6dcdaf87ed142, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.3
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 5920164664464549070, guid: 6264084abc2e204439c6dcdaf87ed142, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2646,12 +2651,16 @@ PrefabInstance:
       value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5920164664464549070, guid: 6264084abc2e204439c6dcdaf87ed142, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.3204
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920164664464549070, guid: 6264084abc2e204439c6dcdaf87ed142, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.04
+      value: -7.72
       objectReference: {fileID: 0}
     - target: {fileID: 5920164664464549070, guid: 6264084abc2e204439c6dcdaf87ed142, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.85
+      value: -4.84
       objectReference: {fileID: 0}
     - target: {fileID: 5920164664464549070, guid: 6264084abc2e204439c6dcdaf87ed142, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3190,6 +3199,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 7119094070264984060, guid: afc700cdfec65d44195eb9b4721ee6c8, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1155612875}
     - target: {fileID: 7119094070646861496, guid: afc700cdfec65d44195eb9b4721ee6c8, type: 3}
       propertyPath: m_Name
       value: PlayerChild
@@ -3985,6 +3998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerAdult
       objectReference: {fileID: 0}
+    - target: {fileID: 4422877330789868626, guid: 25e53b41b176fd344b5c6e79db0080a9, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1155612875}
     - target: {fileID: 7913654121381587281, guid: 25e53b41b176fd344b5c6e79db0080a9, type: 3}
       propertyPath: m_Name
       value: PlayerBack
@@ -4456,3 +4473,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1155612875}
+  stillOnCrate: 0

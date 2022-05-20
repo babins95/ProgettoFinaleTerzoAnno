@@ -5,21 +5,26 @@ using UnityEngine;
 public class PlayerEye : MonoBehaviour
 {
     Player player;
+    [SerializeField] GameManager manager;
     // Start is called before the first frame update
     void Start()
     {
        player = GetComponentInParent<Player>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         player.isFacing = true;
+        if(collision.gameObject.GetComponent<Crate>())
+        {
+            player.GetComponentInChildren<PlayerBack>().stillOnCrate = true;
+        }
+
+        if(collision.gameObject.GetComponent<Cratere>() || collision.gameObject.GetComponent<FallingTerrain>())
+        {
+            player.GetComponentInChildren<PlayerBack>().stillOnCrate = false;
+            manager.onCrate = false;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

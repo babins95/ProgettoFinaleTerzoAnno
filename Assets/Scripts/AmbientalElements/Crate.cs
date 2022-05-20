@@ -10,6 +10,7 @@ public class Crate : MonoBehaviour
     public bool pickedUp;
 
     bool onCratere;
+    bool ignoreCollision;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class Crate : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<Adult>())
+        if(collision.GetComponentInParent<Adult>() && !ignoreCollision)
         {
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
@@ -44,7 +45,7 @@ public class Crate : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<Adult>())
+        if(collision.GetComponentInParent<Adult>() && !ignoreCollision)
         {
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
@@ -54,7 +55,7 @@ public class Crate : MonoBehaviour
     {
         if(!pickedUp)
         {
-            if (gameObject.GetComponent<BoxCollider2D>().isTrigger == false)
+            if (!ignoreCollision)
             {
                 PickUpCrate(pickingUp);
             }
@@ -84,8 +85,10 @@ public class Crate : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         puttingDown.GetComponent<Player>().interactableObject = null;
 
+        //se posi la cassa sopra un buco ci puoi camminare sopra e non la puoi più prendere
         if(onCratere)
         {
+            ignoreCollision = true;
             gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         }
     }
