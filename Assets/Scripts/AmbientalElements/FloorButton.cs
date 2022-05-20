@@ -9,13 +9,6 @@ public class FloorButton : MonoBehaviour
     //specifico se l'interruttore serve per fermare o attivare la rotazione
     public bool switchForActivatingPlatform;
     public GameObject objectToChange;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         BlockRotating();
@@ -28,11 +21,11 @@ public class FloorButton : MonoBehaviour
         {
             if (buttonON == true)
             {
-                objectToChange.GetComponent<MovingPlatform>().enabled = switchForActivatingPlatform;
+                objectToChange.GetComponent<MovingPlatform>().IsConnectedWithButton = switchForActivatingPlatform;
             }
             else if (buttonON == false)
             {
-                objectToChange.GetComponent<MovingPlatform>().enabled = !switchForActivatingPlatform;
+                objectToChange.GetComponent<MovingPlatform>().IsConnectedWithButton = !switchForActivatingPlatform;
             }
         }
     }
@@ -44,15 +37,15 @@ public class FloorButton : MonoBehaviour
         {
             if (buttonON == true)
             {
-                objectToChange.GetComponent<RotatingPlatform>().enabled = switchForActivatingPlatform;
+                objectToChange.GetComponent<RotatingPlatform>().IsConnectedWithButton = switchForActivatingPlatform;
             }
             else if (buttonON == false)
             {
-                objectToChange.GetComponent<RotatingPlatform>().enabled = !switchForActivatingPlatform;
+
+                objectToChange.GetComponent<RotatingPlatform>().IsConnectedWithButton = !switchForActivatingPlatform;
             }
         }
     }
-    //interruttore sempre attivo finchè c'è qualcosa sopra
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.GetComponent<Player>() || collision.GetComponent<Crate>())

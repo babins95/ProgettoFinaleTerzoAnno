@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class RotatingPlatform : MonoBehaviour
 {
+    public bool IsConnectedWithButton;
     public float rotationSpeed;
     private float firstAngle;
     public float rotationAngle;
@@ -11,7 +12,6 @@ public class RotatingPlatform : MonoBehaviour
     public float timer;
     private float currentTimer;
     public Transform swappedPlatform;
-    // Start is called before the first frame update
     //Per lo swap,metto la posizione della piattaforma a quella della piattaforma che era attiva prima
     private void OnEnable()
     {
@@ -38,30 +38,33 @@ public class RotatingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isRotating == true)
+        if (IsConnectedWithButton == true)
         {
-            Rotation();
-        }
-        //alla fine del timer isRotating viene messo a true,
-        //cambio l'angolo di destinazione e resetto il timer
-        if (currentTimer >= timer)
-        {
-            angleToReach = angleToReach + rotationAngle;
-            isRotating = true;
-            currentTimer = 0;
-        }
-        //se l'angolo corrente è maggiore o uguale all'angolo di destinazione
-        //isRotating è false e parte il timer
-        //se è sopra a 360 gradi resetto per non avere numeri troppo alti
-        if (currentAngle >= angleToReach)
-        {
-            if (currentAngle >= 360)
+            if (isRotating == true)
             {
-                currentAngle = firstAngle;
-                angleToReach = currentAngle;
+                Rotation();
             }
-            currentTimer += Time.deltaTime;
-            isRotating = false;
+            //alla fine del timer isRotating viene messo a true,
+            //cambio l'angolo di destinazione e resetto il timer
+            if (currentTimer >= timer)
+            {
+                angleToReach = angleToReach + rotationAngle;
+                isRotating = true;
+                currentTimer = 0;
+            }
+            //se l'angolo corrente è maggiore o uguale all'angolo di destinazione
+            //isRotating è false e parte il timer
+            //se è sopra a 360 gradi resetto per non avere numeri troppo alti
+            if (currentAngle >= angleToReach)
+            {
+                if (currentAngle >= 360)
+                {
+                    currentAngle = firstAngle;
+                    angleToReach = currentAngle;
+                }
+                currentTimer += Time.deltaTime;
+                isRotating = false;
+            }
         }
     }
     //aumento l'angolo e setto il transform rotation di conseguenza
