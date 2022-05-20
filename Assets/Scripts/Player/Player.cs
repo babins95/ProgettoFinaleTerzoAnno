@@ -48,7 +48,16 @@ public class Player : MonoBehaviour
     {
         if (interactableObject != null)
         {
+            GoNextLevel();
             BreakColumn();
+        }
+    }
+
+    void GoNextLevel()
+    {
+        if(interactableObject.GetComponent<NextLevel>() != null)
+        {
+            interactableObject.GetComponent<NextLevel>().GoNextLevel();
         }
     }
 

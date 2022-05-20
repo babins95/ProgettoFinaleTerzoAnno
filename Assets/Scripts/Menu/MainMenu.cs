@@ -10,14 +10,12 @@ public class MainMenu : MonoBehaviour
     //Cancello i salvataggi poi carico la scena
     public void NewGame()
     {
-        PlayerPrefs.DeleteKey("checkpointX");
-        PlayerPrefs.DeleteKey("checkpointY");
-        PlayerPrefs.DeleteKey("saved");
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Continue()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(PlayerPrefs.GetString("lastScene"));
     }
     //Il debug è solo per capire se viene premuto visto che funziona solo nella build
     public void QuitGame()
