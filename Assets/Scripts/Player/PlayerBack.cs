@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class PlayerBack : MonoBehaviour
 {
-    [SerializeField] GameManager manager;
+    GameManager manager;
     public bool stillOnCrate;
+
+    private void Start()
+    {
+        manager = GetComponentInParent<GameManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

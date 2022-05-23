@@ -48,8 +48,8 @@ public class Player : MonoBehaviour
     {
         if (interactableObject != null)
         {
-            GoNextLevel();
             BreakColumn();
+            GoNextLevel();
         }
     }
 

@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerEye : MonoBehaviour
 {
     Player player;
-    [SerializeField] GameManager manager;
+    GameManager manager;
     // Start is called before the first frame update
     void Start()
     {
        player = GetComponentInParent<Player>();
+       manager = GetComponentInParent<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

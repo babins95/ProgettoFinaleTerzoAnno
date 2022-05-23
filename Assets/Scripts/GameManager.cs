@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     //di base è nella versione giovane, quindi se swap = true ha cambiato ad adolescente
     public static bool swap = false;
     public Transform childSpawnPos;
-    public Transform adultSpwanPos;
+    public Transform adultSpawnPos;
 
     Vector3 playerScale;
     //scale del giocatore alla fine della caduta
@@ -46,10 +46,12 @@ public class GameManager : MonoBehaviour
         {
             //altrimenti parti dalla posizione di inizio gioco
             child.transform.position = childSpawnPos.position;
-            adult.transform.position = adultSpwanPos.position;
+            adult.transform.position = adultSpawnPos.position;
         }
 
         TurnOff(adult);
+        childSpawnPos.gameObject.GetComponent<SpawnPoint>().SavePosition();
+        adultSpawnPos.gameObject.GetComponent<SpawnPoint>().SavePosition();
     }
 
     void OnPause()
