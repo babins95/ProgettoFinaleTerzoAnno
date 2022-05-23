@@ -7,7 +7,8 @@ public class NextLevel : MonoBehaviour
 {
     bool childIn;
     bool adultIn;
-    [SerializeField] float cameraLerpDuration;
+    [SerializeField] float cameraLerpDelay;
+    [SerializeField] float cameraLerpSlow;
     float timeElapsed;
 
     public bool changeScene;
@@ -15,28 +16,17 @@ public class NextLevel : MonoBehaviour
     public Transform newCameraPosition;
     int newCameraPos;
     public Camera camera;
-    public float cameraSpeed;
     bool moveCamera;
 
     public Transform newChildSpawn;
     public Transform newAdultSpawn;
+    [SerializeField] NextLevel newNextLevel;
 
     Child child;
     Adult adult;
-
     [SerializeField] GameManager manager;
-    [SerializeField] NextLevel newNextLevel;
 
-    private void Start()
-    {
-        newCameraPos = PlayerPrefs.GetInt("newCameraPos");
-        
-        if(newCameraPos == 1)
-        {
-            camera.transform.position = newCameraPosition.position;
-            ChangeSpawnPoint();
-        }
-    }
+    public int level;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -84,7 +74,6 @@ public class NextLevel : MonoBehaviour
             //se entrambi i giocatori sono sul trigger l'interazione ti manda al prossimo livello
             if (childIn && adultIn)
             {
-                PlayerPrefs.SetInt("newCameraPos", 0);
                 //eventuale animazione? non so come lo vogliono fare di preciso
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
@@ -98,12 +87,17 @@ public class NextLevel : MonoBehaviour
                 adult.transform.position = newAdultSpawn.position;
 
                 ChangeSpawnPoint();
-
-                PlayerPrefs.SetInt("newCameraPos", 1);
             }
         }
     }
 
+    //cambia lo spawnPoint del giocatore e tutti i suoi riferimenti al nuovo checkpoint raggiunto
+    //il levelReached è come gli stage di super mario, le scene i mondi
+    //per esempio per salvare la posizione del giocatore ci sarà:
+    //PlayerPrefs.GetString("lastScene") dove lastScene è Livello2
+    //PlayerPrefs.GetInt("levelReached") dove levelReached è 3
+    //quando apri il gioco ti carica la scena Livello2 e ti setta lo spawn alla posizione del
+    //terzo spawnPoint; livello 2-3
     private void ChangeSpawnPoint()
     {
         newChildSpawn.parent.gameObject.SetActive(true);
@@ -114,43 +108,37 @@ public class NextLevel : MonoBehaviour
         manager.childSpawnPos = newChildSpawn;
         manager.adultSpawnPos = newAdultSpawn;
 
+        PlayerPrefs.SetInt("levelReached", level);
+
         if (child != null)
         {
             child.GetComponentInParent<Player>().interactableObject = null;
         }
     }
 
+    //lerp della camera, quando arriva alla nuova posizione resetta i valori di controllo
+    //attiva il prossimo NextLevel e si disattiva
     private void Update()
     {
         if (moveCamera)
         {
-            //float interp = cameraSpeed * Time.deltaTime;
-
             Vector3 position = camera.transform.position;
-            //position.x = Mathf.Lerp(camera.transform.position.x, newCameraPosition.position.x, interp);
-            //position.y = Mathf.Lerp(camera.transform.position.y, newCameraPosition.position.y, interp);
-            //camera.transform.position = position;
 
-            if (timeElapsed < cameraLerpDuration)
+            if (timeElapsed < cameraLerpDelay)
             {
-                position.x = Mathf.Lerp(camera.transform.position.x, newCameraPosition.position.x, timeElapsed / cameraLerpDuration);
-                position.y = Mathf.Lerp(camera.transform.position.y, newCameraPosition.position.y, timeElapsed / cameraLerpDuration);
+                position.x = Mathf.Lerp(camera.transform.position.x, newCameraPosition.position.x, timeElapsed / (cameraLerpDelay*cameraLerpSlow));
+                position.y = Mathf.Lerp(camera.transform.position.y, newCameraPosition.position.y, timeElapsed / (cameraLerpDelay*cameraLerpSlow));
 
                 camera.transform.position = position;
                 timeElapsed += Time.deltaTime;
             }
             else
             {
+                timeElapsed = 0;
                 moveCamera = false;
-                this.gameObject.SetActive(false);
                 newNextLevel.gameObject.SetActive(true);
+                gameObject.SetActive(false);
             }
         }
-
-        //if(camera.transform.position == newCameraPosition.position)
-        //{
-        //    moveCamera = false;
-        //    this.gameObject.SetActive(false);
-        //}
     }
 }

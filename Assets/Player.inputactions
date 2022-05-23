@@ -15,18 +15,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Swap",
+                    "name": "Pause",
                     "type": "Button",
-                    "id": "a018059b-202e-4565-8f17-17349829458a",
+                    "id": "4bb3150a-13c7-4210-bc02-219fbd177a55",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pause",
+                    "name": "Swap",
                     "type": "Button",
-                    "id": "4bb3150a-13c7-4210-bc02-219fbd177a55",
+                    "id": "95678a7a-5a19-44c8-9bc5-fce09c6fff62",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -45,6 +45,33 @@
                     "name": "Shoot",
                     "type": "Button",
                     "id": "57bcbb5c-f79f-4c63-983e-b962accbdebd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DeleteSave",
+                    "type": "Button",
+                    "id": "54f3c205-3ad9-4184-8624-f003737faa04",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Back",
+                    "type": "Button",
+                    "id": "21598c94-33f0-4753-af7b-36030b787c73",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "bf644901-ce89-4993-b169-13d53d427968",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -109,17 +136,6 @@
                 },
                 {
                     "name": "",
-                    "id": "96e8ed5f-174d-4d5e-9f2b-3f4e7709ac2a",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Swap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "ed71468a-af15-4e1d-a564-d97297d11f83",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -148,6 +164,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2f31f73-f0ee-48f6-a952-787a7943b777",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DeleteSave",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed193246-c755-4d75-ab73-bc6e68b97e71",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Back",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62644683-673e-458b-b64b-01159bee3697",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Swap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a1988fb2-41b8-425c-98ea-8d765602ce61",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

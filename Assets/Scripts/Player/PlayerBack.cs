@@ -9,7 +9,7 @@ public class PlayerBack : MonoBehaviour
 
     private void Start()
     {
-        manager = GetComponentInParent<GameManager>();
+        manager = GetComponentInParent<Player>().gameManager;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

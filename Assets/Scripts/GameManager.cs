@@ -29,11 +29,23 @@ public class GameManager : MonoBehaviour
     public float trasparenza;
     Scene currentScene;
 
+    [SerializeField] Camera camera;
+    public GameObject spawnGroup;
+    public GameObject nextLevelGroup;
+    public GameObject cameraPositionGroup;
+
+    //per ora è public per le funzioni di debug del player
+    public int currentLevel;
+
     void Start()
     {
+        currentLevel = PlayerPrefs.GetInt("levelReached");
         currentScene = SceneManager.GetActiveScene();
         playerScale.x= child.transform.localScale.x;
         playerScale.y= child.transform.localScale.y;
+
+        PlayerPrefs.SetString("lastScene", currentScene.name);
+        PlayerPrefs.Save();
 
         pauseMenu = PauseMenu.thisPauseMenu;
         //se è presente un file di salvataggio
@@ -50,8 +62,8 @@ public class GameManager : MonoBehaviour
         }
 
         TurnOff(adult);
-        childSpawnPos.gameObject.GetComponent<SpawnPoint>().SavePosition();
-        adultSpawnPos.gameObject.GetComponent<SpawnPoint>().SavePosition();
+        //childSpawnPos.gameObject.GetComponent<SpawnPoint>().SavePosition();
+        //adultSpawnPos.gameObject.GetComponent<SpawnPoint>().SavePosition();
     }
 
     void OnPause()
@@ -78,7 +90,14 @@ public class GameManager : MonoBehaviour
 
         child.transform.position = new Vector3(childX, childY, 0);
         adult.transform.position = new Vector3(adultX, adultY, 0);
-        
+
+        //a seconda del currentLevel attiva il corrispettivo spawnPoint e ci sposta la telecamera
+        spawnGroup.transform.GetChild(currentLevel).gameObject.SetActive(true);
+        nextLevelGroup.transform.GetChild(currentLevel).gameObject.SetActive(true);
+        camera.transform.position = cameraPositionGroup.transform.GetChild(currentLevel).transform.position;
+
+        //debug, da togliere poi
+        child.GetComponentInParent<Player>().nextLevel = nextLevelGroup.transform.GetChild(currentLevel).GetComponent<NextLevel>();
     }
 
 
@@ -187,7 +206,7 @@ public class GameManager : MonoBehaviour
         puttingDown.GetComponent<Player>().stopRotation = false;
     }
 
-    void ResetRoom()
+    public void ResetRoom()
     {
         swap = false;
         SceneManager.LoadScene(currentScene.name);

@@ -10,10 +10,10 @@ public class MainMenu : MonoBehaviour
     //Cancello i salvataggi poi carico la scena
     public void NewGame()
     {
-        //PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetInt("saved", 0);
-        PlayerPrefs.SetInt("newCameraPos", 0);
-        PlayerPrefs.Save();
+        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.SetInt("saved", 0);
+        //PlayerPrefs.SetInt("levelReached", 0);
+        //PlayerPrefs.Save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Continue()

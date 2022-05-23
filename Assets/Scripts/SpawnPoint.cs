@@ -5,13 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SpawnPoint : MonoBehaviour
 {
+    //da attivare da editor a seconda di quale dei due player deve partire da li
     [SerializeField] bool child;
     [SerializeField] bool adult;
-
-    private void Start()
-    {
-        //SavePosition();
-    }
 
     public void SavePosition()
     {

@@ -146,7 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f4271a820fc0a4abeb24d18fdb70fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
   stillOnCrate: 0
 --- !u!1 &7119094070264984063
 GameObject:
@@ -218,7 +217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390f6b166c1935e43ac34c0540e0e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
 --- !u!1 &7119094070646861496
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +403,7 @@ MonoBehaviour:
   isFacing: 0
   stopRotation: 0
   interactableObject: {fileID: 0}
+  nextLevel: {fileID: 0}
 --- !u!114 &7119094070646861501
 MonoBehaviour:
   m_ObjectHideFlags: 0
