@@ -69,15 +69,19 @@ public class GameManager : MonoBehaviour
     void OnPause()
     {
         //se premi il pulsante di pausa il tempo si ferma e il gameobject si attiva altrimenti succede il contrario
-        if(Time.timeScale == 0)
+        //se sto parlando con un npc non fa nulla perchè è già in pausa
+        if (NpcDialogue.isActive == false)
         {
-            Time.timeScale = 1;
-            pauseMenu.gameObject.SetActive(false);
-        }
-        else
-        {
-            Time.timeScale = 0;
-            pauseMenu.gameObject.SetActive(true);
+            if (Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+                pauseMenu.gameObject.SetActive(false);
+            }
+            else
+            {
+                Time.timeScale = 0;
+                pauseMenu.gameObject.SetActive(true);
+            }
         }
     }
 

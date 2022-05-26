@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,6 +54,16 @@ public class Player : MonoBehaviour
         {
             BreakColumn();
             GoNextLevel();
+            DialogueInteraction();
+        }
+    }
+
+    private void DialogueInteraction()
+    {
+        //se il gioco è in pausa non puoi interagire con l'npc
+        if (interactableObject != null && interactableObject.GetComponent<NpcDialogue>() != null && !GameManager.pauseMenu.isActiveAndEnabled)
+        {
+            interactableObject.GetComponent<NpcDialogue>().DialogueInteraction();
         }
     }
 
