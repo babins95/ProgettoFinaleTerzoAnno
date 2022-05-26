@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
 
     void GoNextLevel()
     {
-        if(interactableObject != null && interactableObject.GetComponent<NextLevel>() != null)
+        if (interactableObject != null && interactableObject.GetComponent<NextLevel>() != null)
         {
             interactableObject.GetComponent<NextLevel>().GoNextLevel();
         }
@@ -89,15 +89,15 @@ public class Player : MonoBehaviour
     //vai avanti al prossimo checkpoint, fino all'ultimo della scena
     void OnSkip()
     {
-        if(gameManager.currentLevel < gameManager.spawnGroup.transform.childCount-1)
+        if (gameManager.currentLevel < gameManager.nextLevelGroup.transform.childCount - 1)
         {
-            int skipLevel = gameManager.currentLevel += 1;
+            int skipLevel = gameManager.currentLevel + 1;
             PlayerPrefs.SetInt("saved", 1);
             PlayerPrefs.SetInt("levelReached", skipLevel);
-            PlayerPrefs.SetFloat("xChild", gameManager.spawnGroup.transform.GetChild(skipLevel).GetChild(0).position.x);
-            PlayerPrefs.SetFloat("yChild", gameManager.spawnGroup.transform.GetChild(skipLevel).GetChild(0).position.y);
-            PlayerPrefs.SetFloat("xAdult", gameManager.spawnGroup.transform.GetChild(skipLevel).GetChild(1).position.x);
-            PlayerPrefs.SetFloat("yAdult", gameManager.spawnGroup.transform.GetChild(skipLevel).GetChild(1).position.y);
+            PlayerPrefs.SetFloat("xChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(0).position.x);
+            PlayerPrefs.SetFloat("yChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(0).position.y);
+            PlayerPrefs.SetFloat("xAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(1).position.x);
+            PlayerPrefs.SetFloat("yAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(1).position.y);
             PlayerPrefs.Save();
             gameManager.ResetRoom();
         }
@@ -106,15 +106,28 @@ public class Player : MonoBehaviour
     //vai indietro di un checkpoint, fino al primo della scena
     void OnBack()
     {
-        if(gameManager.currentLevel >= 1)
+        if (gameManager.currentLevel >= 2)
         {
-            int skipLevel = gameManager.currentLevel -= 1;
+            int skipLevel = gameManager.currentLevel - 1;
             PlayerPrefs.SetInt("saved", 1);
             PlayerPrefs.SetInt("levelReached", skipLevel);
-            PlayerPrefs.SetFloat("xChild", gameManager.spawnGroup.transform.GetChild(skipLevel).GetChild(0).position.x);
-            PlayerPrefs.SetFloat("yChild", gameManager.spawnGroup.transform.GetChild(skipLevel).GetChild(0).position.y);
-            PlayerPrefs.SetFloat("xAdult", gameManager.spawnGroup.transform.GetChild(skipLevel).GetChild(1).position.x);
-            PlayerPrefs.SetFloat("yAdult", gameManager.spawnGroup.transform.GetChild(skipLevel).GetChild(1).position.y);
+            PlayerPrefs.SetFloat("xChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(0).position.x);
+            PlayerPrefs.SetFloat("yChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(0).position.y);
+            PlayerPrefs.SetFloat("xAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(1).position.x);
+            PlayerPrefs.SetFloat("yAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(1).position.y);
+            PlayerPrefs.Save();
+            gameManager.ResetRoom();
+        }
+        else if(gameManager.currentLevel == 1)
+        {
+            int skipLevel = gameManager.currentLevel - 1;
+            PlayerPrefs.SetInt("saved", 1);
+            PlayerPrefs.SetInt("levelReached", skipLevel);
+            PlayerPrefs.SetFloat("xChild", gameManager.childSpawnPos.position.x);
+            PlayerPrefs.SetFloat("yChild", gameManager.childSpawnPos.position.y);
+            PlayerPrefs.SetFloat("xChild", gameManager.childSpawnPos.position.x);
+            PlayerPrefs.SetFloat("xAdult", gameManager.adultSpawnPos.position.x);
+            PlayerPrefs.SetFloat("yAdult", gameManager.adultSpawnPos.position.y);
             PlayerPrefs.Save();
             gameManager.ResetRoom();
         }

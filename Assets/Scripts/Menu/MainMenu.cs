@@ -11,9 +11,6 @@ public class MainMenu : MonoBehaviour
     public void NewGame()
     {
         PlayerPrefs.DeleteAll();
-        //PlayerPrefs.SetInt("saved", 0);
-        //PlayerPrefs.SetInt("levelReached", 0);
-        //PlayerPrefs.Save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Continue()

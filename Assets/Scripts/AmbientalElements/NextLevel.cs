@@ -2,41 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class NextLevel : MonoBehaviour
 {
     bool childIn;
     bool adultIn;
-    [SerializeField] float cameraLerpDelay;
-    [SerializeField] float cameraLerpSlow;
-    float timeElapsed;
-
     public bool changeScene;
-
-    public Transform newCameraPosition;
-    int newCameraPos;
-    public Camera camera;
-    bool moveCamera;
 
     public Transform newChildSpawn;
     public Transform newAdultSpawn;
-    [SerializeField] NextLevel newNextLevel;
 
     Child child;
     Adult adult;
-    [SerializeField] GameManager manager;
 
-    public int level;
+    [SerializeField] CinemachineVirtualCamera nextVCam;
+
+    int levelReached;
+
+    private void Start()
+    {
+        levelReached = PlayerPrefs.GetInt("levelReached");
+
+        if (levelReached > 0)
+        {
+            //a seconda di quale livello hai raggiunto attiva il corrispettivo prefab nel gruppo dei NextLevel
+            gameObject.transform.parent.transform.parent.GetChild(levelReached).gameObject.SetActive(true);
+            //ma spenge la NewCameraPosition, visto che si attiverà solo al passaggio di livello
+            gameObject.transform.parent.transform.parent.GetChild(levelReached).gameObject.transform.GetChild(2).gameObject.SetActive(false);
+            //attiva il livello precedente a quello attuale per avere la camera corrente 
+            gameObject.transform.parent.transform.parent.GetChild(levelReached - 1).gameObject.SetActive(true);
+        }
+
+        ChangeCamera(levelReached);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<Child>())
+        if (collision.GetComponentInParent<Child>())
         {
             childIn = true;
             child = collision.GetComponentInParent<Child>();
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
-        }     
-        if(collision.GetComponentInParent<Adult>())
+        }
+        if (collision.GetComponentInParent<Adult>())
         {
             adultIn = true;
             adult = collision.GetComponentInParent<Adult>();
@@ -80,9 +89,14 @@ public class NextLevel : MonoBehaviour
         }
         else
         {
-            if(childIn && adultIn)
+            if (childIn && adultIn)
             {
-                moveCamera = true;
+                //attiva il prossimo prefab NextLevel
+                gameObject.transform.parent.transform.parent.GetChild(levelReached + 1).gameObject.SetActive(true);
+                //e la NewCameraPosition legata al livello attuale
+                gameObject.transform.parent.GetChild(2).gameObject.SetActive(true);
+
+                ChangeCamera(levelReached + 1);
                 child.transform.position = newChildSpawn.position;
                 adult.transform.position = newAdultSpawn.position;
 
@@ -100,15 +114,10 @@ public class NextLevel : MonoBehaviour
     //terzo spawnPoint; livello 2-3
     private void ChangeSpawnPoint()
     {
-        newChildSpawn.parent.gameObject.SetActive(true);
         newChildSpawn.gameObject.GetComponent<SpawnPoint>().SavePosition();
         newAdultSpawn.gameObject.GetComponent<SpawnPoint>().SavePosition();
 
-        manager.childSpawnPos.parent.gameObject.SetActive(false);
-        manager.childSpawnPos = newChildSpawn;
-        manager.adultSpawnPos = newAdultSpawn;
-
-        PlayerPrefs.SetInt("levelReached", level);
+        PlayerPrefs.SetInt("levelReached", levelReached + 1);
 
         if (child != null)
         {
@@ -116,29 +125,8 @@ public class NextLevel : MonoBehaviour
         }
     }
 
-    //lerp della camera, quando arriva alla nuova posizione resetta i valori di controllo
-    //attiva il prossimo NextLevel e si disattiva
-    private void Update()
+    void ChangeCamera(int currentCamera)
     {
-        if (moveCamera)
-        {
-            Vector3 position = camera.transform.position;
-
-            if (timeElapsed < cameraLerpDelay)
-            {
-                position.x = Mathf.Lerp(camera.transform.position.x, newCameraPosition.position.x, timeElapsed / (cameraLerpDelay*cameraLerpSlow));
-                position.y = Mathf.Lerp(camera.transform.position.y, newCameraPosition.position.y, timeElapsed / (cameraLerpDelay*cameraLerpSlow));
-
-                camera.transform.position = position;
-                timeElapsed += Time.deltaTime;
-            }
-            else
-            {
-                timeElapsed = 0;
-                moveCamera = false;
-                newNextLevel.gameObject.SetActive(true);
-                gameObject.SetActive(false);
-            }
-        }
+        nextVCam.Priority += currentCamera;
     }
 }
