@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 74fb0aec08518a14585a210a7a153575
+guid: 77635691653f21240bc285c5871ea552
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -63,8 +63,11 @@ TextureImporter:
       213: 4028140826103853604
     second: tilemap terreno base bambino v3_19
   - first:
-      213: 1795044710706544618
-    second: tilemap terreno base bambino v3_22
+      213: -707735060408107655
+    second: tilemap terreno base bambino v3_20
+  - first:
+      213: -1048746229292075694
+    second: tilemap terreno base bambino v3_21
   - first:
       213: 7939104966952277903
     second: tilemap terreno base bambino v3_23
@@ -98,6 +101,9 @@ TextureImporter:
   - first:
       213: 4075334966497455040
     second: tilemap terreno base bambino v3_33
+  - first:
+      213: 9024258523316248679
+    second: tilemap terreno base bambino v3_34
   - first:
       213: -1723008953398411833
     second: tilemap terreno base bambino v3_35
@@ -176,6 +182,15 @@ TextureImporter:
   - first:
       213: 1596799556033880237
     second: tilemap terreno base bambino v3_60
+  - first:
+      213: 9023278192182987193
+    second: tilemap terreno base bambino v3_61
+  - first:
+      213: -6541879004440043140
+    second: tilemap terreno base bambino v3_62
+  - first:
+      213: -3296405547787499475
+    second: tilemap terreno base bambino v3_63
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -273,7 +288,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,7 +309,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,7 +330,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,7 +351,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,7 +372,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,7 +393,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,7 +414,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,7 +435,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,7 +456,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -462,7 +477,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -483,7 +498,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -499,12 +514,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_11
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2160
+        x: 7920
+        y: 2880
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -520,12 +535,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_12
       rect:
         serializedVersion: 2
-        x: 720
-        y: 2160
+        x: 8640
+        y: 2880
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -541,12 +556,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_13
       rect:
         serializedVersion: 2
-        x: 1440
+        x: 0
         y: 2160
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -562,12 +577,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_14
       rect:
         serializedVersion: 2
-        x: 2160
+        x: 720
         y: 2160
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -583,12 +598,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_15
       rect:
         serializedVersion: 2
-        x: 2880
+        x: 1440
         y: 2160
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -604,12 +619,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_16
       rect:
         serializedVersion: 2
-        x: 3600
-        y: 2159
+        x: 2160
+        y: 2160
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -625,12 +640,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_17
       rect:
         serializedVersion: 2
-        x: 4320
+        x: 2880
         y: 2160
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -646,12 +661,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_18
       rect:
         serializedVersion: 2
-        x: 5040
+        x: 3600
         y: 2160
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -667,12 +682,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_19
       rect:
         serializedVersion: 2
-        x: 5760
+        x: 4320
         y: 2160
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -685,22 +700,43 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap terreno base bambino v3_22
+      name: tilemap terreno base bambino v3_20
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1440
+        x: 5040
+        y: 2160
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aef7b9167a749e810800000000000000
-      internalID: 1795044710706544618
+      spriteID: 97df84956be9d26f0800000000000000
+      internalID: -707735060408107655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base bambino v3_21
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255f3876cda1271f0800000000000000
+      internalID: -1048746229292075694
       vertices: []
       indices: 
       edges: []
@@ -709,12 +745,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_23
       rect:
         serializedVersion: 2
-        x: 720
-        y: 1440
+        x: 7920
+        y: 2160
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -730,12 +766,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_24
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 1440
+        x: 8640
+        y: 2160
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -751,12 +787,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_25
       rect:
         serializedVersion: 2
-        x: 2160
+        x: 0
         y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -772,12 +808,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_26
       rect:
         serializedVersion: 2
-        x: 2880
+        x: 720
         y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -793,12 +829,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_27
       rect:
         serializedVersion: 2
-        x: 3600
+        x: 1440
         y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -814,12 +850,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_28
       rect:
         serializedVersion: 2
-        x: 4320
+        x: 2160
         y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -835,12 +871,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_29
       rect:
         serializedVersion: 2
-        x: 5040
+        x: 2880
         y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -856,12 +892,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_30
       rect:
         serializedVersion: 2
-        x: 5760
+        x: 3600
         y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -877,12 +913,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_31
       rect:
         serializedVersion: 2
-        x: 6480
+        x: 4320
         y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -898,12 +934,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_32
       rect:
         serializedVersion: 2
-        x: 7200
+        x: 5040
         y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -919,12 +955,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_33
       rect:
         serializedVersion: 2
-        x: 7920
+        x: 5760
         y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -937,15 +973,36 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap terreno base bambino v3_35
+      name: tilemap terreno base bambino v3_34
       rect:
         serializedVersion: 2
-        x: 0
-        y: 720
+        x: 6480
+        y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7606e8b705b9c3d70800000000000000
+      internalID: 9024258523316248679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base bambino v3_35
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -961,12 +1018,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_36
       rect:
         serializedVersion: 2
-        x: 720
-        y: 720
+        x: 7920
+        y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -982,12 +1039,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_37
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 720
+        x: 8640
+        y: 1440
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1003,12 +1060,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_38
       rect:
         serializedVersion: 2
-        x: 2160
+        x: 0
         y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1024,12 +1081,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_39
       rect:
         serializedVersion: 2
-        x: 2880
+        x: 720
         y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1045,12 +1102,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_40
       rect:
         serializedVersion: 2
-        x: 3600
+        x: 1440
         y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1066,12 +1123,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_41
       rect:
         serializedVersion: 2
-        x: 4320
+        x: 2160
         y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1087,12 +1144,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_42
       rect:
         serializedVersion: 2
-        x: 5040
+        x: 2880
         y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1108,12 +1165,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_43
       rect:
         serializedVersion: 2
-        x: 5760
+        x: 3600
         y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1129,12 +1186,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_44
       rect:
         serializedVersion: 2
-        x: 6480
+        x: 4320
         y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1150,12 +1207,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_45
       rect:
         serializedVersion: 2
-        x: 7200
+        x: 5040
         y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1171,12 +1228,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_46
       rect:
         serializedVersion: 2
-        x: 7920
+        x: 5760
         y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1192,12 +1249,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_47
       rect:
         serializedVersion: 2
-        x: 8640
+        x: 6480
         y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1213,12 +1270,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_48
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 7200
+        y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1234,12 +1291,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_49
       rect:
         serializedVersion: 2
-        x: 720
-        y: 0
+        x: 7920
+        y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1255,12 +1312,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_50
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 0
+        x: 8640
+        y: 720
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1276,12 +1333,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_51
       rect:
         serializedVersion: 2
-        x: 2160
+        x: 0
         y: 0
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1297,12 +1354,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_52
       rect:
         serializedVersion: 2
-        x: 2880
+        x: 720
         y: 0
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1318,12 +1375,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_53
       rect:
         serializedVersion: 2
-        x: 3600
+        x: 1440
         y: 0
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1339,12 +1396,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_54
       rect:
         serializedVersion: 2
-        x: 4320
+        x: 2160
         y: 0
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1360,12 +1417,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_55
       rect:
         serializedVersion: 2
-        x: 5040
+        x: 2880
         y: 0
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1381,12 +1438,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_56
       rect:
         serializedVersion: 2
-        x: 5760
+        x: 3600
         y: 0
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1402,12 +1459,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_57
       rect:
         serializedVersion: 2
-        x: 6480
+        x: 4320
         y: 0
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1423,12 +1480,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_58
       rect:
         serializedVersion: 2
-        x: 7200
+        x: 5040
         y: 0
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1444,12 +1501,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_59
       rect:
         serializedVersion: 2
-        x: 7920
+        x: 5760
         y: 0
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1465,12 +1522,12 @@ TextureImporter:
       name: tilemap terreno base bambino v3_60
       rect:
         serializedVersion: 2
-        x: 8640
+        x: 6480
         y: 0
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1478,6 +1535,69 @@ TextureImporter:
       bones: []
       spriteID: da0a6ea6cb8f82610800000000000000
       internalID: 1596799556033880237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base bambino v3_61
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 0
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9889a55bf193d70800000000000000
+      internalID: 9023278192182987193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base bambino v3_62
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 0
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71e3c0b4b39635a0800000000000000
+      internalID: -6541879004440043140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base bambino v3_63
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 0
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d28cf709e90d042d0800000000000000
+      internalID: -3296405547787499475
       vertices: []
       indices: 
       edges: []

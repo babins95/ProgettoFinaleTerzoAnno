@@ -1,4 +1,4 @@
-ï»¿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,9 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static Canvas pauseMenu;
-    //di base Ã¨ nella versione giovane, quindi se swap = true ha cambiato ad adolescente
+    //di base è nella versione giovane, quindi se swap = true ha cambiato ad adolescente
     public static bool swap = false;
-
     public Transform childSpawnPos;
     public Transform adultSpawnPos;
 
@@ -18,35 +17,38 @@ public class GameManager : MonoBehaviour
     float scaleTarget = 0.5f;
 
     [HideInInspector]
-    public bool falling;
+    public bool falling;   
     [HideInInspector]
     public bool onCrate;
     [SerializeField] int fallTimer = 5;
 
-
+    //public SwitchCounter SwitchCounter;
     public GameObject child;
     public GameObject adult;
-    public float trasparenza;
 
+    public float trasparenza;
     Scene currentScene;
 
+    [SerializeField] Camera camera;
+    public GameObject spawnGroup;
     public GameObject nextLevelGroup;
+    public GameObject cameraPositionGroup;
 
-    //per ora Ã¨ public per le funzioni di debug del player
+    //per ora è public per le funzioni di debug del player
     public int currentLevel;
 
     void Start()
     {
         currentLevel = PlayerPrefs.GetInt("levelReached");
         currentScene = SceneManager.GetActiveScene();
-        playerScale.x = child.transform.localScale.x;
-        playerScale.y = child.transform.localScale.y;
+        playerScale.x= child.transform.localScale.x;
+        playerScale.y= child.transform.localScale.y;
 
         PlayerPrefs.SetString("lastScene", currentScene.name);
         PlayerPrefs.Save();
 
         pauseMenu = PauseMenu.thisPauseMenu;
-        //se Ã¨ presente un file di salvataggio
+        //se è presente un file di salvataggio
         if (PlayerPrefs.GetInt("saved") == 1)
         {
             //setta la posizione del giocatore a quella dell'ultimo checkpoint toccato
@@ -60,20 +62,26 @@ public class GameManager : MonoBehaviour
         }
 
         TurnOff(adult);
+        //childSpawnPos.gameObject.GetComponent<SpawnPoint>().SavePosition();
+        //adultSpawnPos.gameObject.GetComponent<SpawnPoint>().SavePosition();
     }
 
     void OnPause()
     {
         //se premi il pulsante di pausa il tempo si ferma e il gameobject si attiva altrimenti succede il contrario
-        if (Time.timeScale == 0)
+        //se sto parlando con un npc non fa nulla perchè è già in pausa
+        if (NpcDialogue.isActive == false)
         {
-            Time.timeScale = 1;
-            pauseMenu.gameObject.SetActive(false);
-        }
-        else
-        {
-            Time.timeScale = 0;
-            pauseMenu.gameObject.SetActive(true);
+            if (Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+                pauseMenu.gameObject.SetActive(false);
+            }
+            else
+            {
+                Time.timeScale = 0;
+                pauseMenu.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -87,6 +95,11 @@ public class GameManager : MonoBehaviour
         child.transform.position = new Vector3(childX, childY, 0);
         adult.transform.position = new Vector3(adultX, adultY, 0);
 
+        //a seconda del currentLevel attiva il corrispettivo spawnPoint e ci sposta la telecamera
+        spawnGroup.transform.GetChild(currentLevel).gameObject.SetActive(true);
+        nextLevelGroup.transform.GetChild(currentLevel).gameObject.SetActive(true);
+        camera.transform.position = cameraPositionGroup.transform.GetChild(currentLevel).transform.position;
+
         //debug, da togliere poi
         child.GetComponentInParent<Player>().nextLevel = nextLevelGroup.transform.GetChild(currentLevel).GetComponent<NextLevel>();
     }
@@ -94,9 +107,9 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (falling && !onCrate)
+        if(falling && !onCrate)
         {
-            if (fallTimer > 0)
+            if(fallTimer > 0)
             {
                 fallTimer--;
             }
@@ -117,7 +130,7 @@ public class GameManager : MonoBehaviour
     void Fall(GameObject fallingPlayer)
     {
         //se stai cadendo interrompo il movimento e disattivo l'actionmap
-        //togliendo al giocatore la possibilitï¿½ di agire
+        //togliendo al giocatore la possibilità di agire
         fallingPlayer.GetComponent<Player>().moveVector = Vector2.zero;
         fallingPlayer.GetComponent<Player>().GetComponent<PlayerInput>().DeactivateInput();
         //e diminuisco i valore della scale fino ad arrivare alla dimensione
@@ -136,7 +149,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //oltre a quello che giï¿½ faceva in player lo swap ora disattiva controlli e collisione
+    //oltre a quello che già faceva in player lo swap ora disattiva controlli e collisione
     //della parte non attiva e la mette trasparente
     //tolgo anche il playerEye della versione spenta
     public void Swap()
@@ -203,4 +216,3 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentScene.name);
     }
 }
-
