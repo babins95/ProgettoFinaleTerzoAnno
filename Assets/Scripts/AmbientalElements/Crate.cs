@@ -9,14 +9,17 @@ public class Crate : MonoBehaviour
     Rigidbody2D rb;
     public bool pickedUp;
 
-    bool onCratere;
+    bool onHole;
     bool ignoreCollision;
+
+    GameObject holeColliding;
 
     private void Start()
     {
         joint = GetComponent<FixedJoint2D>();
         rb = GetComponent<Rigidbody2D>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.GetComponentInParent<Adult>() && !ignoreCollision)
@@ -24,22 +27,23 @@ public class Crate : MonoBehaviour
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
 
-        if(collision.GetComponent<Cratere>())
+        if(collision.GetComponent<Hole>())
         {
-            onCratere = true;
+            onHole = true;
+            holeColliding = collision.gameObject;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponentInParent<Adult>() && !pickedUp)
+        if (collision.GetComponentInParent<Adult>() && !pickedUp && !ignoreCollision)
         {
             collision.GetComponentInParent<Player>().interactableObject = null;
         }
 
-        if (collision.GetComponent<Cratere>())
+        if (collision.GetComponent<Hole>())
         {
-            onCratere = false;
+            onHole = false;
         }
     }
 
@@ -86,8 +90,10 @@ public class Crate : MonoBehaviour
         puttingDown.GetComponent<Player>().interactableObject = null;
 
         //se posi la cassa sopra un buco ci puoi camminare sopra e non la puoi più prendere
-        if(onCratere)
+        if(onHole && !holeColliding.GetComponent<Hole>().filled)
         {
+            holeColliding.GetComponent<Hole>().filled = true;
+            gameObject.transform.position = holeColliding.GetComponent<Renderer>().bounds.center;
             ignoreCollision = true;
             gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         }

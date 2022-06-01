@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector]
     public bool falling;
-    [HideInInspector]
-    public bool onCrate;
     [SerializeField] int fallTimer = 5;
 
 
@@ -98,7 +96,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (falling && !onCrate)
+        if (falling)
         {
             if (fallTimer > 0)
             {
