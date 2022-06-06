@@ -20,4 +20,9 @@ public class PlayerEye : MonoBehaviour
     {
         player.isFacing = false;
     }
+
+    public void SetPosition(Vector3 newPosition)
+    {
+        transform.localPosition = newPosition;
+    }
 }

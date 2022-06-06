@@ -20,6 +20,10 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public GameObject interactableObject;
 
+    Animator animator;
+    Vector3 moveDirection;
+    PlayerEye playerEye;
+
     //debug, da togliere poi
     public NextLevel nextLevel;
 
@@ -27,6 +31,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        playerEye = GetComponentInChildren<PlayerEye>();
     }
 
     // Update is called once per frame
@@ -36,11 +42,12 @@ public class Player : MonoBehaviour
 
         //questo fa schifo ed è temporaneo, quando ci saranno le animazioni si farà
         //il flip con quelle
-        if (moveVector != Vector2.zero && !stopRotation)
-        {
-            float angle = Mathf.Atan2(moveVector.y, moveVector.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
+        /* if (moveVector != Vector2.zero && !stopRotation)
+         {
+             float angle = Mathf.Atan2(moveVector.y, moveVector.x) * Mathf.Rad2Deg;
+             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+         }*/
+        Animate(moveVector.x, moveVector.y);
     }
 
     void OnMove(InputValue moveValue)
@@ -81,6 +88,52 @@ public class Player : MonoBehaviour
         {
             //animazione
             interactableObject.GetComponentInParent<Column>().BreakDownColumn();
+        }
+    }
+
+    void Animate(float x, float y)
+    {
+        if(moveVector != Vector2.zero)
+        {
+            animator.SetBool("moving", true);
+        }
+        else
+        {
+            animator.SetBool("moving", false);
+        }
+
+        moveDirection = new Vector3(x, 0, y);
+
+        if(moveDirection.magnitude > 1f)
+        {
+            moveDirection = moveDirection.normalized;
+        }
+
+        moveDirection = transform.InverseTransformDirection(moveDirection);
+
+        animator.SetFloat("moveX", moveVector.x);
+        animator.SetFloat("moveY", moveVector.y);
+
+        MovePlayerEye();
+    }
+
+    void MovePlayerEye()
+    {
+        if (playerEye != null)
+        {
+            if (animator.GetFloat("moveX") == 0 && animator.GetFloat("moveY") == 1
+                || animator.GetFloat("moveX") == 0 && animator.GetFloat("moveY") == -1)
+            {
+                playerEye.SetPosition(new Vector3(moveVector.x, moveVector.y * 0.75f, 0));
+            }
+            else if (animator.GetFloat("moveX") == 1 && animator.GetFloat("moveY") == 0)
+            {
+                playerEye.SetPosition(new Vector3(0, moveVector.y, 0));
+            }
+            else if (animator.GetFloat("moveX") == -1 && animator.GetFloat("moveY") == 0)
+            {
+                playerEye.SetPosition(new Vector3(moveVector.x * 0.75f, moveVector.y, 0));
+            }
         }
     }
 
