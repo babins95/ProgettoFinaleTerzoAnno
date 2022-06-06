@@ -196,7 +196,7 @@ public class GameManager : MonoBehaviour
     void PutDownCrate(GameObject puttingDown)
     {
         puttingDown.GetComponent<Player>().interactableObject.GetComponent<Crate>().CrateInteraction(puttingDown);
-        puttingDown.GetComponent<Player>().stopRotation = false;
+        puttingDown.GetComponent<Player>().stopAnimation = false;
     }
 
     public void ResetRoom()

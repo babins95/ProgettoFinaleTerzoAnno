@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public bool isFacing;
     [HideInInspector]
-    public bool stopRotation;
+    public bool stopAnimation;
     [HideInInspector]
     public GameObject interactableObject;
 
@@ -47,7 +47,10 @@ public class Player : MonoBehaviour
              float angle = Mathf.Atan2(moveVector.y, moveVector.x) * Mathf.Rad2Deg;
              transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
          }*/
-        Animate(moveVector.x, moveVector.y);
+        if (!stopAnimation)
+        {
+            Animate(moveVector.x, moveVector.y);
+        }
     }
 
     void OnMove(InputValue moveValue)
