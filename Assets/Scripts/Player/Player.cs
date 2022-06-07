@@ -127,7 +127,7 @@ public class Player : MonoBehaviour
             if (animator.GetFloat("moveX") == 0 && animator.GetFloat("moveY") == 1
                 || animator.GetFloat("moveX") == 0 && animator.GetFloat("moveY") == -1)
             {
-                playerEye.SetPosition(new Vector3(moveVector.x, moveVector.y * 0.75f, 0));
+                playerEye.SetPosition(new Vector3(-0.4f, moveVector.y * 0.75f));
             }
             else if (animator.GetFloat("moveX") == 1 && animator.GetFloat("moveY") == 0)
             {
