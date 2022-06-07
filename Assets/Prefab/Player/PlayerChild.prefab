@@ -102,7 +102,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6138170395425225782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.361, y: -0.381, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7119094070646861502}
@@ -172,7 +172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7119094070264984063}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7119094070646861502}
@@ -400,8 +400,9 @@ MonoBehaviour:
   moveVector: {x: 0, y: 0}
   speed: 6
   isFacing: 0
-  stopRotation: 0
+  stopAnimation: 0
   interactableObject: {fileID: 0}
+  offset: 0.75
   nextLevel: {fileID: 0}
 --- !u!114 &7119094070646861501
 MonoBehaviour:
