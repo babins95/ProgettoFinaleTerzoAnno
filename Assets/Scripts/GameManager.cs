@@ -180,7 +180,6 @@ public class GameManager : MonoBehaviour
         Color newColor = toTurnOff.GetComponent<SpriteRenderer>().color;
         newColor.a = trasparenza;
         toTurnOff.GetComponent<SpriteRenderer>().color = newColor;
-        toTurnOff.transform.GetChild(0).gameObject.SetActive(false);
     }
 
     void TurnOn(GameObject toTurnOn)
@@ -190,7 +189,6 @@ public class GameManager : MonoBehaviour
         Color newColor = toTurnOn.GetComponent<SpriteRenderer>().color;
         newColor.a = 1f;
         toTurnOn.GetComponent<SpriteRenderer>().color = newColor;
-        toTurnOn.transform.GetChild(0).gameObject.SetActive(true);
     }
 
     void PutDownCrate(GameObject puttingDown)

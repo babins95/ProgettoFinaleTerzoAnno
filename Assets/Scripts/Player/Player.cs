@@ -109,39 +109,25 @@ public class Player : MonoBehaviour
         animator.SetFloat("moveX", moveVector.x);
         animator.SetFloat("moveY", moveVector.y);
 
-        MovePlayerEye();
-        MovePlayerBack();
+        MoveCollider(playerEye, playerBack);
     }
 
-    void MovePlayerEye()
-    {
-        if (animator.GetFloat("moveY") != 0)
-        {
-            playerEye.SetPosition(new Vector3(-offset/2, moveVector.y * offset, 0));
-        }
-        else if (animator.GetFloat("moveX") == 1)
-        {
-            playerEye.SetPosition(Vector3.zero);
-        }
-        else if (animator.GetFloat("moveX") == -1)
-        {
-            playerEye.SetPosition(new Vector3(moveVector.x * offset, 0, 0));
-        }
-    }
-
-    void MovePlayerBack()
+    void MoveCollider(PlayerEye eye, PlayerBack back)
     {
         if(animator.GetFloat("moveY") != 0)
         {
-            playerBack.SetPosition(new Vector3(-offset/2, -moveVector.y * offset, 0));
+            eye.SetPosition(new Vector3(0, moveVector.y, 0));
+            back.SetPosition(new Vector3(0, -moveVector.y, 0));
         }
         else if(animator.GetFloat("moveX") == 1)
         {
-            playerBack.SetPosition(new Vector3(-offset, 0, 0));
+            eye.SetPosition(Vector3.zero);
+            back.SetPosition(new Vector3(-0.75f, 0, 0));
         }
         else if(animator.GetFloat("moveX") == -1)
         {
-            playerBack.SetPosition(Vector3.zero);
+            eye.SetPosition(new Vector3(-0.75f, 0, 0));
+            back.SetPosition(Vector3.zero);
         }
     }
 

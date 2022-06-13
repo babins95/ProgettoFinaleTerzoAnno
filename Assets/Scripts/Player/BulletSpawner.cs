@@ -23,12 +23,15 @@ public class BulletSpawner : MonoBehaviour
     }
     void OnShoot()
     {
-        if (timer >= bulletFireRate)
+        if (!GameManager.swap)
         {
-            BulletPrefab.bulletAngle = Vector2.right;
-            ChildBullet newBullet = Instantiate(BulletPrefab);
-            newBullet.transform.position = this.transform.position;
-            timer = 0;
+            if (timer >= bulletFireRate)
+            {
+                BulletPrefab.bulletAngle = Vector2.right;
+                ChildBullet newBullet = Instantiate(BulletPrefab);
+                newBullet.transform.position = this.transform.position;
+                timer = 0;
+            }
         }
     }
 }
