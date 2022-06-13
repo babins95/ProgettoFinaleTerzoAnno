@@ -122,11 +122,11 @@ public class Player : MonoBehaviour
         else if(animator.GetFloat("moveX") == 1)
         {
             eye.SetPosition(Vector3.zero);
-            back.SetPosition(new Vector3(-0.75f, 0, 0));
+            back.SetPosition(new Vector3(-offset, 0, 0));
         }
         else if(animator.GetFloat("moveX") == -1)
         {
-            eye.SetPosition(new Vector3(-0.75f, 0, 0));
+            eye.SetPosition(new Vector3(-offset, 0, 0));
             back.SetPosition(Vector3.zero);
         }
     }
