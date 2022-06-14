@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerEye : MonoBehaviour
 {
     Player player;
+    public float posX;
+    public float posY;
 
     void Start()
     {
-       player = GetComponentInParent<Player>();
+        posX = transform.localPosition.x;
+        player = GetComponentInParent<Player>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,10 +20,5 @@ public class PlayerEye : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         player.isFacing = false;
-    }
-
-    public void SetPosition(Vector3 newPosition)
-    {
-        transform.localPosition = newPosition;
     }
 }

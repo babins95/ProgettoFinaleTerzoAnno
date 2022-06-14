@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerBack : MonoBehaviour
 {
-    public void SetPosition(Vector3 newPosition)
+    public float posX;
+    public float posY;
+
+    void Start()
     {
-        transform.localPosition = newPosition;
+        posX = transform.localPosition.x;
     }
 }

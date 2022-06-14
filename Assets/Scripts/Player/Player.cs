@@ -20,8 +20,6 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public GameObject interactableObject;
 
-    [SerializeField] float offset = 0.75f;
-
     Animator animator;
     Vector3 moveDirection;
     PlayerEye playerEye;
@@ -114,20 +112,25 @@ public class Player : MonoBehaviour
 
     void MoveCollider(PlayerEye eye, PlayerBack back)
     {
-        if(animator.GetFloat("moveY") != 0)
+        if (animator.GetFloat("moveY") == 1)
         {
-            eye.SetPosition(new Vector3(0, moveVector.y, 0));
-            back.SetPosition(new Vector3(0, -moveVector.y, 0));
+            back.transform.localPosition = new Vector3(0, -eye.posY, 0);
+            eye.transform.localPosition = new Vector3(0, -back.posY, 0);
+        }
+        else if (animator.GetFloat("moveY") == -1)
+        {
+            back.transform.localPosition = new Vector3(0, eye.posY, 0);
+            eye.transform.localPosition = new Vector3(0, back.posY, 0);
         }
         else if(animator.GetFloat("moveX") == 1)
         {
-            eye.SetPosition(Vector3.zero);
-            back.SetPosition(new Vector3(-offset, 0, 0));
+            back.transform.localPosition = new Vector3(back.posX, 0, 0);
+            eye.transform.localPosition = new Vector3(eye.posX, 0, 0);
         }
         else if(animator.GetFloat("moveX") == -1)
         {
-            eye.SetPosition(new Vector3(-offset, 0, 0));
-            back.SetPosition(Vector3.zero);
+            back.transform.localPosition = new Vector3(-back.posX, 0, 0);
+            eye.transform.localPosition = new Vector3(-eye.posX, 0, 0);
         }
     }
 

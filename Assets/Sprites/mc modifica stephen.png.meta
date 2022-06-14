@@ -103,12 +103,12 @@ TextureImporter:
       name: mc modifica stephen_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 269
         y: 0
-        width: 930
+        width: 661
         height: 2000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,7 +129,7 @@ TextureImporter:
         width: 930
         height: 2000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,10 +147,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1860
         y: 0
-        width: 930
+        width: 723
         height: 2000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
