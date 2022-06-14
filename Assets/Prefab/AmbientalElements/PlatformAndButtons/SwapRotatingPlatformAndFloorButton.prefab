@@ -430,6 +430,7 @@ GameObject:
   - component: {fileID: 4618889255784708443}
   - component: {fileID: 4618889255784708442}
   - component: {fileID: 4618889255784708445}
+  - component: {fileID: 4114866129857582557}
   m_Layer: 0
   m_Name: RotatingPlatform (1)
   m_TagString: Untagged
@@ -546,6 +547,18 @@ MonoBehaviour:
   rotationAngle: 90
   timer: 2
   swappedPlatform: {fileID: 4618889255393828380}
+--- !u!114 &4114866129857582557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618889255784708444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98e177624d6171479d396535c1cf558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4618889256202564664
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +571,7 @@ GameObject:
   - component: {fileID: 4618889256202564663}
   - component: {fileID: 4618889256202564662}
   - component: {fileID: 4618889256202564665}
+  - component: {fileID: 2484758218848558512}
   m_Layer: 0
   m_Name: RotatingPlatform (1)
   m_TagString: Untagged
@@ -674,3 +688,15 @@ MonoBehaviour:
   rotationAngle: 90
   timer: 2
   swappedPlatform: {fileID: 4618889256245048530}
+--- !u!114 &2484758218848558512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618889256202564664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98e177624d6171479d396535c1cf558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
