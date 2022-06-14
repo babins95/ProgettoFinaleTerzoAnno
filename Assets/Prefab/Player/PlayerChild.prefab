@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2296716612713513303}
   - component: {fileID: 5310591355999457687}
   - component: {fileID: 479358528121329238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 828647873410291288}
   - component: {fileID: 1605582698163855366}
   - component: {fileID: 8758430725730076968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 7119094070264984062}
   - component: {fileID: 7119094070264984061}
   - component: {fileID: 7119094070264984060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 7119094070646861500}
   - component: {fileID: 7119094070646861501}
   - component: {fileID: 4316916717733470566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerChild
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1658665, y: 0.022763431}
+  m_Offset: {x: 0.16866577, y: -0.66305447}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -331,7 +331,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43009782, y: 1.0914732}
+  m_Size: {x: 0.301332, y: 0.13412762}
   m_EdgeRadius: 0
 --- !u!50 &7119094070646861474
 Rigidbody2D:
@@ -352,7 +352,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7119094070646861475
 MonoBehaviour:

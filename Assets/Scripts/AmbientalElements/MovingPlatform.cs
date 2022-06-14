@@ -55,21 +55,5 @@ public class MovingPlatform : MonoBehaviour
     }
     //quando il player entra a contatto con la piattaforma diventa figlio del figlio della piattaforma
     //in modo tale che non scali ma segua la posizione della piattaforma
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.GetComponent<Player>())
-        {
-            collision.transform.parent = gameObject.transform.GetChild(0).transform;
-            collision.transform.rotation = Quaternion.Euler(Vector3.zero);
-        }
-    }
-    //all'uscita tolgo la parentela e resetto la rotazione
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.GetComponent<Player>())
-        {
-            collision.transform.parent = null;
-            collision.transform.rotation = Quaternion.Euler(Vector3.zero);
-        }
-    }
+    
 }
