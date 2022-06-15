@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Mirror
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -16,9 +15,9 @@ TagManager:
   - Platforms
   - Player
   - ChildBullet
-  - 
-  - 
-  - 
+  - Mirror
+  - BlockLaser
+  - Refract
   - 
   - 
   - 
