@@ -19,8 +19,10 @@ public class LaserBeam
     //dizionario per eventuali differenti materiali per avere differenti rifrazioni
     Dictionary<string, float> refractMaterials = new Dictionary<string, float>()
     {
+        //più grande il float più grande l'angolo di rifrazione
         {"Air", 1f },
-        {"Glass", 1.5f }
+        {"Glass", 1.5f },
+        {"Crystal", 2.1f }
     };
 
     public LaserBeam(Vector2 pos, Vector2 dir, Material material, float range)
@@ -84,7 +86,6 @@ public class LaserBeam
             laserIndexes.Add(pos);
 
             Vector3 newPos1 = new Vector3(pos.x + (0.01f * direction.x), pos.y + (0.01f * direction.y));
-
             float n1 = refractMaterials["Air"];
             //questo funziona solo se il nome del gameObject è lo stesso interno al dictionary
             float n2 = refractMaterials[hit.collider.name];
@@ -93,7 +94,14 @@ public class LaserBeam
             Vector3 incidentDir = direction;
 
             Vector3 refractedVector = Refract(n1, n2, norm, incidentDir);
+            //da togliere se si mette la seconda rifrazione
+            CastRay(newPos1, refractedVector, laser);
 
+            //questa parte in teoria servirebbe per fare la seconda rifrazione quando il laser
+            //esce dall'oggetto, ma non funziona come dovrebbe
+            //se vuoi provare basta scommentarla e togliere il CastRay qui sopra
+            //--------------------------------------------------------------------//
+            /*
             //una volta presa la rifrazione d'ingresso vado a calcolare quella d'uscita
             Ray ray1 = new Ray(newPos1, refractedVector);
             Vector3 newRayPos = ray1.GetPoint(1.5f);
@@ -101,7 +109,7 @@ public class LaserBeam
             Ray ray2 = new Ray(newRayPos, -refractedVector);
             RaycastHit2D hit2 = Physics2D.Raycast(newRayPos, -refractedVector, 1.6f);
 
-            if(hit2)
+            if (hit2)
             {
                 laserIndexes.Add(hit2.point);
             }
@@ -110,6 +118,8 @@ public class LaserBeam
 
             Vector3 refractedVector2 = Refract(n2, n1, -hit2.normal, refractedVector);
             CastRay(hit2.point, refractedVector2, laser);
+            */
+            //--------------------------------------------------------------------//
         }
         else
         {
