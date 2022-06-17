@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3822477667056697107}
   - component: {fileID: 3822477667056697100}
   - component: {fileID: 5649596532685786524}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RotatingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,6 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98e177624d6171479d396535c1cf558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &3822477667247264173
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3822477668283210185}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EmptyObjectForUnscaling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +233,7 @@ GameObject:
   - component: {fileID: 3822477668487752533}
   - component: {fileID: 3822477668487752534}
   - component: {fileID: 7219311097564060832}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RotatingPlatform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,6 +361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98e177624d6171479d396535c1cf558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &3822477668588256022
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3822477668588256021}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EmptyObjectForUnscaling
   m_TagString: Untagged
   m_Icon: {fileID: 0}

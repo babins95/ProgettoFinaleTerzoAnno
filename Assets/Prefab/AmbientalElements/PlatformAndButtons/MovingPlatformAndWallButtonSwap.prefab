@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2992115512066434376}
   - component: {fileID: 2992115512066434377}
   - component: {fileID: 1030292276566495063}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,6 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98e177624d6171479d396535c1cf558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2992115512391866666
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +159,7 @@ GameObject:
   - component: {fileID: 2992115512391866669}
   - component: {fileID: 2992115512391866668}
   - component: {fileID: 1739877088600196170}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,6 +289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98e177624d6171479d396535c1cf558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2992115512449075407
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2992115513587021813}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EmptyObjectForUnscaling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,7 +801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2992115513705282492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EmptyObjectForUnscaling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
