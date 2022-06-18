@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -24,6 +20,7 @@ public class Player : MonoBehaviour
     Vector3 moveDirection;
     PlayerEye playerEye;
     PlayerBack playerBack;
+    public BulletSpawner bulletSpawner;
 
     //debug, da togliere poi
     public NextLevel nextLevel;
@@ -91,7 +88,7 @@ public class Player : MonoBehaviour
 
     void Animate(float x, float y)
     {
-        if(moveVector != Vector2.zero)
+        if (moveVector != Vector2.zero)
         {
             animator.SetBool("moving", true);
         }
@@ -107,30 +104,50 @@ public class Player : MonoBehaviour
         animator.SetFloat("moveX", moveVector.x);
         animator.SetFloat("moveY", moveVector.y);
 
-        MoveCollider(playerEye, playerBack);
+        MoveCollider();
     }
 
-    void MoveCollider(PlayerEye eye, PlayerBack back)
+    void MoveCollider()
     {
         if (animator.GetFloat("moveY") == 1)
         {
-            back.transform.localPosition = new Vector3(0, -eye.posY, 0);
-            eye.transform.localPosition = new Vector3(0, -back.posY, 0);
+            playerBack.transform.localPosition = new Vector3(0, playerBack.posY, 0);
+            playerEye.transform.localPosition = new Vector3(0, playerEye.posY, 0);
+            if (bulletSpawner != null)
+            {
+                bulletSpawner.transform.localPosition = new Vector3(0, playerEye.posY, 0);
+                bulletSpawner.bulletDirection = Vector2.up;
+            }
         }
         else if (animator.GetFloat("moveY") == -1)
         {
-            back.transform.localPosition = new Vector3(0, eye.posY, 0);
-            eye.transform.localPosition = new Vector3(0, back.posY, 0);
+            playerBack.transform.localPosition = new Vector3(0, -playerBack.posY, 0);
+            playerEye.transform.localPosition = new Vector3(0, -playerEye.posY, 0);
+            if (bulletSpawner != null)
+            {
+                bulletSpawner.transform.localPosition = new Vector3(0, -playerEye.posY, 0);
+                bulletSpawner.bulletDirection = Vector2.down;
+            }
         }
-        else if(animator.GetFloat("moveX") == 1)
+        else if (animator.GetFloat("moveX") == 1)
         {
-            back.transform.localPosition = new Vector3(back.posX, 0, 0);
-            eye.transform.localPosition = new Vector3(eye.posX, 0, 0);
+            playerBack.transform.localPosition = new Vector3(playerBack.posX, 0, 0);
+            playerEye.transform.localPosition = new Vector3(playerEye.posX, 0, 0);
+            if (bulletSpawner != null)
+            {
+                bulletSpawner.transform.localPosition = new Vector3(bulletSpawner.posX, bulletSpawner.posY, 0);
+                bulletSpawner.bulletDirection = Vector2.right;
+            }
         }
-        else if(animator.GetFloat("moveX") == -1)
+        else if (animator.GetFloat("moveX") == -1)
         {
-            back.transform.localPosition = new Vector3(-back.posX, 0, 0);
-            eye.transform.localPosition = new Vector3(-eye.posX, 0, 0);
+            playerBack.transform.localPosition = new Vector3(-playerBack.posX, 0, 0);
+            playerEye.transform.localPosition = new Vector3(-playerEye.posX, 0, 0);
+            if (bulletSpawner != null)
+            {
+                bulletSpawner.transform.localPosition = new Vector3(-bulletSpawner.posX, bulletSpawner.posY, 0);
+                bulletSpawner.bulletDirection = Vector2.left;
+            }
         }
     }
 
@@ -155,10 +172,10 @@ public class Player : MonoBehaviour
             int skipLevel = gameManager.currentLevel + 1;
             PlayerPrefs.SetInt("saved", 1);
             PlayerPrefs.SetInt("levelReached", skipLevel);
-            PlayerPrefs.SetFloat("xChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(0).position.x);
-            PlayerPrefs.SetFloat("yChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(0).position.y);
-            PlayerPrefs.SetFloat("xAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(1).position.x);
-            PlayerPrefs.SetFloat("yAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(1).position.y);
+            PlayerPrefs.SetFloat("xChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(0).position.x);
+            PlayerPrefs.SetFloat("yChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(0).position.y);
+            PlayerPrefs.SetFloat("xAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(1).position.x);
+            PlayerPrefs.SetFloat("yAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(1).position.y);
             PlayerPrefs.Save();
             gameManager.ResetRoom();
         }
@@ -172,14 +189,14 @@ public class Player : MonoBehaviour
             int skipLevel = gameManager.currentLevel - 1;
             PlayerPrefs.SetInt("saved", 1);
             PlayerPrefs.SetInt("levelReached", skipLevel);
-            PlayerPrefs.SetFloat("xChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(0).position.x);
-            PlayerPrefs.SetFloat("yChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(0).position.y);
-            PlayerPrefs.SetFloat("xAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(1).position.x);
-            PlayerPrefs.SetFloat("yAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel-1).GetChild(1).GetChild(1).position.y);
+            PlayerPrefs.SetFloat("xChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(0).position.x);
+            PlayerPrefs.SetFloat("yChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(0).position.y);
+            PlayerPrefs.SetFloat("xAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(1).position.x);
+            PlayerPrefs.SetFloat("yAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(1).position.y);
             PlayerPrefs.Save();
             gameManager.ResetRoom();
         }
-        else if(gameManager.currentLevel == 1)
+        else if (gameManager.currentLevel == 1)
         {
             int skipLevel = gameManager.currentLevel - 1;
             PlayerPrefs.SetInt("saved", 1);

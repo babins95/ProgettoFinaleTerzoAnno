@@ -9,6 +9,7 @@ public class Child : MonoBehaviour
     private void Start()
     {
         player = gameObject.GetComponent<Player>();
+        player.bulletSpawner = GetComponentInChildren<BulletSpawner>();
     }
 
     void OnInteract()
