@@ -13,6 +13,10 @@ public class MovingPlatform : MonoBehaviour
 
     Vector3 nextPosition;
     //Per lo swap,metto la posizione della piattaforma a quella della piattaforma che era attiva prima
+    private void OnDisable()
+    {
+        GetComponentInChildren<Player>().transform.parent = swappedPlatform;
+    }
     private void OnEnable()
     {
         gameObject.transform.position = swappedPlatform.position;

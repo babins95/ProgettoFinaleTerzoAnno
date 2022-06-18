@@ -12,6 +12,10 @@ public class RotatingPlatform : MonoBehaviour
     public float timer;
     private float currentTimer;
     public Transform swappedPlatform;
+    private void OnDisable()
+    {
+        GetComponentInChildren<Player>().transform.parent = swappedPlatform;
+    }
     //Per lo swap,metto la posizione della piattaforma a quella della piattaforma che era attiva prima
     private void OnEnable()
     {
