@@ -2,17 +2,14 @@ using UnityEngine;
 
 public class Platforms : MonoBehaviour
 {
-    public LayerMask collisionLayer;
+    private LayerMask collisionLayer;
 
     //Quando il player entra a contatto con la piattaforma cambio il suo layer in modo che non senta il collider della tilemap,
     //Quando esce resetto tutto
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
     {
-        if (collision.GetComponent<Player>())
-        {
-            collisionLayer = collision.gameObject.layer;
-        }
+        collisionLayer = LayerMask.GetMask("Player");
     }
     private void OnTriggerStay2D(Collider2D collision)
     {

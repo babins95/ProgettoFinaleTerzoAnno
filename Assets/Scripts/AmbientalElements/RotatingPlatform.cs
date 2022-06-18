@@ -40,10 +40,6 @@ public class RotatingPlatform : MonoBehaviour
     {
         if (IsConnectedWithButton == true)
         {
-            if (isRotating == true)
-            {
-                Rotation();
-            }
             //alla fine del timer isRotating viene messo a true,
             //cambio l'angolo di destinazione e resetto il timer
             if (currentTimer >= timer)
@@ -65,13 +61,17 @@ public class RotatingPlatform : MonoBehaviour
                 currentTimer += Time.deltaTime;
                 isRotating = false;
             }
+            if (isRotating == true)
+            {
+                Rotation();
+            }
         }
     }
     //aumento l'angolo e setto il transform rotation di conseguenza
     private void Rotation()
     {
-        currentAngle += rotationSpeed * Time.deltaTime;
         transform.rotation = Quaternion.Euler(0, 0, currentAngle);
+        currentAngle += rotationSpeed * Time.deltaTime;
     }
     //quando il player entra a contatto con la piattaforma diventa figlio del figlio della piattaforma
     //in modo tale che non scali ma segua la posizione della piattaforma

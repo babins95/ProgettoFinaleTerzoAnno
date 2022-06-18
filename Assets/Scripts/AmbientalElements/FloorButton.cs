@@ -21,11 +21,11 @@ public class FloorButton : MonoBehaviour
         {
             if (buttonON == true)
             {
-                objectToChange.GetComponent<MovingPlatform>().IsConnectedWithButton = switchForActivatingPlatform;
+                objectToChange.GetComponent<MovingPlatform>().isConnectedWithFloorButton = switchForActivatingPlatform;
             }
             else if (buttonON == false)
             {
-                objectToChange.GetComponent<MovingPlatform>().IsConnectedWithButton = !switchForActivatingPlatform;
+                objectToChange.GetComponent<MovingPlatform>().isConnectedWithFloorButton = !switchForActivatingPlatform;
             }
         }
     }

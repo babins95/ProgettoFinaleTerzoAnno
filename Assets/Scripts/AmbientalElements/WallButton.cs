@@ -16,22 +16,6 @@ public class WallButton : MonoBehaviour
     void Update()
     {
         BlockRotating();
-        MovePlatform();
-    }
-    //Abilito o disabilito il movimento a seconda del tipo di interruttore
-    private void MovePlatform()
-    {
-        if (objectToChange.GetComponent<MovingPlatform>())
-        {
-            if (buttonON == true)
-            {
-                objectToChange.GetComponent<MovingPlatform>().IsConnectedWithButton = switchForActivatingPlatform;
-            }
-            else if (buttonON == false)
-            {
-                objectToChange.GetComponent<MovingPlatform>().IsConnectedWithButton = !switchForActivatingPlatform;
-            }
-        }
     }
 
     //Abilito o disabilito la rotazione a seconda del tipo di interruttore
@@ -55,6 +39,8 @@ public class WallButton : MonoBehaviour
         if (collision.GetComponent<ChildBullet>())
         {
             buttonON = !buttonON;
+            //con la piattaforma che si muove attivo semplicemente il movimento per poi disattivarlo nel MovingPlatform
+            objectToChange.GetComponent<MovingPlatform>().isConnectedWithWallButton = true;
         }
     }
 }
