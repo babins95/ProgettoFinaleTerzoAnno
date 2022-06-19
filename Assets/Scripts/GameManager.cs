@@ -176,7 +176,7 @@ public class GameManager : MonoBehaviour
     {
         toTurnOff.GetComponent<Player>().moveVector = Vector2.zero;
         toTurnOff.GetComponent<PlayerInput>().enabled = false;
-        //toTurnOff.GetComponent<BoxCollider2D>().enabled = false;
+        toTurnOff.GetComponent<BoxCollider2D>().isTrigger = true;
         Color newColor = toTurnOff.GetComponent<SpriteRenderer>().color;
         newColor.a = trasparenza;
         toTurnOff.GetComponent<SpriteRenderer>().color = newColor;
@@ -185,7 +185,7 @@ public class GameManager : MonoBehaviour
     void TurnOn(GameObject toTurnOn)
     {
         toTurnOn.GetComponent<PlayerInput>().enabled = true;
-        //toTurnOn.GetComponent<BoxCollider2D>().enabled = true;
+        toTurnOn.GetComponent<BoxCollider2D>().isTrigger = false;
         Color newColor = toTurnOn.GetComponent<SpriteRenderer>().color;
         newColor.a = 1f;
         toTurnOn.GetComponent<SpriteRenderer>().color = newColor;

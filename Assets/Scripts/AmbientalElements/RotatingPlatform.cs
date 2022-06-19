@@ -14,7 +14,10 @@ public class RotatingPlatform : MonoBehaviour
     public Transform swappedPlatform;
     private void OnDisable()
     {
-        GetComponentInChildren<Player>().transform.parent = swappedPlatform;
+        if (GetComponentInChildren<Player>())
+        {
+            GetComponentInChildren<Player>().transform.parent = swappedPlatform;
+        }
     }
     //Per lo swap,metto la posizione della piattaforma a quella della piattaforma che era attiva prima
     private void OnEnable()
@@ -79,5 +82,5 @@ public class RotatingPlatform : MonoBehaviour
     }
     //quando il player entra a contatto con la piattaforma diventa figlio del figlio della piattaforma
     //in modo tale che non scali ma segua la posizione della piattaforma
-    
+
 }

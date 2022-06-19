@@ -9,9 +9,9 @@ public class Platforms : MonoBehaviour
 
     private void Start()
     {
-        collisionLayer = LayerMask.GetMask("Player");
+        collisionLayer = 8;
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<Player>())
         {
