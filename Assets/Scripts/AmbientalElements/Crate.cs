@@ -26,8 +26,11 @@ public class Crate : MonoBehaviour
         {
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
+    }
 
-        if(collision.GetComponent<Hole>())
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<Hole>())
         {
             onHole = true;
             holeColliding = collision.gameObject;
