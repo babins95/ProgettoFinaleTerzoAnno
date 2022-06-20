@@ -14,14 +14,6 @@ public class Hole : MonoBehaviour
         collider = GetComponent<BoxCollider2D>();
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.GetComponent<PlayerBack>() && !filled)
-    //    {
-    //        manager.falling = true;
-    //    }
-    //}
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponent<Crate>())

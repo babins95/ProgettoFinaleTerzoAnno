@@ -10,10 +10,7 @@ public class Crate : MonoBehaviour
     BoxCollider2D coll;
     public bool pickedUp;
 
-    //bool onHole;
     bool ignoreCollision;
-
-   //GameObject holeColliding;
 
     Vector2 eyePos;
     public float range = 0.5f;
@@ -27,37 +24,24 @@ public class Crate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<Adult>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
+        if(collision.GetComponent<PlayerEye>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
         {
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //if (collision.gameObject.GetComponent<Hole>())
-        //{
-        //    onHole = true;
-        //    holeColliding = collision.gameObject;
-        //}
-    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponentInParent<Adult>() && !pickedUp && !ignoreCollision)
+        if (collision.GetComponent<PlayerEye>() && !pickedUp && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
         {
             collision.GetComponentInParent<Player>().interactableObject = null;
         }
-
-        //if (collision.GetComponent<Hole>())
-        //{
-        //    onHole = false;
-        //}
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<Adult>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
+        if(collision.GetComponent<PlayerEye>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
         {
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
@@ -95,6 +79,7 @@ public class Crate : MonoBehaviour
         else
         {
             //suono del "non puoi"
+            Debug.Log("NO!");
         }
     }
 

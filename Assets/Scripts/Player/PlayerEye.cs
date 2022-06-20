@@ -25,17 +25,11 @@ public class PlayerEye : MonoBehaviour
             onHole = true;
             holeColliding = collision.gameObject;
         }
-
-        //if(collision.gameObject.layer == 13)
-        //{
-        //    player.obstacleAhead = true;
-        //}
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         player.isFacing = false;
-        //player.obstacleAhead = false;
 
         if (collision.GetComponent<Hole>())
         {

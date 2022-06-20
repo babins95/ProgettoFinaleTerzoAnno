@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 5538565781074671630}
   - component: {fileID: 4852366436140821908}
   - component: {fileID: 4126927566862713711}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: ObstacleCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093213515568281967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7119094070646861502}
@@ -124,7 +124,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.33607817, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -135,7 +135,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2912416, y: 0.4845395}
+  m_Size: {x: 0.963398, y: 0.4845395}
   m_EdgeRadius: 0
 --- !u!114 &4126927566862713711
 MonoBehaviour:
@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f019fe5efe9ff741ac24f1de4d9b166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  posX: 0
+  posY: 1
 --- !u!1 &6138170395425225782
 GameObject:
   m_ObjectHideFlags: 0

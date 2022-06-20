@@ -42,6 +42,7 @@ public class LaserBeam
         laserRenderer.material = material;
         laserRenderer.startColor = Color.red;
         laserRenderer.endColor = Color.red;
+        laserRenderer.sortingOrder = 2;
 
         CastRay(pos, dir, laserRenderer);
     }

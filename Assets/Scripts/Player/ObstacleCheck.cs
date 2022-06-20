@@ -16,10 +16,7 @@ public class ObstacleCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 13)
-        {
-            player.obstacleAhead = true;
-        }
+        player.obstacleAhead = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)

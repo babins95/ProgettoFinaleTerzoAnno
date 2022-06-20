@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 1943910858205986493}
   - component: {fileID: 1943910858205986491}
   - component: {fileID: 1943910858205986490}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NarrowPassage (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
