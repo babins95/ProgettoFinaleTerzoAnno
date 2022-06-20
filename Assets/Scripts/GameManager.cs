@@ -15,11 +15,11 @@ public class GameManager : MonoBehaviour
 
     Vector3 playerScale;
     //scale del giocatore alla fine della caduta
-    float scaleTarget = 0.5f;
+    //float scaleTarget = 0.5f;
 
-    [HideInInspector]
-    public bool falling;
-    [SerializeField] int fallTimer = 5;
+    //[HideInInspector]
+    //public bool falling;
+    //[SerializeField] int fallTimer = 5;
 
 
     public GameObject child;
