@@ -8,7 +8,7 @@ public class ClimbableWall : MonoBehaviour
     //con lo swap
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<Adult>())
+        if(collision.GetComponentInParent<Adult>() && collision.GetComponentInParent<Adult>().hasCrate == false)
         {
             SetPos(collision);
         }
@@ -16,7 +16,7 @@ public class ClimbableWall : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponentInParent<Adult>())
+        if (collision.GetComponentInParent<Adult>() && collision.GetComponentInParent<Adult>().hasCrate == false)
         {
             collision.GetComponentInParent<Player>().interactableObject = null;
         }

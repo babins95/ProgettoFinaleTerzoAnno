@@ -7,22 +7,27 @@ public class Crate : MonoBehaviour
 {
     FixedJoint2D joint;
     Rigidbody2D rb;
+    BoxCollider2D coll;
     public bool pickedUp;
 
-    bool onHole;
+    //bool onHole;
     bool ignoreCollision;
 
-    GameObject holeColliding;
+   //GameObject holeColliding;
+
+    Vector2 eyePos;
+    public float range = 0.5f;
 
     private void Start()
     {
         joint = GetComponent<FixedJoint2D>();
         rb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<BoxCollider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<Adult>() && !ignoreCollision)
+        if(collision.GetComponentInParent<Adult>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
         {
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
@@ -30,11 +35,11 @@ public class Crate : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Hole>())
-        {
-            onHole = true;
-            holeColliding = collision.gameObject;
-        }
+        //if (collision.gameObject.GetComponent<Hole>())
+        //{
+        //    onHole = true;
+        //    holeColliding = collision.gameObject;
+        //}
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -44,15 +49,15 @@ public class Crate : MonoBehaviour
             collision.GetComponentInParent<Player>().interactableObject = null;
         }
 
-        if (collision.GetComponent<Hole>())
-        {
-            onHole = false;
-        }
+        //if (collision.GetComponent<Hole>())
+        //{
+        //    onHole = false;
+        //}
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.GetComponentInParent<Adult>() && !ignoreCollision)
+        if(collision.GetComponentInParent<Adult>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
         {
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
@@ -77,26 +82,58 @@ public class Crate : MonoBehaviour
     //collego la cassa al player e tolgo i constraint al rigidbody, tranne il blocco alla rotazione
     private void PickUpCrate(GameObject pickingUp)
     {
-        joint.enabled = true;
-        joint.connectedBody = pickingUp.GetComponent<Rigidbody2D>();
-        rb.constraints = RigidbodyConstraints2D.None;
-        pickedUp = true;
+        if (!pickingUp.GetComponent<Adult>().hasCrate)
+        {
+            joint.enabled = true;
+            joint.connectedBody = pickingUp.GetComponent<Rigidbody2D>();
+            rb.constraints = RigidbodyConstraints2D.None;
+            pickedUp = true;
+            transform.position = new Vector2(pickingUp.transform.position.x, pickingUp.transform.position.y + 1);
+            coll.enabled = false;
+            pickingUp.GetComponent<Adult>().hasCrate = true;
+        }
+        else
+        {
+            //suono del "non puoi"
+        }
     }
 
     //stacco la cassa e riattivo i constraint al rigidbody
     private void PutDownCrate(GameObject puttingDown)
     {
+        coll.enabled = true;
         pickedUp = false;
         joint.enabled = false;
         joint.connectedBody = null;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         puttingDown.GetComponent<Player>().interactableObject = null;
+        eyePos = puttingDown.GetComponentInChildren<PlayerEye>().gameObject.transform.position;
+        puttingDown.GetComponent<Adult>().hasCrate = false;
+
+        switch (puttingDown.GetComponent<Player>().eyePosCounter)
+        {
+            case 1:
+                transform.position = new Vector2(eyePos.x, eyePos.y + range);
+                break;
+
+            case 2:
+                transform.position = new Vector2(eyePos.x, eyePos.y - range);
+                break;
+
+            case 3:
+                transform.position = new Vector2(eyePos.x + range, eyePos.y);
+                break;
+
+            case 4:
+                transform.position = new Vector2(eyePos.x - range, eyePos.y);
+                break;
+        }
 
         //se posi la cassa sopra un buco ci puoi camminare sopra e non la puoi più prendere
-        if(onHole && !holeColliding.GetComponent<Hole>().filled)
+        if(puttingDown.GetComponentInChildren<PlayerEye>().onHole && !puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Hole>().filled)
         {
-            holeColliding.GetComponent<Hole>().filled = true;
-            gameObject.transform.position = holeColliding.GetComponent<Renderer>().bounds.center;
+            puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Hole>().FillHole();
+            gameObject.transform.position = puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Renderer>().bounds.center;
             ignoreCollision = true;
             gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         }

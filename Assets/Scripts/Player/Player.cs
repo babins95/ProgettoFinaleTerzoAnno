@@ -22,6 +22,11 @@ public class Player : MonoBehaviour
     PlayerBack playerBack;
     public BulletSpawner bulletSpawner;
 
+    [HideInInspector]
+    public bool obstacleAhead;    
+    [HideInInspector]
+    public int eyePosCounter;
+    ObstacleCheck obstacleCheck;
     //debug, da togliere poi
     public NextLevel nextLevel;
 
@@ -32,6 +37,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         playerEye = GetComponentInChildren<PlayerEye>();
         playerBack = GetComponentInChildren<PlayerBack>();
+        obstacleCheck = GetComponentInChildren<ObstacleCheck>();
     }
 
     // Update is called once per frame
@@ -54,7 +60,7 @@ public class Player : MonoBehaviour
     {
         if (interactableObject != null)
         {
-            BreakColumn();
+            //BreakColumn();
             GoNextLevel();
             DialogueInteraction();
         }
@@ -77,14 +83,14 @@ public class Player : MonoBehaviour
         }
     }
 
-    void BreakColumn()
-    {
-        if (interactableObject.GetComponentInParent<Column>() != null && isFacing)
-        {
-            //animazione
-            interactableObject.GetComponentInParent<Column>().BreakDownColumn();
-        }
-    }
+    //void BreakColumn()
+    //{
+    //    if (interactableObject.GetComponentInParent<Column>() != null && isFacing)
+    //    {
+    //        //animazione
+    //        interactableObject.GetComponentInParent<Column>().BreakDownColumn();
+    //    }
+    //}
 
     void Animate(float x, float y)
     {
@@ -113,41 +119,49 @@ public class Player : MonoBehaviour
         {
             playerBack.transform.localPosition = new Vector3(0, playerBack.posY, 0);
             playerEye.transform.localPosition = new Vector3(0, playerEye.posY, 0);
+            obstacleCheck.transform.localPosition = new Vector3(0, obstacleCheck.posY, 0);
             if (bulletSpawner != null)
             {
                 bulletSpawner.transform.localPosition = new Vector3(0, playerEye.posY, 0);
                 bulletSpawner.bulletDirection = Vector2.up;
             }
+            eyePosCounter = 1;
         }
         else if (animator.GetFloat("moveY") == -1)
         {
             playerBack.transform.localPosition = new Vector3(0, -playerBack.posY, 0);
             playerEye.transform.localPosition = new Vector3(0, -playerEye.posY, 0);
+            obstacleCheck.transform.localPosition = new Vector3(0, -obstacleCheck.posY, 0);
             if (bulletSpawner != null)
             {
                 bulletSpawner.transform.localPosition = new Vector3(0, -playerEye.posY, 0);
                 bulletSpawner.bulletDirection = Vector2.down;
             }
+            eyePosCounter = 2;
         }
         else if (animator.GetFloat("moveX") == 1)
         {
             playerBack.transform.localPosition = new Vector3(playerBack.posX, 0, 0);
             playerEye.transform.localPosition = new Vector3(playerEye.posX, 0, 0);
+            obstacleCheck.transform.localPosition = new Vector3(obstacleCheck.posX, 0, 0);
             if (bulletSpawner != null)
             {
                 bulletSpawner.transform.localPosition = new Vector3(bulletSpawner.posX, bulletSpawner.posY, 0);
                 bulletSpawner.bulletDirection = Vector2.right;
             }
+            eyePosCounter = 3;
         }
         else if (animator.GetFloat("moveX") == -1)
         {
             playerBack.transform.localPosition = new Vector3(-playerBack.posX, 0, 0);
             playerEye.transform.localPosition = new Vector3(-playerEye.posX, 0, 0);
+            obstacleCheck.transform.localPosition = new Vector3(-obstacleCheck.posX, 0, 0);
             if (bulletSpawner != null)
             {
                 bulletSpawner.transform.localPosition = new Vector3(-bulletSpawner.posX, bulletSpawner.posY, 0);
                 bulletSpawner.bulletDirection = Vector2.left;
             }
+            eyePosCounter = 4;
         }
     }
 

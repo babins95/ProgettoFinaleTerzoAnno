@@ -5,6 +5,8 @@ using UnityEngine;
 public class Adult : MonoBehaviour
 {
     Player player;
+    [HideInInspector]
+    public bool hasCrate;
 
     private void Start()
     {
@@ -23,7 +25,7 @@ public class Adult : MonoBehaviour
     void Climb()
     {
         //animazione del climb
-        if (player.interactableObject.GetComponent<ClimbableWall>() != null && player.isFacing)
+        if (player.interactableObject.GetComponent<ClimbableWall>() != null && player.isFacing && !hasCrate)
         {
             transform.position = player.interactableObject.transform.position;
         }
@@ -35,8 +37,15 @@ public class Adult : MonoBehaviour
         {
             //stopRotation poi sarà per bloccare l'animazione sul personaggio che
             //spinge la cassa, per ora blocca la rotazione
-            player.interactableObject.GetComponent<Crate>().CrateInteraction(gameObject);
-            player.stopAnimation = !player.stopAnimation;
+            if (player.obstacleAhead == false)
+            {
+                player.interactableObject.GetComponent<Crate>().CrateInteraction(gameObject);
+            }
+            else
+            {
+                //suono del "non puoi"
+            }
+            //player.stopAnimation = !player.stopAnimation;
         }
     }
 }

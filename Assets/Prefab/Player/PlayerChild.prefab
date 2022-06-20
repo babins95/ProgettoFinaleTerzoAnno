@@ -46,6 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 8879693668317962483, guid: 6c6ef91042a5ea04c8e3754d03730abe, type: 3}
   bulletFireRate: 2
+  posX: 0
+  posY: 0
+  bulletDirection: {x: 0, y: 0}
 --- !u!114 &479358528121329238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +79,76 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!1 &2093213515568281967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5538565781074671630}
+  - component: {fileID: 4852366436140821908}
+  - component: {fileID: 4126927566862713711}
+  m_Layer: 8
+  m_Name: ObstacleCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5538565781074671630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093213515568281967}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7119094070646861502}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4852366436140821908
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093213515568281967}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2912416, y: 0.4845395}
+  m_EdgeRadius: 0
+--- !u!114 &4126927566862713711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093213515568281967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f019fe5efe9ff741ac24f1de4d9b166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6138170395425225782
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +293,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posX: 0
   posY: 0.7
+  onHole: 0
+  holeColliding: {fileID: 0}
 --- !u!1 &7119094070646861496
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +332,7 @@ Transform:
   - {fileID: 2296716612713513303}
   - {fileID: 7119094070264984062}
   - {fileID: 828647873410291288}
+  - {fileID: 5538565781074671630}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -407,6 +483,9 @@ MonoBehaviour:
   isFacing: 0
   stopAnimation: 0
   interactableObject: {fileID: 0}
+  bulletSpawner: {fileID: 0}
+  obstacleAhead: 0
+  eyePosCounter: 0
   nextLevel: {fileID: 0}
 --- !u!114 &7119094070646861501
 MonoBehaviour:

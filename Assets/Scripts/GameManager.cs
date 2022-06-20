@@ -146,26 +146,14 @@ public class GameManager : MonoBehaviour
         swap = !swap;
         if (swap)
         {
-            //vecchio
-            if (adult.GetComponent<Player>().interactableObject != null)
-            {
-                if (adult.GetComponent<Player>().interactableObject.GetComponent<Crate>() != null)
-                {
-                    PutDownCrate(adult);
-                }
-            }
             TurnOff(child);
             TurnOn(adult);
         }
         else if (swap == false)
         {
-            //giovane
-            if (adult.GetComponent<Player>().interactableObject != null)
+            if(adult.GetComponent<Adult>().hasCrate)
             {
-                if (adult.GetComponent<Player>().interactableObject.GetComponent<Crate>() != null)
-                {
-                    PutDownCrate(adult);
-                }
+                PutDownCrate(adult);
             }
             TurnOff(adult);
             TurnOn(child);

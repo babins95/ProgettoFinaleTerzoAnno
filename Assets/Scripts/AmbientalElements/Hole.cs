@@ -37,4 +37,9 @@ public class Hole : MonoBehaviour
             collider.isTrigger = false;
         }       
     }
+
+    public void FillHole()
+    {
+        collider.isTrigger = true;
+    }
 }
