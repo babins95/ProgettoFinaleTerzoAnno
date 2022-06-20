@@ -1,0 +1,2388 @@
+fileFormatVersion: 2
+guid: 86a00db932803ec4087bd470c6ddc9b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4860680985739538848
+    second: tilemap terreno base adolescente v1 temp_0
+  - first:
+      213: -3002775515287956914
+    second: tilemap terreno base adolescente v1 temp_1
+  - first:
+      213: 4456994428907864227
+    second: tilemap terreno base adolescente v1 temp_2
+  - first:
+      213: -8002529184591926643
+    second: tilemap terreno base adolescente v1 temp_3
+  - first:
+      213: 860726345157751444
+    second: tilemap terreno base adolescente v1 temp_4
+  - first:
+      213: 7492197309241174646
+    second: tilemap terreno base adolescente v1 temp_5
+  - first:
+      213: -1302993417664495616
+    second: tilemap terreno base adolescente v1 temp_6
+  - first:
+      213: -925415975262742361
+    second: tilemap terreno base adolescente v1 temp_7
+  - first:
+      213: -3153029330025695744
+    second: tilemap terreno base adolescente v1 temp_8
+  - first:
+      213: 161390550419819201
+    second: tilemap terreno base adolescente v1 temp_9
+  - first:
+      213: 4551392584122463607
+    second: tilemap terreno base adolescente v1 temp_10
+  - first:
+      213: 3895508051836006562
+    second: tilemap terreno base adolescente v1 temp_11
+  - first:
+      213: -2698065294977224703
+    second: tilemap terreno base adolescente v1 temp_12
+  - first:
+      213: 5542107535743671905
+    second: tilemap terreno base adolescente v1 temp_13
+  - first:
+      213: 7194712820119533825
+    second: tilemap terreno base adolescente v1 temp_14
+  - first:
+      213: -6814117438647605597
+    second: tilemap terreno base adolescente v1 temp_15
+  - first:
+      213: -7445775285397755017
+    second: tilemap terreno base adolescente v1 temp_16
+  - first:
+      213: 5832891545629197000
+    second: tilemap terreno base adolescente v1 temp_17
+  - first:
+      213: -8012560785342006984
+    second: tilemap terreno base adolescente v1 temp_18
+  - first:
+      213: -8353110532067315762
+    second: tilemap terreno base adolescente v1 temp_19
+  - first:
+      213: 4207166593390908526
+    second: tilemap terreno base adolescente v1 temp_20
+  - first:
+      213: 2906063819419944929
+    second: tilemap terreno base adolescente v1 temp_21
+  - first:
+      213: -5568810789437169855
+    second: tilemap terreno base adolescente v1 temp_22
+  - first:
+      213: 4046007631444415227
+    second: tilemap terreno base adolescente v1 temp_23
+  - first:
+      213: -6852295723059222924
+    second: tilemap terreno base adolescente v1 temp_24
+  - first:
+      213: 2289872033349733460
+    second: tilemap terreno base adolescente v1 temp_25
+  - first:
+      213: -1554458874152213412
+    second: tilemap terreno base adolescente v1 temp_26
+  - first:
+      213: -287146320912007984
+    second: tilemap terreno base adolescente v1 temp_27
+  - first:
+      213: 7890182919127045654
+    second: tilemap terreno base adolescente v1 temp_28
+  - first:
+      213: -5585337755830534582
+    second: tilemap terreno base adolescente v1 temp_29
+  - first:
+      213: -3335922383125421052
+    second: tilemap terreno base adolescente v1 temp_30
+  - first:
+      213: -8746123903888147847
+    second: tilemap terreno base adolescente v1 temp_31
+  - first:
+      213: 4841800588230462606
+    second: tilemap terreno base adolescente v1 temp_32
+  - first:
+      213: -2819683675490710963
+    second: tilemap terreno base adolescente v1 temp_33
+  - first:
+      213: -8428743061479356069
+    second: tilemap terreno base adolescente v1 temp_34
+  - first:
+      213: -5156214558080800610
+    second: tilemap terreno base adolescente v1 temp_35
+  - first:
+      213: -2490440127428468012
+    second: tilemap terreno base adolescente v1 temp_36
+  - first:
+      213: -1744848583729220662
+    second: tilemap terreno base adolescente v1 temp_37
+  - first:
+      213: -8789827346609113155
+    second: tilemap terreno base adolescente v1 temp_38
+  - first:
+      213: -3273344869173609662
+    second: tilemap terreno base adolescente v1 temp_39
+  - first:
+      213: 1883393562989704181
+    second: tilemap terreno base adolescente v1 temp_40
+  - first:
+      213: -7550400229882486440
+    second: tilemap terreno base adolescente v1 temp_41
+  - first:
+      213: 5551234925746904214
+    second: tilemap terreno base adolescente v1 temp_42
+  - first:
+      213: -1310126212685948641
+    second: tilemap terreno base adolescente v1 temp_43
+  - first:
+      213: 7893935580927354916
+    second: tilemap terreno base adolescente v1 temp_44
+  - first:
+      213: -1609107430997967284
+    second: tilemap terreno base adolescente v1 temp_45
+  - first:
+      213: -5368466558023336692
+    second: tilemap terreno base adolescente v1 temp_46
+  - first:
+      213: 7490356874724471779
+    second: tilemap terreno base adolescente v1 temp_47
+  - first:
+      213: 8175631445857968581
+    second: tilemap terreno base adolescente v1 temp_48
+  - first:
+      213: -5124545968113626896
+    second: tilemap terreno base adolescente v1 temp_49
+  - first:
+      213: -433553346916815536
+    second: tilemap terreno base adolescente v1 temp_50
+  - first:
+      213: 6782188490696210527
+    second: tilemap terreno base adolescente v1 temp_51
+  - first:
+      213: 1915423724159173411
+    second: tilemap terreno base adolescente v1 temp_52
+  - first:
+      213: -5826675349948499172
+    second: tilemap terreno base adolescente v1 temp_53
+  - first:
+      213: 2885439575731933364
+    second: tilemap terreno base adolescente v1 temp_54
+  - first:
+      213: 1117488910059132561
+    second: tilemap terreno base adolescente v1 temp_55
+  - first:
+      213: -3756074027738822647
+    second: tilemap terreno base adolescente v1 temp_56
+  - first:
+      213: 202494572975998641
+    second: tilemap terreno base adolescente v1 temp_57
+  - first:
+      213: -4322887204993220235
+    second: tilemap terreno base adolescente v1 temp_58
+  - first:
+      213: -8367143060421053900
+    second: tilemap terreno base adolescente v1 temp_59
+  - first:
+      213: -7872687750357733518
+    second: tilemap terreno base adolescente v1 temp_60
+  - first:
+      213: 4000647572984345307
+    second: tilemap terreno base adolescente v1 temp_61
+  - first:
+      213: -5379407936790100160
+    second: tilemap terreno base adolescente v1 temp_62
+  - first:
+      213: 1555382434719224706
+    second: tilemap terreno base adolescente v1 temp_63
+  - first:
+      213: -2735665787601787370
+    second: tilemap terreno base adolescente v1 temp_64
+  - first:
+      213: 8945985137718559271
+    second: tilemap terreno base adolescente v1 temp_65
+  - first:
+      213: -3963607089114898408
+    second: tilemap terreno base adolescente v1 temp_66
+  - first:
+      213: 2865780228467499591
+    second: tilemap terreno base adolescente v1 temp_67
+  - first:
+      213: 1091733421675808700
+    second: tilemap terreno base adolescente v1 temp_68
+  - first:
+      213: 7127119937201170610
+    second: tilemap terreno base adolescente v1 temp_69
+  - first:
+      213: 8324350679685298050
+    second: tilemap terreno base adolescente v1 temp_70
+  - first:
+      213: -4227393311421357921
+    second: tilemap terreno base adolescente v1 temp_71
+  - first:
+      213: 6828966557606193722
+    second: tilemap terreno base adolescente v1 temp_72
+  - first:
+      213: 5523423060326231596
+    second: tilemap terreno base adolescente v1 temp_73
+  - first:
+      213: -8117520170810539573
+    second: tilemap terreno base adolescente v1 temp_74
+  - first:
+      213: 9126660998269758759
+    second: tilemap terreno base adolescente v1 temp_75
+  - first:
+      213: -8465283330980716901
+    second: tilemap terreno base adolescente v1 temp_76
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -152, y: 127}
+        - {x: -146, y: -360}
+        - {x: -132, y: 98}
+        - {x: 360, y: 135}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ecf7e75646b8cb0800000000000000
+      internalID: -4860680985739538848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_1
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: 122}
+        - {x: -360, y: 135}
+        - {x: 360, y: 133}
+        - {x: 360, y: 127}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e425507049ff356d0800000000000000
+      internalID: -3002775515287956914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: 130}
+        - {x: 51, y: 79}
+        - {x: 118, y: -360}
+        - {x: 102, y: 116}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0c2f4a1dc6add30800000000000000
+      internalID: 4456994428907864227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_3
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -152, y: 127}
+        - {x: -146, y: -360}
+        - {x: -132, y: 98}
+        - {x: 360, y: 135}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8aa3b71b1e41f090800000000000000
+      internalID: -8002529184591926643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_4
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: 130}
+        - {x: 51, y: 79}
+        - {x: 118, y: -360}
+        - {x: 102, y: 116}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492b2f3fc0ae1fb00800000000000000
+      internalID: 860726345157751444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_5
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -152, y: 127}
+        - {x: -146, y: -360}
+        - {x: -132, y: 98}
+        - {x: 360, y: 135}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a2574e1c1a9f760800000000000000
+      internalID: 7492197309241174646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_6
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: 130}
+        - {x: 51, y: 79}
+        - {x: 118, y: -360}
+        - {x: 102, y: 116}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0008f63e366daede0800000000000000
+      internalID: -1302993417664495616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_7
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 150, y: -115}
+        - {x: 128, y: -360}
+        - {x: 162, y: -139}
+        - {x: 360, y: -107}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a81ef4d2134823f0800000000000000
+      internalID: -925415975262742361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_8
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: -108}
+        - {x: -179, y: -112}
+        - {x: -139, y: -360}
+        - {x: -165, y: -93}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0063e61a7803e34d0800000000000000
+      internalID: -3153029330025695744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_9
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: 360}
+        - {x: 123, y: 202}
+        - {x: 360, y: 132}
+        - {x: 139, y: 217}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cac0ebb9df5d3200800000000000000
+      internalID: 161390550419819201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_10
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -190, y: 157}
+        - {x: -360, y: 132}
+        - {x: -166, y: 125}
+        - {x: -139, y: 360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77577f1e07bc92f30800000000000000
+      internalID: 4551392584122463607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_11
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 5040
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: -96}
+        - {x: -360, y: -108}
+        - {x: 360, y: -105}
+        - {x: 360, y: -95}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0fb511fef9f0630800000000000000
+      internalID: 3895508051836006562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -150, y: -360}
+        - {x: -145, y: 360}
+        - {x: -129, y: 360}
+        - {x: -131, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100b210c8eb8e8ad0800000000000000
+      internalID: -2698065294977224703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_13
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e540fb07589ec40800000000000000
+      internalID: 5542107535743671905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_14
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 114, y: -360}
+        - {x: 114, y: 360}
+        - {x: 128, y: 360}
+        - {x: 122, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1097c20d031c8d360800000000000000
+      internalID: 7194712820119533825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_15
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -150, y: -360}
+        - {x: -145, y: 360}
+        - {x: -129, y: 360}
+        - {x: -131, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a66d93da446f61a0800000000000000
+      internalID: -6814117438647605597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_16
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 114, y: -360}
+        - {x: 114, y: 360}
+        - {x: 128, y: 360}
+        - {x: 122, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77beb7cc3da4ba890800000000000000
+      internalID: -7445775285397755017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_17
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -150, y: -360}
+        - {x: -145, y: 360}
+        - {x: -129, y: 360}
+        - {x: -131, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c28b9ee4f792f050800000000000000
+      internalID: 5832891545629197000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_18
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 114, y: -360}
+        - {x: 114, y: 360}
+        - {x: 128, y: 360}
+        - {x: 122, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839f6780b6aadc090800000000000000
+      internalID: -8012560785342006984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_19
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: 360}
+        - {x: 123, y: 202}
+        - {x: 360, y: 132}
+        - {x: 139, y: 217}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfad8e4a3ac31c80800000000000000
+      internalID: -8353110532067315762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_20
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -190, y: 157}
+        - {x: -360, y: 132}
+        - {x: -166, y: 125}
+        - {x: -139, y: 360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6494f5e9bbd26a30800000000000000
+      internalID: 4207166593390908526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_21
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 128, y: 360}
+        - {x: 123, y: 202}
+        - {x: 360, y: 132}
+        - {x: 139, y: 217}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7042395a9645820800000000000000
+      internalID: 2906063819419944929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_22
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -190, y: 157}
+        - {x: -360, y: 132}
+        - {x: -166, y: 125}
+        - {x: -139, y: 360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f1c32871c97b2b0800000000000000
+      internalID: -5568810789437169855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_23
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 4320
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf293ce018e462830800000000000000
+      internalID: 4046007631444415227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -140, y: 360}
+        - {x: -154, y: 327}
+        - {x: -154, y: 138}
+        - {x: -14, y: -64}
+        - {x: 179, y: -128}
+        - {x: 360, y: -107}
+        - {x: 151, y: -104}
+        - {x: -8, y: -33}
+        - {x: -124, y: 138}
+      - - {x: -41, y: -360}
+        - {x: -16, y: -49}
+        - {x: 2, y: -68}
+        - {x: -28, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476602b4851c7e0a0800000000000000
+      internalID: -6852295723059222924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_25
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: -96}
+        - {x: -360, y: -108}
+        - {x: 360, y: -105}
+        - {x: 360, y: -95}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c89e86b7247cf10800000000000000
+      internalID: 2289872033349733460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_26
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 103, y: 241}
+        - {x: 163, y: 78}
+        - {x: 149, y: 4}
+        - {x: 7, y: -81}
+        - {x: -360, y: -105}
+        - {x: 24, y: -113}
+        - {x: 169, y: -6}
+        - {x: 170, y: 112}
+        - {x: 134, y: 214}
+        - {x: 125, y: 360}
+      - - {x: 7, y: -360}
+        - {x: 9, y: -95}
+        - {x: 15, y: -100}
+        - {x: 14, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54243cc3e37d6ae0800000000000000
+      internalID: -1554458874152213412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_27
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -140, y: 360}
+        - {x: -154, y: 327}
+        - {x: -154, y: 138}
+        - {x: -14, y: -64}
+        - {x: 179, y: -128}
+        - {x: 360, y: -94}
+        - {x: 151, y: -104}
+        - {x: -8, y: -33}
+        - {x: -124, y: 138}
+      - - {x: -41, y: -360}
+        - {x: -16, y: -49}
+        - {x: 2, y: -68}
+        - {x: -28, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dcba7741f9d30cf0800000000000000
+      internalID: -287146320912007984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_28
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 103, y: 241}
+        - {x: 163, y: 78}
+        - {x: 149, y: 4}
+        - {x: 7, y: -81}
+        - {x: -360, y: -105}
+        - {x: 24, y: -113}
+        - {x: 169, y: -6}
+        - {x: 170, y: 112}
+        - {x: 134, y: 214}
+        - {x: 125, y: 360}
+      - - {x: 7, y: -360}
+        - {x: 9, y: -95}
+        - {x: 15, y: -100}
+        - {x: 14, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6161c6b9f8f8f7d60800000000000000
+      internalID: 7890182919127045654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_29
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -140, y: 360}
+        - {x: -154, y: 327}
+        - {x: -154, y: 138}
+        - {x: -14, y: -64}
+        - {x: 179, y: -128}
+        - {x: 360, y: -94}
+        - {x: 151, y: -104}
+        - {x: -8, y: -33}
+        - {x: -124, y: 138}
+      - - {x: -41, y: -360}
+        - {x: -16, y: -49}
+        - {x: 2, y: -68}
+        - {x: -28, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4eb42947e4ec72b0800000000000000
+      internalID: -5585337755830534582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_30
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 103, y: 241}
+        - {x: 163, y: 78}
+        - {x: 149, y: 4}
+        - {x: 7, y: -81}
+        - {x: -360, y: -105}
+        - {x: 24, y: -113}
+        - {x: 169, y: -6}
+        - {x: 170, y: 112}
+        - {x: 134, y: 214}
+        - {x: 125, y: 360}
+      - - {x: 7, y: -360}
+        - {x: 9, y: -95}
+        - {x: 15, y: -100}
+        - {x: 14, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404e88b544c64b1d0800000000000000
+      internalID: -3335922383125421052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_31
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: -278}
+        - {x: -360, y: -262}
+        - {x: 360, y: -265}
+        - {x: 360, y: -278}
+      - - {x: 149, y: -113}
+        - {x: 54, y: -144}
+        - {x: -16, y: -102}
+        - {x: 3, y: 9}
+        - {x: 17, y: 142}
+        - {x: 5, y: 360}
+        - {x: 24, y: 133}
+        - {x: -6, y: -95}
+        - {x: 58, y: -127}
+        - {x: 214, y: -79}
+        - {x: 360, y: -96}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ab13bf5a68f9680800000000000000
+      internalID: -8746123903888147847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_32
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: -96}
+        - {x: -360, y: -108}
+        - {x: 360, y: -105}
+        - {x: 360, y: -95}
+      - - {x: -360, y: -280}
+        - {x: -360, y: -263}
+        - {x: 360, y: -262}
+        - {x: 360, y: -279}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c01c66bf7813340800000000000000
+      internalID: 4841800588230462606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_33
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: -278}
+        - {x: -360, y: -262}
+        - {x: 360, y: -265}
+        - {x: 360, y: -278}
+      - - {x: -100, y: -162}
+        - {x: -252, y: -128}
+        - {x: -360, y: -106}
+        - {x: -168, y: -130}
+        - {x: -96, y: -142}
+        - {x: -13, y: -95}
+        - {x: 0, y: -42}
+        - {x: -29, y: 33}
+        - {x: -29, y: 360}
+        - {x: -19, y: 50}
+        - {x: 10, y: -18}
+        - {x: 17, y: -78}
+        - {x: -11, y: -123}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a886fe2a87ed8d0800000000000000
+      internalID: -2819683675490710963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_34
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 149, y: -113}
+        - {x: 54, y: -144}
+        - {x: -16, y: -102}
+        - {x: 3, y: 9}
+        - {x: 17, y: 142}
+        - {x: 5, y: 360}
+        - {x: 24, y: 133}
+        - {x: -6, y: -95}
+        - {x: 58, y: -127}
+        - {x: 214, y: -79}
+        - {x: 360, y: -96}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b590c7dc7d6170b80800000000000000
+      internalID: -8428743061479356069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_35
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -100, y: -162}
+        - {x: -252, y: -128}
+        - {x: -360, y: -106}
+        - {x: -168, y: -130}
+        - {x: -96, y: -142}
+        - {x: -13, y: -95}
+        - {x: 0, y: -42}
+        - {x: -29, y: 33}
+        - {x: -29, y: 360}
+        - {x: -19, y: 50}
+        - {x: 10, y: -18}
+        - {x: 17, y: -78}
+        - {x: -11, y: -123}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9865ef9d227178b0800000000000000
+      internalID: -5156214558080800610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_36
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 3600
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: -278}
+        - {x: -360, y: -262}
+        - {x: 360, y: -265}
+        - {x: 360, y: -278}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d26f3626ed207dd0800000000000000
+      internalID: -2490440127428468012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -41, y: -360}
+        - {x: -42, y: 360}
+        - {x: -24, y: 360}
+        - {x: -29, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3f9fb257d09c7e0800000000000000
+      internalID: -1744848583729220662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_38
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db779584992440680800000000000000
+      internalID: -8789827346609113155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_39
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -360}
+        - {x: 5, y: 360}
+        - {x: 17, y: 360}
+        - {x: 17, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b3f853f2eb292d0800000000000000
+      internalID: -3273344869173609662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_40
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -41, y: -360}
+        - {x: -42, y: 360}
+        - {x: -24, y: 360}
+        - {x: -29, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f332468778232a10800000000000000
+      internalID: 1883393562989704181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_41
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -360}
+        - {x: 5, y: 360}
+        - {x: 17, y: 360}
+        - {x: 15, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851a3d1aef6973790800000000000000
+      internalID: -7550400229882486440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_42
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -41, y: -360}
+        - {x: -42, y: 360}
+        - {x: -24, y: 360}
+        - {x: -29, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cd2e5d0c2f90d40800000000000000
+      internalID: 5551234925746904214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_43
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -360}
+        - {x: 5, y: 360}
+        - {x: 17, y: 360}
+        - {x: 15, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f191de1a62f71dde0800000000000000
+      internalID: -1310126212685948641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_44
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: 122}
+        - {x: -360, y: 135}
+        - {x: 360, y: 133}
+        - {x: 360, y: 127}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428edf44694ec8d60800000000000000
+      internalID: 7893935580927354916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_45
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: 122}
+        - {x: -360, y: 135}
+        - {x: 360, y: 133}
+        - {x: 360, y: 127}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ebce1215d4ba9e0800000000000000
+      internalID: -1609107430997967284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_46
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 129, y: -360}
+        - {x: 121, y: -323}
+        - {x: 132, y: -260}
+        - {x: 121, y: -197}
+        - {x: 138, y: -90}
+        - {x: 140, y: -6}
+        - {x: 154, y: 123}
+        - {x: 148, y: 180}
+        - {x: 133, y: 199}
+        - {x: 136, y: 87}
+        - {x: 123, y: 11}
+        - {x: 119, y: -91}
+        - {x: 105, y: -193}
+        - {x: 114, y: -282}
+        - {x: 106, y: -333}
+        - {x: 117, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d747cdb106f75b0800000000000000
+      internalID: -5368466558023336692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_47
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -136, y: -360}
+        - {x: -166, y: -237}
+        - {x: -156, y: -147}
+        - {x: -155, y: -6}
+        - {x: -120, y: 207}
+        - {x: -115, y: 164}
+        - {x: -140, y: -14}
+        - {x: -141, y: -143}
+        - {x: -151, y: -240}
+        - {x: -125, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e37bd654e713f760800000000000000
+      internalID: 7490356874724471779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_48
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1a0e0db7da57170800000000000000
+      internalID: 8175631445857968581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -39, y: -265}
+        - {x: -42, y: 360}
+        - {x: -27, y: 360}
+        - {x: -19, y: -268}
+      - - {x: -19, y: -268}
+        - {x: -26, y: -256}
+        - {x: 360, y: -262}
+        - {x: 360, y: -277}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f05d6fc794f1e8b0800000000000000
+      internalID: -5124545968113626896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_50
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: -279}
+        - {x: -360, y: -261}
+        - {x: 360, y: -264}
+        - {x: 360, y: -279}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d67dd2785bbf9f0800000000000000
+      internalID: -433553346916815536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_51
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: -246}
+        - {x: 10, y: 360}
+        - {x: 17, y: 360}
+        - {x: 24, y: -248}
+      - - {x: -360, y: -264}
+        - {x: -360, y: -280}
+        - {x: 16, y: -244}
+        - {x: 4, y: -225}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58b0bbaf7c2f1e50800000000000000
+      internalID: 6782188490696210527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_52
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -39, y: -265}
+        - {x: -42, y: 360}
+        - {x: -27, y: 360}
+        - {x: -19, y: -268}
+      - - {x: -19, y: -268}
+        - {x: -26, y: -256}
+        - {x: 360, y: -262}
+        - {x: 360, y: -277}
+      - - {x: -360, y: -111}
+        - {x: -360, y: -94}
+        - {x: -21, y: -91}
+        - {x: -26, y: -110}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3230dd09ab3f49a10800000000000000
+      internalID: 1915423724159173411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_53
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: -246}
+        - {x: 10, y: 360}
+        - {x: 17, y: 360}
+        - {x: 24, y: -248}
+      - - {x: -360, y: -264}
+        - {x: -360, y: -280}
+        - {x: 16, y: -244}
+        - {x: 4, y: -225}
+      - - {x: 17, y: -109}
+        - {x: 20, y: -94}
+        - {x: 360, y: -99}
+        - {x: 360, y: -112}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b7bc8e3ad732fa0800000000000000
+      internalID: -5826675349948499172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_54
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -42, y: 360}
+        - {x: -33, y: -190}
+        - {x: -133, y: -221}
+        - {x: -164, y: -257}
+        - {x: -161, y: -321}
+        - {x: -132, y: -360}
+        - {x: -151, y: -285}
+        - {x: -126, y: -239}
+        - {x: -35, y: -212}
+        - {x: -39, y: -267}
+        - {x: 360, y: -279}
+        - {x: -26, y: -255}
+        - {x: -30, y: 360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b01b54a1042b0820800000000000000
+      internalID: 2885439575731933364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_55
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 36, y: -230}
+        - {x: 88, y: -257}
+        - {x: 125, y: -360}
+        - {x: 93, y: -249}
+        - {x: 23, y: -211}
+        - {x: 16, y: 360}
+        - {x: 8, y: 360}
+        - {x: 3, y: -212}
+        - {x: -360, y: -279}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19653843e3e128f00800000000000000
+      internalID: 1117488910059132561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_56
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 204, y: -126}
+        - {x: -40, y: -110}
+        - {x: -38, y: -24}
+        - {x: -60, y: 81}
+        - {x: -32, y: 250}
+        - {x: -43, y: 360}
+        - {x: -17, y: 247}
+        - {x: -36, y: 79}
+        - {x: -20, y: -20}
+        - {x: -22, y: -91}
+        - {x: 199, y: -114}
+        - {x: 360, y: -111}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9088e82829ebfdbc0800000000000000
+      internalID: -3756074027738822647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_57
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: -96}
+        - {x: -360, y: -112}
+        - {x: 360, y: -111}
+        - {x: 360, y: -95}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6cd23cdb76fc200800000000000000
+      internalID: 202494572975998641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_58
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: -112}
+        - {x: -360, y: -94}
+        - {x: 9, y: -67}
+        - {x: 27, y: -89}
+      - - {x: 8, y: -67}
+        - {x: 2, y: 360}
+        - {x: 19, y: 360}
+        - {x: 27, y: -89}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5714c4e9df40204c0800000000000000
+      internalID: -4322887204993220235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_59
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4327ab2b7bfe1eb80800000000000000
+      internalID: -8367143060421053900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_60
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fab5cc3389eb290800000000000000
+      internalID: -7872687750357733518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd2b24375c7258730800000000000000
+      internalID: 4000647572984345307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_62
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04785b99bf08855b0800000000000000
+      internalID: -5379407936790100160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_63
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28352576514d59510800000000000000
+      internalID: 1555382434719224706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_64
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -360, y: 130}
+        - {x: 51, y: 79}
+        - {x: 118, y: -360}
+        - {x: 102, y: 116}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6166ec9d576f80ad0800000000000000
+      internalID: -2735665787601787370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_65
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -152, y: 127}
+        - {x: -146, y: -360}
+        - {x: -132, y: 98}
+        - {x: 360, y: 135}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72283abb516862c70800000000000000
+      internalID: 8945985137718559271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81026104a507ef8c0800000000000000
+      internalID: -3963607089114898408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_67
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 720
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742a42a2feb45c720800000000000000
+      internalID: 2865780228467499591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_68
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 720
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7886443cd962f00800000000000000
+      internalID: 1091733421675808700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_69
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 720
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8ea7062dd98e260800000000000000
+      internalID: 7127119937201170610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_70
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 720
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 114, y: -360}
+        - {x: 114, y: 360}
+        - {x: 128, y: 360}
+        - {x: 122, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2877c60c6d8068370800000000000000
+      internalID: 8324350679685298050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_71
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 720
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -150, y: -360}
+        - {x: -145, y: 360}
+        - {x: -129, y: 360}
+        - {x: -131, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f902ed25e284555c0800000000000000
+      internalID: -4227393311421357921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3aa32917ec55ce50800000000000000
+      internalID: 6828966557606193722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_73
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e22fe420427ac40800000000000000
+      internalID: 5523423060326231596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_74
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc105c1c966c85f80800000000000000
+      internalID: -8117520170810539573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_75
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 103, y: 241}
+        - {x: 163, y: 78}
+        - {x: 149, y: 4}
+        - {x: 7, y: -81}
+        - {x: -360, y: -105}
+        - {x: 24, y: -113}
+        - {x: 169, y: -6}
+        - {x: 170, y: 112}
+        - {x: 134, y: 214}
+        - {x: 125, y: 360}
+      - - {x: 7, y: -360}
+        - {x: 9, y: -95}
+        - {x: 15, y: -100}
+        - {x: 14, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72de743a2d968ae70800000000000000
+      internalID: 9126660998269758759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap terreno base adolescente v1 temp_76
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -140, y: 360}
+        - {x: -154, y: 327}
+        - {x: -154, y: 138}
+        - {x: -14, y: -64}
+        - {x: 179, y: -128}
+        - {x: 360, y: -94}
+        - {x: 151, y: -104}
+        - {x: -8, y: -33}
+        - {x: -124, y: 138}
+      - - {x: -41, y: -360}
+        - {x: -16, y: -49}
+        - {x: 2, y: -68}
+        - {x: -28, y: -360}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9edbd559a5458a80800000000000000
+      internalID: -8465283330980716901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
