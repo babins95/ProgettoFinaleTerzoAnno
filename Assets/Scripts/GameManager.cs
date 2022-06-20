@@ -94,49 +94,49 @@ public class GameManager : MonoBehaviour
     }
 
 
-    private void Update()
-    {
-        if (falling)
-        {
-            if (fallTimer > 0)
-            {
-                fallTimer--;
-            }
-            else
-            {
-                if (swap)
-                {
-                    Fall(adult);
-                }
-                else
-                {
-                    Fall(child);
-                }
-            }
-        }
-    }
+    //private void Update()
+    //{
+    //    if (falling)
+    //    {
+    //        if (fallTimer > 0)
+    //        {
+    //            fallTimer--;
+    //        }
+    //        else
+    //        {
+    //            if (swap)
+    //            {
+    //                Fall(adult);
+    //            }
+    //            else
+    //            {
+    //                Fall(child);
+    //            }
+    //        }
+    //    }
+    //}
 
-    void Fall(GameObject fallingPlayer)
-    {
-        //se stai cadendo interrompo il movimento e disattivo l'actionmap
-        //togliendo al giocatore la possibilit? di agire
-        fallingPlayer.GetComponent<Player>().moveVector = Vector2.zero;
-        fallingPlayer.GetComponent<Player>().GetComponent<PlayerInput>().DeactivateInput();
-        //e diminuisco i valore della scale fino ad arrivare alla dimensione
-        //da fine caduta
-        if (playerScale.x > scaleTarget)
-        {
-            playerScale.x -= 0.01f;
-            playerScale.y -= 0.01f;
+    //void Fall(GameObject fallingPlayer)
+    //{
+    //    //se stai cadendo interrompo il movimento e disattivo l'actionmap
+    //    //togliendo al giocatore la possibilit? di agire
+    //    fallingPlayer.GetComponent<Player>().moveVector = Vector2.zero;
+    //    fallingPlayer.GetComponent<Player>().GetComponent<PlayerInput>().DeactivateInput();
+    //    //e diminuisco i valore della scale fino ad arrivare alla dimensione
+    //    //da fine caduta
+    //    if (playerScale.x > scaleTarget)
+    //    {
+    //        playerScale.x -= 0.01f;
+    //        playerScale.y -= 0.01f;
 
-            fallingPlayer.transform.localScale = new Vector3(playerScale.x, playerScale.y, 1);
-            fallTimer = 5;
-        }
-        else
-        {
-            ResetRoom();
-        }
-    }
+    //        fallingPlayer.transform.localScale = new Vector3(playerScale.x, playerScale.y, 1);
+    //        fallTimer = 5;
+    //    }
+    //    else
+    //    {
+    //        ResetRoom();
+    //    }
+    //}
 
     //oltre a quello che gi? faceva in player lo swap ora disattiva controlli e collisione
     //della parte non attiva e la mette trasparente

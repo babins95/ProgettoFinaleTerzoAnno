@@ -7,12 +7,34 @@ public class Hole : MonoBehaviour
     [SerializeField] GameManager manager;
     [HideInInspector]
     public bool filled;
+    Collider2D collider;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
     {
-        if (collision.gameObject.GetComponent<PlayerBack>() && !filled)
+        collider = GetComponent<BoxCollider2D>();
+    }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.GetComponent<PlayerBack>() && !filled)
+    //    {
+    //        manager.falling = true;
+    //    }
+    //}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.GetComponent<Crate>())
         {
-            manager.falling = true;
+            collider.isTrigger = true;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<Crate>() && !filled)
+        {
+            collider.isTrigger = false;
+        }       
     }
 }
