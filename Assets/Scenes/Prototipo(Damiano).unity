@@ -2702,6 +2702,10 @@ PrefabInstance:
       value: PlayerChild
       objectReference: {fileID: 0}
     - target: {fileID: 7119094070646861500, guid: afc700cdfec65d44195eb9b4721ee6c8, type: 3}
+      propertyPath: speed
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119094070646861500, guid: afc700cdfec65d44195eb9b4721ee6c8, type: 3}
       propertyPath: nextLevel
       value: 
       objectReference: {fileID: 1049857987}
@@ -2752,18 +2756,6 @@ PrefabInstance:
     - target: {fileID: 7119094070646861502, guid: afc700cdfec65d44195eb9b4721ee6c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7119094070646861503, guid: afc700cdfec65d44195eb9b4721ee6c8, type: 3}
-      propertyPath: m_Color.b
-      value: 0.13764903
-      objectReference: {fileID: 0}
-    - target: {fileID: 7119094070646861503, guid: afc700cdfec65d44195eb9b4721ee6c8, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7119094070646861503, guid: afc700cdfec65d44195eb9b4721ee6c8, type: 3}
-      propertyPath: m_Color.r
-      value: 0.042452812
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afc700cdfec65d44195eb9b4721ee6c8, type: 3}
@@ -3855,6 +3847,10 @@ PrefabInstance:
     - target: {fileID: 4422877330156731152, guid: 25e53b41b176fd344b5c6e79db0080a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422877330156731154, guid: 25e53b41b176fd344b5c6e79db0080a9, type: 3}
+      propertyPath: speed
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4422877330156731154, guid: 25e53b41b176fd344b5c6e79db0080a9, type: 3}
       propertyPath: nextLevel

@@ -24,27 +24,35 @@ public class Crate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponent<PlayerEye>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
+        if (collision.GetComponent<Adult>())
         {
-            collision.GetComponentInParent<Player>().interactableObject = gameObject;
+            if (collision.GetComponent<PlayerEye>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
+            {
+                collision.GetComponentInParent<Player>().interactableObject = gameObject;
+            }
         }
     }
 
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponent<PlayerEye>() && !pickedUp && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
+        if (collision.GetComponent<Adult>())
         {
-            collision.GetComponentInParent<Player>().interactableObject = null;
+            if (collision.GetComponent<PlayerEye>() && !pickedUp && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
+            {
+                collision.GetComponentInParent<Player>().interactableObject = null;
+            }
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.GetComponent<PlayerEye>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
+        if(collision.GetComponent<Adult>())
         {
-            collision.GetComponentInParent<Player>().interactableObject = gameObject;
-        }
+            if (collision.GetComponent<PlayerEye>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
+            {
+                collision.GetComponentInParent<Player>().interactableObject = gameObject;
+            }        }
     }
 
     public void CrateInteraction(GameObject pickingUp)

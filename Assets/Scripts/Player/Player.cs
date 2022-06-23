@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     [HideInInspector]
     public Vector2 moveVector;
-    public int speed = 6;
+    public float speed = 6;
     [HideInInspector]
     public bool isFacing;
     [HideInInspector]
