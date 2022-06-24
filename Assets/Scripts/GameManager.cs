@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static Canvas pauseMenu;
+    public static bool cantSwap;
     //di base è nella versione giovane, quindi se swap = true ha cambiato ad adolescente
     public static bool swap = false;
 
@@ -143,20 +144,23 @@ public class GameManager : MonoBehaviour
     //tolgo anche il playerEye della versione spenta
     public void Swap()
     {
-        swap = !swap;
-        if (swap)
+        if (!cantSwap)
         {
-            TurnOff(child);
-            TurnOn(adult);
-        }
-        else if (swap == false)
-        {
-            if(adult.GetComponent<Adult>().hasCrate)
+            swap = !swap;
+            if (swap)
             {
-                PutDownCrate(adult);
+                TurnOff(child);
+                TurnOn(adult);
             }
-            TurnOff(adult);
-            TurnOn(child);
+            else if (swap == false)
+            {
+                if (adult.GetComponent<Adult>().hasCrate)
+                {
+                    PutDownCrate(adult);
+                }
+                TurnOff(adult);
+                TurnOn(child);
+            }
         }
     }
 

@@ -24,7 +24,7 @@ public class Crate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<Adult>())
+        if (collision.GetComponentInParent<Adult>())
         {
             if (collision.GetComponent<PlayerEye>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
             {
@@ -36,7 +36,7 @@ public class Crate : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponent<Adult>())
+        if (collision.GetComponentInParent<Adult>())
         {
             if (collision.GetComponent<PlayerEye>() && !pickedUp && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
             {
@@ -47,7 +47,7 @@ public class Crate : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.GetComponent<Adult>())
+        if(collision.GetComponentInParent<Adult>())
         {
             if (collision.GetComponent<PlayerEye>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
             {
