@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject child;
     public GameObject adult;
-    public float trasparenza;
+    public static float trasparenza = 0.5f;
 
     Scene currentScene;
 
