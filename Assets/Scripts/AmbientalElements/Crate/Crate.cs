@@ -16,6 +16,10 @@ public class Crate : MonoBehaviour
     Vector2 eyePos;
     public float range = 0.5f;
 
+    bool movingDown;
+    float timer;
+    float targetPos;
+
     private void Start()
     {
         joint = GetComponent<FixedJoint2D>();
@@ -36,7 +40,35 @@ public class Crate : MonoBehaviour
             newColor.a = 1f;
             GetComponent<SpriteRenderer>().color = newColor;
         }
+
+        if (movingDown)
+        {
+            if (timer > 0)
+            {
+                timer--;
+            }
+            else
+            {
+                MoveDown();
+            }
+        }
     }
+
+    void MoveDown()
+    {
+        if (transform.position.y > targetPos)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.02f, 0);
+
+
+            timer = 5;
+        }
+        else
+        {
+            movingDown = false;
+        }
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -154,6 +186,11 @@ public class Crate : MonoBehaviour
             gameObject.transform.position = puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Renderer>().bounds.center;
             ignoreCollision = true;
             gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            targetPos = transform.position.y - 0.25f;
+            movingDown = true;
+            //transform.parent = puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.gameObject.transform;
+            //transform.position = Vector3.zero;
+            //Debug.Log(transform.position);
         }
     }
 }

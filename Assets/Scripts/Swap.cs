@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Swap : MonoBehaviour
 {
-    public bool hasFallen;
+    public bool isFilled;
 
     // Start is called before the first frame update
     void Start()

@@ -14,6 +14,14 @@ public class Hole : MonoBehaviour
         collider = GetComponent<BoxCollider2D>();
     }
 
+    private void OnEnable()
+    {
+        if(GetComponentInParent<Swap>().isFilled)
+        {
+            collider.isTrigger = true;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponent<Crate>())
@@ -33,5 +41,6 @@ public class Hole : MonoBehaviour
     public void FillHole()
     {
         collider.isTrigger = true;
+        GetComponentInParent<Swap>().isFilled = true;
     }
 }
