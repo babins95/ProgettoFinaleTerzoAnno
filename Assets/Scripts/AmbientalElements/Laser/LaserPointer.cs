@@ -1,64 +1,57 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LaserPointer : MonoBehaviour
 {
+    List<GameObject> lasersShooting;
     [HideInInspector]
-    public bool laserOn;
+    public List<GameObject> lasersToAdd;
 
-    float startAngle;
-    float currentAngle;
-    float rotationSpeed = 100f;
-    float angleToReach;
-    float rotationAngle = 90;
-    bool rotating;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        laserOn = true;
-        startAngle = transform.eulerAngles.z;
-        currentAngle = startAngle;
-        angleToReach = currentAngle + rotationAngle;
-    }
-
-    void Update()
-    {
-        if (rotating)
-        {
-            if (currentAngle >= angleToReach)
-            {
-                if (currentAngle >= 360)
-                {
-                    currentAngle = startAngle;
-                    angleToReach = currentAngle;
-                }
-                rotating = false;
-                angleToReach = currentAngle + rotationAngle;
-            }
-
-            Rotate();
-        }
-        else
-        {
-            laserOn = true;
-        }
+        lasersShooting = new List<GameObject>();
+        lasersToAdd = new List<GameObject>();
     }
 
     private void Rotate()
     {
-        transform.rotation = Quaternion.Euler(0, 0, currentAngle);
-        currentAngle += rotationSpeed * Time.deltaTime;
+        //animazione rotazione
+        //a fine animazione metto un evento che chiama getlaseractive
+        //per ora lo chiamo a mano
+        GetLaserActive();
+    }
+
+    public void GetLaserActive()
+    {    
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            if(transform.GetChild(i).gameObject.GetComponent<ShootLaser>().laserOn)
+            {
+                lasersToAdd.Add(transform.GetChild(i).gameObject);
+            }
+        }
+
+        UpdateLaser();
+    }
+
+    public void UpdateLaser()
+    {
+        lasersShooting.AddRange(lasersToAdd);
+
+        foreach(GameObject laser in lasersShooting)
+        {
+            laser.GetComponent<ShootLaser>().GoNextLaser();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<ChildBullet>())
         {
-            laserOn = false;
-            rotating = true;
+            Rotate();
         }
     }
 }

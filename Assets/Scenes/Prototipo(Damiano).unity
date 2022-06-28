@@ -3824,6 +3824,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserPointer
       objectReference: {fileID: 0}
+    - target: {fileID: 3848390965154556548, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
+      propertyPath: laserOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253791281754577485, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
+      propertyPath: laserOn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5253791281754577485, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
       propertyPath: laserUp
       value: 1
@@ -3839,6 +3847,14 @@ PrefabInstance:
     - target: {fileID: 5253791281754577485, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
       propertyPath: laserRight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325489100109121838, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
+      propertyPath: laserOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768944073997882830, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
+      propertyPath: laserOn
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8139801830843575198, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
       propertyPath: m_RootOrder
