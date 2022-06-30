@@ -32,14 +32,14 @@ public class NpcDialogue : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponentInParent<Player>())
+        if (collision.GetComponentInParent<Player>() && !collision.GetComponentInParent<Adult>().hasCrate)
         {
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponentInParent<Player>())
+        if (collision.GetComponentInParent<Player>() && !collision.GetComponentInParent<Adult>().hasCrate)
         {
             collision.GetComponentInParent<Player>().interactableObject = null;
         }
