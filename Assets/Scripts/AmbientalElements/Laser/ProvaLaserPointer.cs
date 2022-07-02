@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class LaserPointer : MonoBehaviour
+public class ProvaLaserPointer : MonoBehaviour
 {
     public List<GameObject> lasersShooting;
     private void Start()
@@ -21,10 +21,10 @@ public class LaserPointer : MonoBehaviour
     }
 
     public void GetLaserActive()
-    {    
-        for(int i = 0; i < transform.childCount; i++)
+    {
+        for (int i = 0; i < transform.childCount; i++)
         {
-            if(transform.GetChild(i).gameObject.GetComponent<ShootLaser>().laserOn)
+            if (transform.GetChild(i).gameObject.GetComponent<ProvaShootLaser>().laserOn)
             {
                 lasersShooting.Add(transform.GetChild(i).gameObject);
             }
@@ -35,9 +35,9 @@ public class LaserPointer : MonoBehaviour
 
     public void UpdateLaser()
     {
-        foreach(GameObject laser in lasersShooting)
+        foreach (GameObject laser in lasersShooting)
         {
-            laser.GetComponent<ShootLaser>().GoNextLaser();
+            laser.GetComponent<ProvaShootLaser>().GoNextLaser();
         }
         lasersShooting = new List<GameObject>();
     }
