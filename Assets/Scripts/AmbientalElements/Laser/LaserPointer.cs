@@ -21,10 +21,10 @@ public class LaserPointer : MonoBehaviour
     }
 
     public void GetLaserActive()
-    {    
-        for(int i = 0; i < transform.childCount; i++)
+    {
+        for (int i = 0; i < transform.childCount; i++)
         {
-            if(transform.GetChild(i).gameObject.GetComponent<ShootLaser>().laserOn)
+            if (transform.GetChild(i).gameObject.GetComponent<ShootLaser>().laserOn)
             {
                 lasersShooting.Add(transform.GetChild(i).gameObject);
             }
@@ -35,7 +35,7 @@ public class LaserPointer : MonoBehaviour
 
     public void UpdateLaser()
     {
-        foreach(GameObject laser in lasersShooting)
+        foreach (GameObject laser in lasersShooting)
         {
             laser.GetComponent<ShootLaser>().GoNextLaser();
         }

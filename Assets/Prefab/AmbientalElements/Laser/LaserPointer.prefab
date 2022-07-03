@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 0.35, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8139801830843575198}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &8862568495817028573
 SpriteRenderer:
@@ -95,8 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cb6b342e2160f449f5163f16f4427e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 2c2be25ec0362d049bf6c6012e1121d7, type: 2}
-  laserRange: 10
+  Laser: {fileID: 5184949938637477047, guid: effd50e71b2ccc74889c326aa454f849, type: 3}
   nextLaser: {fileID: 5253791281754577485}
   laserOn: 0
 --- !u!1 &2415447356380252996
@@ -130,8 +129,8 @@ Transform:
   m_Children:
   - {fileID: 4052680853664623191}
   - {fileID: 3475115377816234160}
-  - {fileID: 8741574649882612844}
   - {fileID: 337520514281637794}
+  - {fileID: 8741574649882612844}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -204,7 +203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.35, z: 1}
   m_Children: []
   m_Father: {fileID: 8139801830843575198}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &199631242265337887
 SpriteRenderer:
@@ -269,8 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cb6b342e2160f449f5163f16f4427e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 2c2be25ec0362d049bf6c6012e1121d7, type: 2}
-  laserRange: 10
+  Laser: {fileID: 5184949938637477047, guid: effd50e71b2ccc74889c326aa454f849, type: 3}
   nextLaser: {fileID: 3848390965154556548}
   laserOn: 0
 --- !u!1 &2673098097202631114
@@ -368,8 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cb6b342e2160f449f5163f16f4427e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 2c2be25ec0362d049bf6c6012e1121d7, type: 2}
-  laserRange: 10
+  Laser: {fileID: 5184949938637477047, guid: effd50e71b2ccc74889c326aa454f849, type: 3}
   nextLaser: {fileID: 5325489100109121838}
   laserOn: 0
 --- !u!1 &5993666579951374308
@@ -467,7 +464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cb6b342e2160f449f5163f16f4427e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 2c2be25ec0362d049bf6c6012e1121d7, type: 2}
-  laserRange: 10
+  Laser: {fileID: 5184949938637477047, guid: effd50e71b2ccc74889c326aa454f849, type: 3}
   nextLaser: {fileID: 6768944073997882830}
   laserOn: 0

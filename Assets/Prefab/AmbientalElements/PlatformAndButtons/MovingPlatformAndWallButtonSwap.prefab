@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2992115512066434373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.837584, y: 8.154394, z: 1.5221288}
+  m_LocalPosition: {x: -14.807585, y: 8.154394, z: 1.5221288}
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children:
   - {fileID: 2992115513705282492}
@@ -104,7 +104,8 @@ MonoBehaviour:
   startPosition: {fileID: 2992115513570419167}
   timer: 1
   swappedPlatform: {fileID: 2992115512391866667}
-  IsConnectedWithButton: 0
+  isConnectedWithFloorButton: 0
+  isConnectedWithWallButton: 0
 --- !u!61 &2992115512066434377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,9 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98e177624d6171479d396535c1cf558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &2992115512391866666
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2992115512391866666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.837584, y: 8.154394, z: 1.5221288}
+  m_LocalPosition: {x: -14.807585, y: 8.154394, z: 1.5221288}
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children:
   - {fileID: 2992115513587021813}
@@ -250,7 +248,8 @@ MonoBehaviour:
   startPosition: {fileID: 2992115512449075504}
   timer: 1
   swappedPlatform: {fileID: 2992115512066434375}
-  IsConnectedWithButton: 0
+  isConnectedWithFloorButton: 0
+  isConnectedWithWallButton: 0
 --- !u!61 &2992115512391866668
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -289,9 +288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98e177624d6171479d396535c1cf558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &2992115512449075407
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +330,7 @@ GameObject:
   - component: {fileID: 2992115512458716210}
   - component: {fileID: 2992115512458716208}
   - component: {fileID: 2992115512458716209}
+  - component: {fileID: 7830261077360289211}
   m_Layer: 0
   m_Name: WallButton
   m_TagString: Untagged
@@ -447,6 +444,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &7830261077360289211
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2992115512458716111}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2992115512569430759
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +697,7 @@ GameObject:
   - component: {fileID: 2992115513675040181}
   - component: {fileID: 2992115513675040180}
   - component: {fileID: 2992115513675040179}
+  - component: {fileID: 6764700578378825986}
   m_Layer: 0
   m_Name: WallButton (1)
   m_TagString: Untagged
@@ -792,6 +811,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &6764700578378825986
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2992115513675040177}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2992115513705282491
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1785e43f745b148a8a4dacc6c32017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasFallen: 0
+  isFilled: 0
 --- !u!1 &2992115513940830272
 GameObject:
   m_ObjectHideFlags: 0

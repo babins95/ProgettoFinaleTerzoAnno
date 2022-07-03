@@ -36,11 +36,15 @@ public class WallButton : MonoBehaviour
     //interruttore sempre attivo finchè c'è qualcosa sopra
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<ChildBullet>())
+        if (collision.gameObject.GetComponent<LaserCollision>())
         {
             buttonON = !buttonON;
             //con la piattaforma che si muove attivo semplicemente il movimento per poi disattivarlo nel MovingPlatform
-            objectToChange.GetComponent<MovingPlatform>().isConnectedWithWallButton = true;
+            objectToChange.GetComponent<MovingPlatform>().MovePlatformToNextPos(true);
         }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        objectToChange.GetComponent<MovingPlatform>().MovePlatformToNextPos(false);
     }
 }
