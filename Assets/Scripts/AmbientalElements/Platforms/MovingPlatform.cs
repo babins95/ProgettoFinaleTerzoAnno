@@ -12,14 +12,6 @@ public class MovingPlatform : MonoBehaviour
     public bool isConnectedWithWallButton = false;
 
     Vector3 nextPosition;
-    //Per lo swap,metto la posizione della piattaforma a quella della piattaforma che era attiva prima
-    //private void OnDisable()
-    //{
-    //    if (GetComponentInChildren<Player>())
-    //    {
-    //        GetComponentInChildren<Player>().transform.parent = swappedPlatform.GetChild(0);
-    //    }
-    //}
     private void OnEnable()
     {
         gameObject.transform.position = swappedPlatform.position;
@@ -41,26 +33,19 @@ public class MovingPlatform : MonoBehaviour
         {
             MovePlatform();
         }
-        if (isConnectedWithWallButton == true)
-        {
-            MovePlatformToNextPos();
-        }
+        transform.position = Vector3.MoveTowards(transform.position, nextPosition, speed * Time.deltaTime);
     }
 
     //se è connesso al pulsante va alla posizione successiva e quando arriva si blocca
-    private void MovePlatformToNextPos()
+    public void MovePlatformToNextPos(bool isConnected)
     {
-        if (transform.position == nextPosition)
+        if (isConnected == true)
         {
-            isConnectedWithWallButton = false;
-            if (transform.position == pos1.position)
-            {
-                nextPosition = pos2.position;
-            }
-            else if (transform.position == pos2.position)
-            {
-                nextPosition = pos1.position;
-            }
+            nextPosition = pos2.position;
+        }
+        else
+        {
+            nextPosition = pos1.position;
         }
         //ho messo questo if di nuovo perchè altrimenti si muoveva un po' prima di fermarsi
         if (isConnectedWithWallButton == true)

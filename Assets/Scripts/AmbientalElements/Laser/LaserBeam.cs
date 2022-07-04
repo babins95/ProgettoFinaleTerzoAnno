@@ -3,19 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserBeam 
+public class LaserBeam : MonoBehaviour
 {
-    Vector2 position;
-    Vector2 direction;
-    float laserRange;
-
-    public GameObject laserObject;
+    //Vector2 position;
+    public float laserRange = 10;
+    private Vector2 direction;
     LineRenderer laserRenderer;
     //se il raggio deve collidere con qualcosa basta aggiungerlo ai layer
-    int layer = LayerMask.GetMask("Mirror", "Player", "BlockLaser", "Refract");
+    private int layer;
 
     //lista per immagazzinare ogni punto del raggio laser
-    List<Vector2> laserIndexes = new List<Vector2>();
+    List<Vector3> laserIndexes = new List<Vector3>();
     //dizionario per eventuali differenti materiali per avere differenti rifrazioni
     Dictionary<string, float> refractMaterials = new Dictionary<string, float>()
     {
@@ -24,29 +22,16 @@ public class LaserBeam
         {"Glass", 1.5f },
         {"Crystal", 2.1f }
     };
-
-    public LaserBeam(Vector2 pos, Vector2 dir, Material material, float range)
+    private void Start()
     {
-        laserRenderer = new LineRenderer();
-        laserObject = new GameObject();
-        position = pos;
-        direction = dir;
-        laserRange = range;
-
-        //quando crei un raggio ci aggiungi il LineRenderer
-        laserRenderer = laserObject.AddComponent(typeof(LineRenderer)) as LineRenderer;
-
-        //dimensione del raggio, materiale e colore
-        laserRenderer.startWidth = 0.1f;
-        laserRenderer.endWidth = 0.1f;
-        laserRenderer.material = material;
-        laserRenderer.startColor = Color.red;
-        laserRenderer.endColor = Color.red;
-        laserRenderer.sortingOrder = 2;
-
-        CastRay(pos, dir, laserRenderer);
+        laserRenderer = GetComponent<LineRenderer>();
+        direction = GetComponentInParent<Transform>().right;
+        layer = LayerMask.GetMask("Mirror", "Player", "BlockLaser");
     }
-
+    private void Update()
+    {
+        CastRay(transform.position, direction, laserRenderer);
+    }
     void CastRay(Vector2 pos, Vector2 dir, LineRenderer laser)
     {
         laserIndexes.Add(pos);
@@ -55,7 +40,7 @@ public class LaserBeam
         Ray ray = new Ray(pos, dir);
         RaycastHit2D hit = Physics2D.Raycast(pos, dir, laserRange, layer);
 
-        if(hit.collider != null)
+        if (hit.collider != null)
         {
             CheckHit(hit, dir, laser);
         }
@@ -80,77 +65,33 @@ public class LaserBeam
             CastRay(newPos, dir, laser);
             //la funzione è ricorsiva, se serve mettere un limite basta aggiungere una variabile counter
         }
-        else if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Refract"))
-        {
-            //prendo il punto d'impatto
-            Vector3 pos = hit.point;
-            laserIndexes.Add(pos);
-
-            Vector3 newPos1 = new Vector3(pos.x + (0.01f * direction.x), pos.y + (0.01f * direction.y));
-            float n1 = refractMaterials["Air"];
-            //questo funziona solo se il nome del gameObject è lo stesso interno al dictionary
-            float n2 = refractMaterials[hit.collider.name];
-
-            Vector3 norm = hit.normal;
-            Vector3 incidentDir = direction;
-
-            Vector3 refractedVector = Refract(n1, n2, norm, incidentDir);
-            //da togliere se si mette la seconda rifrazione
-            CastRay(newPos1, refractedVector, laser);
-
-            //questa parte in teoria servirebbe per fare la seconda rifrazione quando il laser
-            //esce dall'oggetto, ma non funziona come dovrebbe
-            //se vuoi provare basta scommentarla e togliere il CastRay qui sopra
-            //--------------------------------------------------------------------//
-            /*
-            //una volta presa la rifrazione d'ingresso vado a calcolare quella d'uscita
-            Ray ray1 = new Ray(newPos1, refractedVector);
-            Vector3 newRayPos = ray1.GetPoint(1.5f);
-
-            Ray ray2 = new Ray(newRayPos, -refractedVector);
-            RaycastHit2D hit2 = Physics2D.Raycast(newRayPos, -refractedVector, 1.6f);
-
-            if (hit2)
-            {
-                laserIndexes.Add(hit2.point);
-            }
-
-            UpdateLaser();
-
-            Vector3 refractedVector2 = Refract(n2, n1, -hit2.normal, refractedVector);
-            CastRay(hit2.point, refractedVector2, laser);
-            */
-            //--------------------------------------------------------------------//
-        }
         else
         {
             laserIndexes.Add(hit.point);
             UpdateLaser();
         }
     }
-
-    //questo serve a calcolare la prima rifrazione
-    Vector3 Refract(float n1, float n2, Vector3 norm, Vector3 incident)
-    {
-        incident.Normalize();
-        //bro questa è fisica oltre il mio livello, non ho idea dei calcoli, la legge di Snell non l'ho mai studiata
-        Vector3 refractedVector = (n1 / n2 * Vector3.Cross(norm, Vector3.Cross(-norm, incident))
-            - norm * Mathf.Sqrt(1 - Vector3.Dot(Vector3.Cross(norm, incident) * (n1 / n2 * n1 / n2),
-            Vector3.Cross(norm, incident)))).normalized;
-
-        return refractedVector;
-    }
-
     //updatelaser serve a far andare "in avanti" il laser
     void UpdateLaser()
     {
-        int count = 0;
         laserRenderer.positionCount = laserIndexes.Count;
-
-        foreach(Vector2 index in laserIndexes)
+        for (int i = 0; i < laserIndexes.Count; i++)
         {
-            laserRenderer.SetPosition(count, index);
-            count++;
+            if (laserRenderer.GetPosition(i) != laserIndexes[i])
+            {
+                laserRenderer.SetPosition(i, laserIndexes[i]);
+            }
         }
+        laserIndexes = new List<Vector3>();
+    }
+    public Vector3[] GetPositions()
+    {
+        Vector3[] positions = new Vector3[laserRenderer.positionCount];
+        laserRenderer.GetPositions(positions);
+        return positions;
+    }
+    public float GetWidth()
+    {
+        return laserRenderer.startWidth;
     }
 }

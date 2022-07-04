@@ -6,14 +6,10 @@ using UnityEngine;
 
 public class LaserPointer : MonoBehaviour
 {
-    List<GameObject> lasersShooting;
-    [HideInInspector]
-    public List<GameObject> lasersToAdd;
-
+    public List<GameObject> lasersShooting;
     private void Start()
     {
         lasersShooting = new List<GameObject>();
-        lasersToAdd = new List<GameObject>();
     }
 
     private void Rotate()
@@ -25,12 +21,12 @@ public class LaserPointer : MonoBehaviour
     }
 
     public void GetLaserActive()
-    {    
-        for(int i = 0; i < transform.childCount; i++)
+    {
+        for (int i = 0; i < transform.childCount; i++)
         {
-            if(transform.GetChild(i).gameObject.GetComponent<ShootLaser>().laserOn)
+            if (transform.GetChild(i).gameObject.GetComponent<ShootLaser>().laserOn)
             {
-                lasersToAdd.Add(transform.GetChild(i).gameObject);
+                lasersShooting.Add(transform.GetChild(i).gameObject);
             }
         }
 
@@ -39,12 +35,11 @@ public class LaserPointer : MonoBehaviour
 
     public void UpdateLaser()
     {
-        lasersShooting.AddRange(lasersToAdd);
-
-        foreach(GameObject laser in lasersShooting)
+        foreach (GameObject laser in lasersShooting)
         {
             laser.GetComponent<ShootLaser>().GoNextLaser();
         }
+        lasersShooting = new List<GameObject>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

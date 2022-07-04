@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716629514439503194}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.837584, y: 8.154394, z: 1.5221288}
+  m_LocalPosition: {x: -14.807585, y: 8.154394, z: 1.5221288}
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children:
   - {fileID: 716629515673760675}
@@ -104,7 +104,8 @@ MonoBehaviour:
   startPosition: {fileID: 716629516076788160}
   timer: 1
   swappedPlatform: {fileID: 716629514898133300}
-  IsConnectedWithButton: 1
+  isConnectedWithFloorButton: 0
+  isConnectedWithWallButton: 0
 --- !u!61 &716629514439503190
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,9 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98e177624d6171479d396535c1cf558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &716629514582604031
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716629514898133301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.837584, y: 8.154394, z: 1.5221288}
+  m_LocalPosition: {x: -14.807585, y: 8.154394, z: 1.5221288}
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children:
   - {fileID: 716629516094013418}
@@ -310,7 +308,8 @@ MonoBehaviour:
   startPosition: {fileID: 716629514820206895}
   timer: 1
   swappedPlatform: {fileID: 716629514439503192}
-  IsConnectedWithButton: 1
+  isConnectedWithFloorButton: 0
+  isConnectedWithWallButton: 0
 --- !u!61 &716629514898133299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -349,9 +348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98e177624d6171479d396535c1cf558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &716629514943122168
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1785e43f745b148a8a4dacc6c32017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasFallen: 0
+  isFilled: 0
 --- !u!1 &716629515777679455
 GameObject:
   m_ObjectHideFlags: 0

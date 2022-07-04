@@ -4,34 +4,34 @@ using UnityEngine;
 
 public class ShootLaser : MonoBehaviour
 {
-    public Material material;
-    [SerializeField] float laserRange;
+    public GameObject Laser;
     LaserBeam laser;
 
     public ShootLaser nextLaser;
-    //[HideInInspector]
-    //public bool turnOffLaser;
     public bool laserOn;
-
-    //per risparmiare sulle prestazioni si potrebbe spengere/accendere i laser a seconda
-    //di quale livello sta facendo in quel momento il giocatore
-    void Update()
+    private void Start()
     {
-        //se c'è già un raggio lo distruggo prima di andare a creare un nuovo raggio
-        if (laser != null)
+        if (laserOn == true)
         {
-            Destroy(laser.laserObject);
+            CreateLaser();
         }
-
-        if (laserOn)
+    }
+    public void CreateLaser()
+    {
+        if (laser == null)
         {
-            laser = new LaserBeam(gameObject.transform.position, gameObject.transform.right, material, laserRange);
+            laser = Instantiate(Laser, GetComponentInParent<Transform>()).GetComponent<LaserBeam>();
         }
     }
 
     public void GoNextLaser()
     {
         laserOn = false;
+        if (laser != null)
+        {
+            Destroy(laser.gameObject);
+        }
         nextLaser.laserOn = true;
+        nextLaser.CreateLaser();
     }
 }
