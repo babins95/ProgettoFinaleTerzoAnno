@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Platforms : MonoBehaviour
 {
+    public static bool onPlatform;
     private LayerMask collisionLayer;
 
     //Quando il player entra a contatto con la piattaforma cambio il suo layer in modo che non senta il collider della tilemap,
@@ -22,6 +23,7 @@ public class Platforms : MonoBehaviour
             }
             collision.transform.parent = gameObject.transform.GetChild(0).transform;
             collision.transform.rotation = Quaternion.Euler(Vector3.zero);
+            onPlatform = true;
         }
     }
     //all'uscita tolgo la parentela e resetto la rotazione
@@ -36,6 +38,7 @@ public class Platforms : MonoBehaviour
             }
             collision.transform.parent = null;
             collision.transform.rotation = Quaternion.Euler(Vector3.zero);
+            onPlatform = false;
         }
     }
 }

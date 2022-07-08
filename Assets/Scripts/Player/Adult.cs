@@ -37,7 +37,7 @@ public class Adult : MonoBehaviour
         {
             //stopRotation poi sarà per bloccare l'animazione sul personaggio che
             //spinge la cassa, per ora blocca la rotazione
-            if (!hasCrate || hasCrate && !player.obstacleAhead)
+            if (!hasCrate || hasCrate && !player.obstacleAhead && !Platforms.onPlatform)
             {
                 player.interactableObject.GetComponent<Crate>().CrateInteraction(gameObject);
             }

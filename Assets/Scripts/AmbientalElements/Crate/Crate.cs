@@ -133,6 +133,7 @@ public class Crate : MonoBehaviour
     {
         if (!pickingUp.GetComponent<Adult>().hasCrate)
         {
+            transform.SetParent(pickingUp.transform);
             joint.enabled = true;
             joint.connectedBody = pickingUp.GetComponent<Rigidbody2D>();
             rb.constraints = RigidbodyConstraints2D.None;
@@ -151,6 +152,7 @@ public class Crate : MonoBehaviour
     //stacco la cassa e riattivo i constraint al rigidbody
     private void PutDownCrate(GameObject puttingDown)
     {
+        transform.SetParent(null);
         coll.enabled = true;
         pickedUp = false;
         joint.enabled = false;
@@ -186,11 +188,8 @@ public class Crate : MonoBehaviour
             gameObject.transform.position = puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Renderer>().bounds.center;
             ignoreCollision = true;
             gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-            targetPos = transform.position.y - 0.25f;
+            targetPos = transform.position.y - 0.35f;
             movingDown = true;
-            //transform.parent = puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.gameObject.transform;
-            //transform.position = Vector3.zero;
-            //Debug.Log(transform.position);
         }
     }
 }
