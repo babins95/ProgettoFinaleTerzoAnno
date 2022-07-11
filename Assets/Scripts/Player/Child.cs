@@ -5,11 +5,13 @@ using UnityEngine;
 public class Child : MonoBehaviour
 {
     Player player;
+    Animator animator;
 
     private void Start()
     {
         player = gameObject.GetComponent<Player>();
         player.bulletSpawner = GetComponentInChildren<BulletSpawner>();
+        animator = GetComponent<Animator>();
     }
 
     void OnInteract()
@@ -29,4 +31,8 @@ public class Child : MonoBehaviour
         }
     }
 
+    public void EndShoot()
+    {
+        animator.SetBool("shooting", false);
+    }
 }

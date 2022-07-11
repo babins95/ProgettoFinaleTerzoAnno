@@ -11,12 +11,15 @@ public class BulletSpawner : MonoBehaviour
     public float posX;
     public float posY;
     public Vector2 bulletDirection;
+    Animator animator;
+
     void Start()
     {
         bulletDirection = Vector2.down;
         posX = transform.localPosition.x;
         posY = transform.localPosition.y;
         timer = bulletFireRate;
+        animator = GetComponentInParent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,7 +40,11 @@ public class BulletSpawner : MonoBehaviour
                 ChildBullet newBullet = Instantiate(BulletPrefab);
                 newBullet.transform.position = this.transform.position;
                 timer = 0;
+
+                animator.SetBool("shooting", true);
             }
         }
     }
+
+
 }

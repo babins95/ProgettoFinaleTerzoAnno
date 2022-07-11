@@ -60,7 +60,6 @@ public class Player : MonoBehaviour
     {
         if (interactableObject != null)
         {
-            //BreakColumn();
             GoNextLevel();
             DialogueInteraction();
         }
@@ -82,15 +81,6 @@ public class Player : MonoBehaviour
             interactableObject.GetComponent<NextLevel>().GoNextLevel();
         }
     }
-
-    //void BreakColumn()
-    //{
-    //    if (interactableObject.GetComponentInParent<Column>() != null && isFacing)
-    //    {
-    //        //animazione
-    //        interactableObject.GetComponentInParent<Column>().BreakDownColumn();
-    //    }
-    //}
 
     void Animate(float x, float y)
     {
@@ -126,6 +116,8 @@ public class Player : MonoBehaviour
                 bulletSpawner.bulletDirection = Vector2.up;
             }
             eyePosCounter = 1;
+            //up
+            animator.SetFloat("direction", 1);
         }
         else if (animator.GetFloat("moveY") == -1)
         {
@@ -138,6 +130,8 @@ public class Player : MonoBehaviour
                 bulletSpawner.bulletDirection = Vector2.down;
             }
             eyePosCounter = 2;
+            //down
+            animator.SetFloat("direction", 0);
         }
         else if (animator.GetFloat("moveX") == 1)
         {
@@ -150,6 +144,8 @@ public class Player : MonoBehaviour
                 bulletSpawner.bulletDirection = Vector2.right;
             }
             eyePosCounter = 3;
+            //right
+            animator.SetFloat("direction", 0.7f);
         }
         else if (animator.GetFloat("moveX") == -1)
         {
@@ -162,6 +158,8 @@ public class Player : MonoBehaviour
                 bulletSpawner.bulletDirection = Vector2.left;
             }
             eyePosCounter = 4;
+            //left
+            animator.SetFloat("direction", 0.3f);
         }
     }
 
