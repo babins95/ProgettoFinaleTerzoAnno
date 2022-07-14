@@ -36,9 +36,6 @@ public class BulletSpawner : MonoBehaviour
         {
             if (timer >= bulletFireRate)
             {
-                BulletPrefab.bulletAngle = bulletDirection;
-                ChildBullet newBullet = Instantiate(BulletPrefab);
-                newBullet.transform.position = this.transform.position;
                 timer = 0;
 
                 animator.SetBool("shooting", true);
@@ -46,5 +43,10 @@ public class BulletSpawner : MonoBehaviour
         }
     }
 
-
+    //public void ActualShoot()
+    //{
+    //    BulletPrefab.bulletAngle = bulletDirection;
+    //    ChildBullet newBullet = Instantiate(BulletPrefab);
+    //    newBullet.transform.position = this.transform.position;
+    //}
 }

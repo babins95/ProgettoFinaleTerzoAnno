@@ -6,11 +6,12 @@ public class Child : MonoBehaviour
 {
     Player player;
     Animator animator;
+    BulletSpawner spawner;
 
     private void Start()
     {
         player = gameObject.GetComponent<Player>();
-        player.bulletSpawner = GetComponentInChildren<BulletSpawner>();
+        spawner = GetComponentInChildren<BulletSpawner>();
         animator = GetComponent<Animator>();
     }
 
@@ -29,6 +30,13 @@ public class Child : MonoBehaviour
         {
             transform.position = player.interactableObject.transform.position;
         }
+    }
+
+    public void ActualShoot()
+    {
+        spawner.BulletPrefab.bulletAngle = spawner.bulletDirection;
+        ChildBullet newBullet = Instantiate(spawner.BulletPrefab);
+        newBullet.transform.position = spawner.transform.position;
     }
 
     public void EndShoot()
