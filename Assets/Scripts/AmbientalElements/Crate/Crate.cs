@@ -7,11 +7,13 @@ public class Crate : MonoBehaviour
 {
     FixedJoint2D joint;
     Rigidbody2D rb;
-    BoxCollider2D coll;
+    Collider2D coll;
     public bool pickedUp;
     private bool isOnTransparentTile;
 
     bool ignoreCollision;
+
+    public bool isMirror;
 
     Vector2 eyePos;
     public float range = 0.5f;
@@ -24,7 +26,7 @@ public class Crate : MonoBehaviour
     {
         joint = GetComponent<FixedJoint2D>();
         rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<BoxCollider2D>();
+        coll = GetComponent<Collider2D>();
     }
     private void Update()
     {
@@ -141,6 +143,7 @@ public class Crate : MonoBehaviour
             transform.position = new Vector2(pickingUp.transform.position.x, pickingUp.transform.position.y + 1);
             coll.enabled = false;
             pickingUp.GetComponent<Adult>().hasCrate = true;
+            pickingUp.GetComponent<Player>().crateShadow.TurnOnShadow(isMirror);
         }
         else
         {
@@ -161,6 +164,7 @@ public class Crate : MonoBehaviour
         puttingDown.GetComponent<Player>().interactableObject = null;
         eyePos = puttingDown.GetComponentInChildren<PlayerEye>().gameObject.transform.position;
         puttingDown.GetComponent<Adult>().hasCrate = false;
+        puttingDown.GetComponent<Player>().crateShadow.TurnOffShadow();
 
         switch (puttingDown.GetComponent<Player>().eyePosCounter)
         {
@@ -187,7 +191,7 @@ public class Crate : MonoBehaviour
             puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Hole>().FillHole();
             gameObject.transform.position = puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Renderer>().bounds.center;
             ignoreCollision = true;
-            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            gameObject.GetComponent<Collider2D>().isTrigger = true;
             targetPos = transform.position.y - 0.35f;
             movingDown = true;
         }

@@ -43,10 +43,10 @@ public class BulletSpawner : MonoBehaviour
         }
     }
 
-    //public void ActualShoot()
-    //{
-    //    BulletPrefab.bulletAngle = bulletDirection;
-    //    ChildBullet newBullet = Instantiate(BulletPrefab);
-    //    newBullet.transform.position = this.transform.position;
-    //}
+    public void ActualShoot()
+    {
+        BulletPrefab.bulletAngle = bulletDirection;
+        ChildBullet newBullet = Instantiate(BulletPrefab);
+        newBullet.transform.position = this.transform.position;
+    }
 }

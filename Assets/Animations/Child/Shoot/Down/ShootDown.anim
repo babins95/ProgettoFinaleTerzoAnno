@@ -87,7 +87,7 @@ AnimationClip:
   - time: 0.375
     functionName: ActualShoot
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 18edd877248f444419eff18dc8415283, type: 3}
+    objectReferenceParameter: {fileID: 11500000, guid: 079c4f2eb0cf50a4eb86de85f81ab5ee, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

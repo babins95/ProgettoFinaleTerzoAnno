@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Adult : MonoBehaviour
 {
@@ -8,9 +9,14 @@ public class Adult : MonoBehaviour
     [HideInInspector]
     public bool hasCrate;
 
+    Animator animator;
+    PlayerInput input;
+
     private void Start()
     {
         player = gameObject.GetComponent<Player>();
+        animator = GetComponent<Animator>();
+        input = GetComponent<PlayerInput>();
     }
 
     void OnInteract()
@@ -27,8 +33,16 @@ public class Adult : MonoBehaviour
         //animazione del climb
         if (player.interactableObject.GetComponent<ClimbableWall>() != null && player.isFacing && !hasCrate)
         {
-            transform.position = player.interactableObject.transform.position;
+            animator.SetBool("climbing", true);
+            input.enabled = false;
         }
+    }
+
+    public void ActualClimb()
+    {
+        //verrà chiamata da un evento all'ultimo frame dell'animazione
+        transform.position = player.interactableObject.transform.position;
+        input.enabled = true;
     }
 
     void CrateInteract()

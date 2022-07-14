@@ -14,14 +14,7 @@ public class LaserBeam : MonoBehaviour
 
     //lista per immagazzinare ogni punto del raggio laser
     List<Vector3> laserIndexes = new List<Vector3>();
-    //dizionario per eventuali differenti materiali per avere differenti rifrazioni
-    Dictionary<string, float> refractMaterials = new Dictionary<string, float>()
-    {
-        //più grande il float più grande l'angolo di rifrazione
-        {"Air", 1f },
-        {"Glass", 1.5f },
-        {"Crystal", 2.1f }
-    };
+
     private void Start()
     {
         laserRenderer = GetComponent<LineRenderer>();

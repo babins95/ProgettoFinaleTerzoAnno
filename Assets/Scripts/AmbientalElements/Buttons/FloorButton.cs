@@ -9,6 +9,16 @@ public class FloorButton : MonoBehaviour
     //specifico se l'interruttore serve per fermare o attivare la rotazione
     public bool switchForActivatingPlatform;
     public GameObject objectToChange;
+
+    SpriteRenderer renderer;
+    public Sprite on;
+    public Sprite off;
+
+    private void Start()
+    {
+        renderer = GetComponent<SpriteRenderer>();
+    }
+
     void Update()
     {
         BlockRotating();
@@ -51,6 +61,7 @@ public class FloorButton : MonoBehaviour
         if(collision.GetComponent<Player>() || collision.GetComponent<Crate>())
         {
             buttonON = true;
+            renderer.sprite = on;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -58,6 +69,7 @@ public class FloorButton : MonoBehaviour
         if (collision.GetComponent<Player>() || collision.GetComponent<Crate>())
         {
             buttonON = false;
+            renderer.sprite = off;
         }
     }
 }

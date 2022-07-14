@@ -11,7 +11,7 @@ public class Hole : MonoBehaviour
 
     private void Start()
     {
-        collider = GetComponent<BoxCollider2D>();
+        collider = GetComponent<Collider2D>();
     }
 
     private void OnEnable()

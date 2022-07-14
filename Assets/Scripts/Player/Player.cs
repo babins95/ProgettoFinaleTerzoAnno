@@ -27,6 +27,9 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public int eyePosCounter;
     ObstacleCheck obstacleCheck;
+    [HideInInspector]
+    public CrateShadow crateShadow;
+
     //debug, da togliere poi
     public NextLevel nextLevel;
 
@@ -38,6 +41,7 @@ public class Player : MonoBehaviour
         playerEye = GetComponentInChildren<PlayerEye>();
         playerBack = GetComponentInChildren<PlayerBack>();
         obstacleCheck = GetComponentInChildren<ObstacleCheck>();
+        crateShadow = GetComponentInChildren<CrateShadow>();
     }
 
     // Update is called once per frame
@@ -115,6 +119,10 @@ public class Player : MonoBehaviour
                 bulletSpawner.transform.localPosition = new Vector3(0, playerEye.posY, 0);
                 bulletSpawner.bulletDirection = Vector2.up;
             }
+            if(crateShadow != null)
+            {
+                crateShadow.transform.localPosition = new Vector3(0, crateShadow.posY - 0.25f, 0);
+            }
             eyePosCounter = 1;
             //up
             animator.SetFloat("direction", 1);
@@ -128,6 +136,10 @@ public class Player : MonoBehaviour
             {
                 bulletSpawner.transform.localPosition = new Vector3(0, -playerEye.posY, 0);
                 bulletSpawner.bulletDirection = Vector2.down;
+            }
+            if (crateShadow != null)
+            {
+                crateShadow.transform.localPosition = new Vector3(0, -crateShadow.posY, 0);
             }
             eyePosCounter = 2;
             //down
@@ -143,6 +155,10 @@ public class Player : MonoBehaviour
                 bulletSpawner.transform.localPosition = new Vector3(bulletSpawner.posX, bulletSpawner.posY, 0);
                 bulletSpawner.bulletDirection = Vector2.right;
             }
+            if (crateShadow != null)
+            {
+                crateShadow.transform.localPosition = new Vector3(crateShadow.posX, crateShadow.defaultY, 0);
+            }
             eyePosCounter = 3;
             //right
             animator.SetFloat("direction", 0.7f);
@@ -156,6 +172,10 @@ public class Player : MonoBehaviour
             {
                 bulletSpawner.transform.localPosition = new Vector3(-bulletSpawner.posX, bulletSpawner.posY, 0);
                 bulletSpawner.bulletDirection = Vector2.left;
+            }
+            if (crateShadow != null)
+            {
+                crateShadow.transform.localPosition = new Vector3(-crateShadow.posX, crateShadow.defaultY, 0);
             }
             eyePosCounter = 4;
             //left
