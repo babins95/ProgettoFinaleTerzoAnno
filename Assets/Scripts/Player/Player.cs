@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     Animator animator;
     Vector3 moveDirection;
     PlayerEye playerEye;
-    PlayerBack playerBack;
     public BulletSpawner bulletSpawner;
 
     [HideInInspector]
@@ -39,7 +38,6 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         playerEye = GetComponentInChildren<PlayerEye>();
-        playerBack = GetComponentInChildren<PlayerBack>();
         obstacleCheck = GetComponentInChildren<ObstacleCheck>();
         crateShadow = GetComponentInChildren<CrateShadow>();
     }
@@ -111,9 +109,13 @@ public class Player : MonoBehaviour
     {
         if (animator.GetFloat("moveY") == 1)
         {
-            playerBack.transform.localPosition = new Vector3(0, playerBack.posY, 0);
-            playerEye.transform.localPosition = new Vector3(0, playerEye.posY, 0);
-            obstacleCheck.transform.localPosition = new Vector3(0, obstacleCheck.posY, 0);
+            playerEye.transform.localPosition = Vector3.zero;
+            obstacleCheck.transform.localPosition = new Vector3(0, 0.15f, 0);
+            obstacleCheck.transform.rotation = Quaternion.Euler(new Vector3(0,0,1)*90);
+            //if (obstacleCheck.transform.rotation.z == 0)
+            //{
+            //    obstacleCheck.transform.Rotate(new Vector3(0, 0, 1), 90);
+            //}
             if (bulletSpawner != null)
             {
                 bulletSpawner.transform.localPosition = new Vector3(0, playerEye.posY, 0);
@@ -129,9 +131,9 @@ public class Player : MonoBehaviour
         }
         else if (animator.GetFloat("moveY") == -1)
         {
-            playerBack.transform.localPosition = new Vector3(0, -playerBack.posY, 0);
             playerEye.transform.localPosition = new Vector3(0, -playerEye.posY, 0);
             obstacleCheck.transform.localPosition = new Vector3(0, -obstacleCheck.posY, 0);
+            obstacleCheck.transform.rotation = Quaternion.Euler(Vector3.zero);
             if (bulletSpawner != null)
             {
                 bulletSpawner.transform.localPosition = new Vector3(0, -playerEye.posY, 0);
@@ -147,9 +149,9 @@ public class Player : MonoBehaviour
         }
         else if (animator.GetFloat("moveX") == 1)
         {
-            playerBack.transform.localPosition = new Vector3(playerBack.posX, 0, 0);
             playerEye.transform.localPosition = new Vector3(playerEye.posX, 0, 0);
             obstacleCheck.transform.localPosition = new Vector3(obstacleCheck.posX, 0, 0);
+            obstacleCheck.transform.rotation = Quaternion.Euler(Vector3.zero);
             if (bulletSpawner != null)
             {
                 bulletSpawner.transform.localPosition = new Vector3(bulletSpawner.posX, bulletSpawner.posY, 0);
@@ -165,9 +167,9 @@ public class Player : MonoBehaviour
         }
         else if (animator.GetFloat("moveX") == -1)
         {
-            playerBack.transform.localPosition = new Vector3(-playerBack.posX, 0, 0);
             playerEye.transform.localPosition = new Vector3(-playerEye.posX, 0, 0);
             obstacleCheck.transform.localPosition = new Vector3(-obstacleCheck.posX, 0, 0);
+            obstacleCheck.transform.rotation = Quaternion.Euler(Vector3.zero);
             if (bulletSpawner != null)
             {
                 bulletSpawner.transform.localPosition = new Vector3(-bulletSpawner.posX, bulletSpawner.posY, 0);

@@ -12,11 +12,12 @@ public class FloorButton : MonoBehaviour
 
     SpriteRenderer renderer;
     public Sprite on;
-    public Sprite off;
+    Sprite off;
 
     private void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
+        off = renderer.sprite;
     }
 
     void Update()
