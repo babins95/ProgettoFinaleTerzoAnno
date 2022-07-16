@@ -12,11 +12,42 @@ public class Adult : MonoBehaviour
     Animator animator;
     PlayerInput input;
 
+    Transform toReach;
+    Transform starting;
+    float timeElapsed = 5f;
+    float lerpDuration;
+    float currentY;
+
+
     private void Start()
     {
         player = gameObject.GetComponent<Player>();
         animator = GetComponent<Animator>();
         input = GetComponent<PlayerInput>();
+        GetAnimationTime();
+    }
+
+    private void Update()
+    {
+        if(timeElapsed < lerpDuration)
+        {
+            currentY = Mathf.Lerp(starting.position.y, toReach.position.y, timeElapsed / lerpDuration);
+            timeElapsed += Time.deltaTime;
+            transform.position = new Vector2(transform.position.x, currentY);
+        }
+
+    }
+
+    void GetAnimationTime()
+    {
+        AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
+        foreach(AnimationClip clip in clips)
+        {
+            if(clip.name == "Climb")
+            {
+                lerpDuration = clip.length;
+            }
+        }
     }
 
     void OnInteract()
@@ -31,18 +62,34 @@ public class Adult : MonoBehaviour
     void Climb()
     {
         //animazione del climb
-        if (player.interactableObject.GetComponent<ClimbableWall>() != null && player.isFacing && !hasCrate)
+        if (player.interactableObject.GetComponent<ClimbableWall>() != null && !hasCrate)
         {
+            ClimbableWall wallToClimb = player.interactableObject.GetComponent<ClimbableWall>();
+            
             animator.SetBool("climbing", true);
-            input.enabled = false;
+            player.moveVector = Vector2.zero;
+            input.DeactivateInput();
+            if(!wallToClimb.goingDown)
+            {
+                starting = wallToClimb.transform.parent.GetChild(1).gameObject.transform;
+                toReach = wallToClimb.transform.parent.GetChild(0).gameObject.transform;
+                timeElapsed = 0f;
+            }
+            else
+            {
+                starting = wallToClimb.transform.parent.GetChild(0).gameObject.transform;
+                toReach = wallToClimb.transform.parent.GetChild(1).gameObject.transform;
+                timeElapsed = 0f;
+            }
         }
     }
 
     public void ActualClimb()
     {
         //verrà chiamata da un evento all'ultimo frame dell'animazione
-        transform.position = player.interactableObject.transform.position;
-        input.enabled = true;
+        input.ActivateInput();
+        animator.SetBool("climbing", false);
+        transform.position = new Vector2(toReach.position.x, toReach.position.y);
     }
 
     void CrateInteract()

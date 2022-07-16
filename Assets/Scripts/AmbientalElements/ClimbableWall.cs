@@ -6,6 +6,10 @@ public class ClimbableWall : MonoBehaviour
 {
     //importante: ho messo il rigidbody del player su Never Sleep per evitare bug
     //con lo swap
+
+    public bool goingUp;
+    public bool goingDown;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.GetComponentInParent<Adult>() && collision.GetComponentInParent<Adult>().hasCrate == false)
