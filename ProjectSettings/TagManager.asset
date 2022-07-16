@@ -47,12 +47,12 @@ TagManager:
   - name: Tilemap
     uniqueID: 3893249565
     locked: 0
+  - name: TilemapForeGround
+    uniqueID: 90055133
+    locked: 0
   - name: AmbientalElements
     uniqueID: 2983601177
     locked: 0
   - name: Player
     uniqueID: 109441361
-    locked: 0
-  - name: TilemapForeGround
-    uniqueID: 90055133
     locked: 0
