@@ -7,21 +7,21 @@ public class MovingPlatform : MonoBehaviour
     public Transform startPosition;
     public float timer;
     private float currentTimer;
-    public Transform swappedPlatform;
+    //public Transform swappedPlatform;
     public bool isConnectedWithFloorButton;
     public bool isConnectedWithWallButton = false;
 
     Vector3 nextPosition;
-    private void OnEnable()
-    {
-        gameObject.transform.position = swappedPlatform.position;
-        nextPosition = swappedPlatform.gameObject.GetComponent<MovingPlatform>().nextPosition;
-        if (swappedPlatform.GetComponentInChildren<Player>())
-        {
-            swappedPlatform.GetComponentInChildren<Player>().transform.parent = gameObject.transform.GetChild(0);
-        }
+    //private void OnEnable()
+    //{
+    //    gameObject.transform.position = swappedPlatform.position;
+    //    nextPosition = swappedPlatform.gameObject.GetComponent<MovingPlatform>().nextPosition;
+    //    if (swappedPlatform.GetComponentInChildren<Player>())
+    //    {
+    //        swappedPlatform.GetComponentInChildren<Player>().transform.parent = gameObject.transform.GetChild(0);
+    //    }
 
-    }
+    //}
     void Start()
     {
         nextPosition = startPosition.position;
