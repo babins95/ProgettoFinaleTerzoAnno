@@ -19,7 +19,10 @@ public class Platforms : MonoBehaviour
             collision.gameObject.layer = gameObject.layer;
             foreach(Transform child in collision.transform)
             {
-                child.gameObject.layer = gameObject.layer;
+                if (!child.gameObject.GetComponent<ObstacleCheck>())
+                {
+                    child.gameObject.layer = gameObject.layer;
+                }
             }
             collision.transform.parent = gameObject.transform.GetChild(0).transform;
             collision.transform.rotation = Quaternion.Euler(Vector3.zero);
@@ -34,7 +37,10 @@ public class Platforms : MonoBehaviour
             collision.gameObject.layer = collisionLayer;
             foreach (Transform child in collision.transform)
             {
-                child.gameObject.layer = collisionLayer;
+                if (!child.gameObject.GetComponent<ObstacleCheck>())
+                {
+                    child.gameObject.layer = collisionLayer;
+                }
             }
             collision.transform.parent = null;
             collision.transform.rotation = Quaternion.Euler(Vector3.zero);

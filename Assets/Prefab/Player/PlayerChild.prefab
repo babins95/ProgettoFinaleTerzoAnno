@@ -303,7 +303,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 109441361
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 3370943250723455743, guid: f550065323d7ac143b68b1440747d620, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -412,7 +412,7 @@ MonoBehaviour:
   isFacing: 0
   stopAnimation: 0
   interactableObject: {fileID: 0}
-  bulletSpawner: {fileID: 0}
+  bulletSpawner: {fileID: 5310591355999457687}
   obstacleAhead: 0
   eyePosCounter: 0
   crateShadow: {fileID: 0}
