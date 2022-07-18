@@ -150,7 +150,7 @@ public class Player : MonoBehaviour
         else if (animator.GetFloat("moveX") == 1)
         {
             playerEye.transform.localPosition = new Vector3(playerEye.posX, 0, 0);
-            obstacleCheck.transform.localPosition = new Vector3(obstacleCheck.posX, 0, 0);
+            obstacleCheck.transform.localPosition = new Vector3(obstacleCheck.posX, -0.4f, 0);
             obstacleCheck.transform.rotation = Quaternion.Euler(Vector3.zero);
             if (bulletSpawner != null)
             {
@@ -168,7 +168,7 @@ public class Player : MonoBehaviour
         else if (animator.GetFloat("moveX") == -1)
         {
             playerEye.transform.localPosition = new Vector3(-playerEye.posX, 0, 0);
-            obstacleCheck.transform.localPosition = new Vector3(-obstacleCheck.posX, 0, 0);
+            obstacleCheck.transform.localPosition = new Vector3(-obstacleCheck.posX, -0.4f, 0);
             obstacleCheck.transform.rotation = Quaternion.Euler(Vector3.zero);
             if (bulletSpawner != null)
             {

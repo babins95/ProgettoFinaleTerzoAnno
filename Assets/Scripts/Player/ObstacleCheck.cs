@@ -22,6 +22,14 @@ public class ObstacleCheck : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!collision.GetComponent<FloorButton>())
+        {
+            player.obstacleAhead = true;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         player.obstacleAhead = false;
