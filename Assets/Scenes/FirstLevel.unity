@@ -3512,12 +3512,20 @@ PrefabInstance:
       value: 0.54220724
       objectReference: {fileID: 0}
     - target: {fileID: 3706754393610817859, guid: b2fed45e81adaec40b05d10446e6ea9e, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.51493746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706754393610817859, guid: b2fed45e81adaec40b05d10446e6ea9e, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706754393610817859, guid: b2fed45e81adaec40b05d10446e6ea9e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.704499
+      value: 7.3174496
       objectReference: {fileID: 0}
     - target: {fileID: 3706754393610817859, guid: b2fed45e81adaec40b05d10446e6ea9e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5.1035295
+      value: 4.6341467
       objectReference: {fileID: 0}
     - target: {fileID: 8997731589097265963, guid: b2fed45e81adaec40b05d10446e6ea9e, type: 3}
       propertyPath: m_Size.x
@@ -3536,12 +3544,20 @@ PrefabInstance:
       value: 0.54220724
       objectReference: {fileID: 0}
     - target: {fileID: 8997731589097265963, guid: b2fed45e81adaec40b05d10446e6ea9e, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.51493746
+      objectReference: {fileID: 0}
+    - target: {fileID: 8997731589097265963, guid: b2fed45e81adaec40b05d10446e6ea9e, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8997731589097265963, guid: b2fed45e81adaec40b05d10446e6ea9e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.704499
+      value: 7.3174496
       objectReference: {fileID: 0}
     - target: {fileID: 8997731589097265963, guid: b2fed45e81adaec40b05d10446e6ea9e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5.1035295
+      value: 4.6341467
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2fed45e81adaec40b05d10446e6ea9e, type: 3}
@@ -50219,12 +50235,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 9e37b63c516151f40b11875ac72beee5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e651016aa55944c45a6f1a357151d7fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 19.2, y: 12}
+  m_DrawMode: 2
+  m_Size: {x: 19.2, y: 34.15671}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -50238,7 +50254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454616038}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.69999933, y: 0, z: 0}
+  m_LocalPosition: {x: -0.69999933, y: 25.2354, z: 0}
   m_LocalScale: {x: 2.2778964, y: 2.2778964, z: 1}
   m_Children: []
   m_Father: {fileID: 451669718}
@@ -50367,12 +50383,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 96722af8b8eea7d478d27bab85f3f75e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ff9acd170cef4c43b8f41653713f3ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 38.399998, y: 21.599998}
+  m_DrawMode: 2
+  m_Size: {x: 19.988976, y: 34.614685}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -50386,7 +50402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564628367}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5784, y: 25.2353, z: 0}
   m_LocalScale: {x: 2.2778964, y: 2.2778964, z: 1}
   m_Children: []
   m_Father: {fileID: 451669718}
@@ -51789,7 +51805,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 185743411048263961, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -11.0000305
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 1082639571538245096, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
       propertyPath: m_IsActive
@@ -51801,7 +51817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1082639571832391106, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1082639571832391109, guid: d3fb8676f331908449845c1670ffdf7a, type: 3}
       propertyPath: m_RootOrder
