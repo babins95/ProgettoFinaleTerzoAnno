@@ -188,6 +188,10 @@ public class Player : MonoBehaviour
     //ho spostato la logica dello swap nel gamemanager, mi pareva più sensato
     void OnSwap()
     {
+        if(transform.parent != null)
+        {
+            transform.parent = null;
+        }
         gameManager.Swap();
     }
 
