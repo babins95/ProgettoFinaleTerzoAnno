@@ -20,6 +20,7 @@ public class NextLevel : MonoBehaviour
 
     int levelReached;
 
+
     private void Start()
     {
         levelReached = PlayerPrefs.GetInt("levelReached");
@@ -127,6 +128,6 @@ public class NextLevel : MonoBehaviour
 
     void ChangeCamera(int currentCamera)
     {
-        nextVCam.Priority += currentCamera;
+        nextVCam.Priority = currentCamera;
     }
 }

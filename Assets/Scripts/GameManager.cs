@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,11 +32,18 @@ public class GameManager : MonoBehaviour
 
     public GameObject nextLevelGroup;
 
+   
+
     //per ora è public per le funzioni di debug del player
     public int currentLevel;
+    //da togliere quando si toglie il debug del player
+    public Camera mainCamera;
+    public float blendTime;
 
     void Start()
     {
+        //blendTime = mainCamera.GetComponent<CinemachineBrain>().m_DefaultBlend.BlendTime;
+        mainCamera.GetComponent<CinemachineBrain>().m_DefaultBlend.m_Time = 0f;
         currentLevel = PlayerPrefs.GetInt("levelReached");
         currentScene = SceneManager.GetActiveScene();
         playerScale.x = child.transform.localScale.x;
@@ -43,6 +51,8 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetString("lastScene", currentScene.name);
         PlayerPrefs.Save();
+
+ 
 
         pauseMenu = PauseMenu.thisPauseMenu;
         //se è presente un file di salvataggio
@@ -59,6 +69,7 @@ public class GameManager : MonoBehaviour
         }
 
         TurnOff(adult);
+        
     }
 
     void OnPause()
@@ -94,50 +105,6 @@ public class GameManager : MonoBehaviour
         child.GetComponentInParent<Player>().nextLevel = nextLevelGroup.transform.GetChild(currentLevel).GetComponent<NextLevel>();
     }
 
-
-    //private void Update()
-    //{
-    //    if (falling)
-    //    {
-    //        if (fallTimer > 0)
-    //        {
-    //            fallTimer--;
-    //        }
-    //        else
-    //        {
-    //            if (swap)
-    //            {
-    //                Fall(adult);
-    //            }
-    //            else
-    //            {
-    //                Fall(child);
-    //            }
-    //        }
-    //    }
-    //}
-
-    //void Fall(GameObject fallingPlayer)
-    //{
-    //    //se stai cadendo interrompo il movimento e disattivo l'actionmap
-    //    //togliendo al giocatore la possibilit? di agire
-    //    fallingPlayer.GetComponent<Player>().moveVector = Vector2.zero;
-    //    fallingPlayer.GetComponent<Player>().GetComponent<PlayerInput>().DeactivateInput();
-    //    //e diminuisco i valore della scale fino ad arrivare alla dimensione
-    //    //da fine caduta
-    //    if (playerScale.x > scaleTarget)
-    //    {
-    //        playerScale.x -= 0.01f;
-    //        playerScale.y -= 0.01f;
-
-    //        fallingPlayer.transform.localScale = new Vector3(playerScale.x, playerScale.y, 1);
-    //        fallTimer = 5;
-    //    }
-    //    else
-    //    {
-    //        ResetRoom();
-    //    }
-    //}
 
     //oltre a quello che gi? faceva in player lo swap ora disattiva controlli e collisione
     //della parte non attiva e la mette trasparente

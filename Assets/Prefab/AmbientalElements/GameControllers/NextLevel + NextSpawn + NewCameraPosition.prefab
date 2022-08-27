@@ -129,6 +129,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 250766958648531264}
     - target: {fileID: 8357127473817739858, guid: 7cf97e97695f26a45959fad77ecf421b, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1690234196891318707, guid: ccbdd9a1595e70a40ad30d2a27575ebc, type: 3}
+    - target: {fileID: 8357127473817739858, guid: 7cf97e97695f26a45959fad77ecf421b, type: 3}
       propertyPath: newAdultSpawn
       value: 
       objectReference: {fileID: 1036592558445909309}
