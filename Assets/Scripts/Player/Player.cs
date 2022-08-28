@@ -213,9 +213,10 @@ public class Player : MonoBehaviour
     //vai avanti al prossimo checkpoint, fino all'ultimo della scena
     void OnSkip()
     {
-        if (gameManager.currentLevel < gameManager.nextLevelGroup.transform.childCount - 1)
+        int skipLevel = PlayerPrefs.GetInt("levelReached") + 1;
+        if (skipLevel - 1 < gameManager.nextLevelGroup.transform.childCount - 1)
         {
-            int skipLevel = gameManager.currentLevel + 1;
+            //int skipLevel = gameManager.currentLevel + 1;
             PlayerPrefs.SetInt("saved", 1);
             PlayerPrefs.SetInt("levelReached", skipLevel);
             PlayerPrefs.SetFloat("xChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(0).position.x);
@@ -230,9 +231,10 @@ public class Player : MonoBehaviour
     //vai indietro di un checkpoint, fino al primo della scena
     void OnBack()
     {
-        if (gameManager.currentLevel >= 2)
+        int skipLevel = PlayerPrefs.GetInt("levelReached") - 1;
+        if (skipLevel + 1 >= 2)
         {
-            int skipLevel = gameManager.currentLevel - 1;
+            //int skipLevel = gameManager.currentLevel - 1;
             PlayerPrefs.SetInt("saved", 1);
             PlayerPrefs.SetInt("levelReached", skipLevel);
             PlayerPrefs.SetFloat("xChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(0).position.x);
@@ -242,9 +244,9 @@ public class Player : MonoBehaviour
             PlayerPrefs.Save();
             gameManager.ResetRoom();
         }
-        else if (gameManager.currentLevel == 1)
+        else if (skipLevel + 1 == 1)
         {
-            int skipLevel = gameManager.currentLevel - 1;
+            //int skipLevel = gameManager.currentLevel - 1;
             PlayerPrefs.SetInt("saved", 1);
             PlayerPrefs.SetInt("levelReached", skipLevel);
             PlayerPrefs.SetFloat("xChild", gameManager.childSpawnPos.position.x);

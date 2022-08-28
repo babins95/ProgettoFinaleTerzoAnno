@@ -101,6 +101,8 @@ public class NextLevel : MonoBehaviour
                 child.transform.position = newChildSpawn.position;
                 adult.transform.position = newAdultSpawn.position;
 
+                PlayerPrefs.SetInt("levelReached", levelReached + 1);
+                PlayerPrefs.Save();
                 ChangeSpawnPoint();
             }
         }
