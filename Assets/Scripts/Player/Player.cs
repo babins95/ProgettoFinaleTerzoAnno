@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
 
     //debug, da togliere poi
     public NextLevel nextLevel;
-    bool firstMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -58,11 +57,6 @@ public class Player : MonoBehaviour
 
     void OnMove(InputValue moveValue)
     {
-        if(firstMove)
-        {
-            gameManager.mainCamera.GetComponent<CinemachineBrain>().m_DefaultBlend.m_Time = 2f;
-            firstMove = false;
-        }
         moveVector = moveValue.Get<Vector2>();
     }
 

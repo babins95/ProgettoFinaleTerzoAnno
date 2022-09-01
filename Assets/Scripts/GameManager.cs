@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        //blendTime = mainCamera.GetComponent<CinemachineBrain>().m_DefaultBlend.BlendTime;
         mainCamera.GetComponent<CinemachineBrain>().m_DefaultBlend.m_Time = 0f;
         currentLevel = PlayerPrefs.GetInt("levelReached");
         currentScene = SceneManager.GetActiveScene();
