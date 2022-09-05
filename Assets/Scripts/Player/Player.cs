@@ -138,6 +138,17 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Freeze()
+    {
+        moveVector = Vector2.zero;
+        gameObject.GetComponent<PlayerInput>().DeactivateInput();
+    }
+
+    public void UnFreeze()
+    {
+        gameObject.GetComponent<PlayerInput>().ActivateInput();
+    }
+
     void MoveCollider()
     {
         if (animator.GetFloat("moveY") == 1)
