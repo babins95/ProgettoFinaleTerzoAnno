@@ -130,30 +130,20 @@ public class Crate : MonoBehaviour
 
     }
 
-    //collego la cassa al player e tolgo i constraint al rigidbody, tranne il blocco alla rotazione
-    private void PickUpCrate(GameObject pickingUp)
+    public void ActualPickUp(GameObject pickingUp)
     {
-        if (!pickingUp.GetComponent<Adult>().hasCrate)
-        {
-            transform.SetParent(pickingUp.transform);
-            joint.enabled = true;
-            joint.connectedBody = pickingUp.GetComponent<Rigidbody2D>();
-            rb.constraints = RigidbodyConstraints2D.None;
-            pickedUp = true;
-            transform.position = new Vector2(pickingUp.transform.position.x, pickingUp.transform.position.y + 1);
-            coll.enabled = false;
-            pickingUp.GetComponent<Adult>().hasCrate = true;
-            pickingUp.GetComponent<Player>().crateShadow.TurnOnShadow(isMirror);
-        }
-        else
-        {
-            //suono del "non puoi"
-            Debug.Log("NO!");
-        }
+        transform.SetParent(pickingUp.transform);
+        joint.enabled = true;
+        joint.connectedBody = pickingUp.GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.None;
+        pickedUp = true;
+        transform.position = new Vector2(pickingUp.transform.position.x, pickingUp.transform.position.y + 1);
+        coll.enabled = false;
+        pickingUp.GetComponent<Adult>().hasCrate = true;
+        pickingUp.GetComponent<Player>().crateShadow.TurnOnShadow(isMirror);
     }
 
-    //stacco la cassa e riattivo i constraint al rigidbody
-    private void PutDownCrate(GameObject puttingDown)
+    public void ActualPutDown(GameObject puttingDown)
     {
         transform.SetParent(null);
         coll.enabled = true;
@@ -165,6 +155,7 @@ public class Crate : MonoBehaviour
         eyePos = puttingDown.GetComponentInChildren<PlayerEye>().gameObject.transform.position;
         puttingDown.GetComponent<Adult>().hasCrate = false;
         puttingDown.GetComponent<Player>().crateShadow.TurnOffShadow();
+
 
         switch (puttingDown.GetComponent<Player>().eyePosCounter)
         {
@@ -186,7 +177,7 @@ public class Crate : MonoBehaviour
         }
 
         //se posi la cassa sopra un buco ci puoi camminare sopra e non la puoi più prendere
-        if(puttingDown.GetComponentInChildren<PlayerEye>().onHole && !puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Hole>().filled)
+        if (puttingDown.GetComponentInChildren<PlayerEye>().onHole && !puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Hole>().filled)
         {
             puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Hole>().FillHole();
             gameObject.transform.position = puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Renderer>().bounds.center;
@@ -195,5 +186,27 @@ public class Crate : MonoBehaviour
             targetPos = transform.position.y - 0.35f;
             movingDown = true;
         }
+    }
+
+    //collego la cassa al player e tolgo i constraint al rigidbody, tranne il blocco alla rotazione
+    private void PickUpCrate(GameObject pickingUp)
+    {
+        if (!pickingUp.GetComponent<Adult>().hasCrate)
+        {
+            pickingUp.GetComponent<Animator>().SetBool("hasBox", true);
+
+        }
+        else
+        {
+            //suono del "non puoi"
+            Debug.Log("NO!");
+        }
+    }
+
+    //stacco la cassa e riattivo i constraint al rigidbody
+    private void PutDownCrate(GameObject puttingDown)
+    {
+        puttingDown.GetComponent<Animator>().SetBool("hasBox", false);
+        
     }
 }
