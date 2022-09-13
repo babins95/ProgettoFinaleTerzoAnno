@@ -1,0 +1,27 @@
+mazeo child.png
+size:1637,714
+filter:Linear,Linear
+pma:true
+1 c
+bounds:2,2,710,419
+offsets:1,1,712,421
+rotate:90
+Paint Layer 50
+bounds:880,289,739,423
+offsets:1,1,741,425
+Paint Layer 51
+bounds:423,48,664,455
+offsets:1,1,666,457
+rotate:90
+map back
+bounds:1281,24,147,349
+offsets:2,1,150,351
+rotate:90
+map front
+bounds:1281,173,114,354
+offsets:1,3,116,358
+rotate:90
+map mid
+bounds:880,47,240,399
+offsets:1,1,242,401
+rotate:90

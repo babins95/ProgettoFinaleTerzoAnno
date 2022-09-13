@@ -1,0 +1,40 @@
+anthropo smol.png
+size:1679,1094
+filter:Linear,Linear
+pma:true
+arm left
+bounds:1076,613,423,479
+arm right
+bounds:2,16,376,443
+offsets:0,0,376,468
+rotate:90
+bust
+bounds:1387,248,363,269
+offsets:29,0,392,269
+rotate:90
+closed
+bounds:1501,751,341,176
+offsets:1,1,343,178
+rotate:90
+face
+bounds:1076,209,402,309
+offsets:6,2,429,313
+rotate:90
+hair
+bounds:2,394,800,698
+half
+bounds:447,15,377,186
+offsets:1,1,379,191
+rotate:90
+hand left
+bounds:635,195,197,150
+rotate:90
+hand right
+bounds:635,2,191,145
+rotate:90
+legs
+bounds:804,72,270,1020
+offsets:438,0,708,1110
+open
+bounds:1076,13,375,194
+offsets:2,1,378,205

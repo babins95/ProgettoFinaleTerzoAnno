@@ -1,0 +1,111 @@
+chrono smol.png
+size:1695,1033
+filter:Linear,Linear
+pma:true
+Paint Layer 36
+bounds:553,8,23,44
+offsets:1,1,25,46
+rotate:90
+Paint Layer 37
+bounds:442,4,34,27
+offsets:1,1,36,29
+Paint Layer 38
+bounds:318,4,24,57
+offsets:1,1,26,59
+rotate:90
+Paint Layer 39
+bounds:124,2,47,26
+offsets:5,1,53,28
+Paint Layer 42
+bounds:227,3,14,25
+offsets:1,1,16,27
+Paint Layer 43
+bounds:202,3,23,25
+offsets:1,1,25,27
+Paint Layer 44
+bounds:377,2,29,34
+offsets:1,1,31,36
+rotate:90
+Paint Layer 45
+bounds:806,16,15,43
+offsets:1,1,17,45
+rotate:90
+Paint Layer 48
+bounds:173,2,27,26
+offsets:1,1,29,28
+Paint Layer 49
+bounds:478,4,27,23
+offsets:1,1,29,25
+rotate:90
+Paint Layer 50
+bounds:599,9,22,40
+offsets:1,1,24,42
+rotate:90
+Paint Layer 51
+bounds:413,2,27,29
+offsets:1,1,29,31
+Paint Layer 54
+bounds:234,230,30,49
+offsets:1,1,32,51
+Paint Layer 55
+bounds:722,11,20,36
+offsets:1,1,22,38
+rotate:90
+Paint Layer 56
+bounds:243,4,24,73
+offsets:1,1,26,75
+rotate:90
+Paint Layer 57
+bounds:266,240,39,44
+offsets:1,1,41,46
+rotate:90
+Paint Layer 60
+bounds:641,10,21,39
+offsets:1,1,23,41
+rotate:90
+Paint Layer 61
+bounds:682,10,38,21
+offsets:1,1,40,23
+Paint Layer 62
+bounds:503,8,23,48
+offsets:1,1,25,50
+rotate:90
+Paint Layer 63
+bounds:760,12,44,19
+offsets:1,1,47,21
+arm left
+bounds:1258,765,266,410
+rotate:90
+arm right
+bounds:1009,325,223,166
+bust
+bounds:1258,411,347,352
+cloth
+bounds:989,11,170,272
+hair back
+bounds:335,33,246,652
+offsets:1,1,248,676
+rotate:90
+hair front
+bounds:1161,28,295,532
+offsets:1,4,301,537
+rotate:90
+halo
+bounds:488,362,669,345
+offsets:1,1,671,347
+rotate:90
+hand right
+bounds:835,285,172,206
+head
+bounds:835,493,421,538
+offsets:1,2,423,541
+leg left
+bounds:2,208,230,823
+leg right
+bounds:234,281,252,750
+offsets:0,11,592,1056
+sleeve left
+bounds:124,30,176,209
+rotate:90
+sleeve right
+bounds:2,12,120,194

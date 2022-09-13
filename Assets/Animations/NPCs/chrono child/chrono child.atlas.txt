@@ -1,0 +1,14 @@
+chrono child.png
+size:480,499
+filter:Linear,Linear
+pma:true
+arm down
+bounds:2,395,239,102
+offsets:5,14,271,116
+arm up
+bounds:243,391,106,235
+rotate:90
+clock
+bounds:2,2,387,402
+offsets:1,3,450,411
+rotate:90

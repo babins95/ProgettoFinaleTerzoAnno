@@ -1,0 +1,49 @@
+mazeo smol.png
+size:2030,1553
+filter:Linear,Linear
+pma:true
+1 c
+bounds:576,1167,882,384
+offsets:1,1,884,386
+2 c
+bounds:576,821,876,344
+offsets:1,1,878,346
+3 c
+bounds:557,122,868,319
+offsets:1,1,871,321
+4 c
+bounds:557,443,863,376
+offsets:1,1,865,378
+Paint Layer 46
+bounds:724,43,362,77
+offsets:1,2,364,81
+Paint Layer 47
+bounds:1088,44,358,68
+offsets:1,1,360,70
+arm left
+bounds:1454,784,356,560
+rotate:90
+arm right
+bounds:1460,1142,409,568
+rotate:90
+bust
+bounds:2,2,238,371
+rotate:90
+earrings
+bounds:1891,109,411,109
+rotate:90
+face
+bounds:1422,473,372,309
+offsets:1,1,377,314
+gown
+bounds:2,841,572,710
+hair back
+bounds:2,242,597,553
+rotate:90
+hair bangs
+bounds:1796,522,125,260
+hair front
+bounds:1427,114,462,357
+open
+bounds:375,19,347,101
+offsets:1,1,349,103

@@ -1,0 +1,25 @@
+anthropo child.png
+size:619,449
+filter:Linear,Linear
+pma:true
+c
+bounds:530,367,80,82
+offsets:1,1,82,84
+rotate:90
+face child
+bounds:339,143,278,116
+offsets:3,6,286,127
+h
+bounds:456,29,112,104
+offsets:1,1,114,106
+rotate:90
+leaves
+bounds:2,7,440,335
+rotate:90
+legs child
+bounds:339,261,189,186
+offsets:1,1,191,189
+o
+bounds:339,2,139,115
+offsets:1,1,141,123
+rotate:90

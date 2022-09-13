@@ -1,0 +1,70 @@
+weaver smol.png
+size:1965,1087
+filter:Linear,Linear
+pma:true
+closeed
+bounds:1882,405,257,81
+offsets:2,1,262,83
+rotate:90
+head
+bounds:1207,634,549,451
+offsets:21,0,603,451
+legs
+bounds:2,529,1203,556
+offsets:1,8,1205,566
+lower left arm
+bounds:879,191,336,310
+rotate:90
+lower left hand
+bounds:638,6,172,216
+offsets:2,1,175,223
+rotate:90
+lower right arm
+bounds:1600,258,374,203
+offsets:0,0,374,204
+rotate:90
+lower right hand
+bounds:665,180,197,178
+offsets:110,4,308,279
+mask
+bounds:346,13,243,290
+offsets:0,0,308,290
+rotate:90
+mask finger
+bounds:1838,154,117,102
+offsets:3,1,121,110
+open
+bounds:1805,391,271,75
+offsets:2,2,274,78
+rotate:90
+ribbon
+bounds:1805,258,131,158
+offsets:225,110,637,665
+rotate:90
+scissors
+bounds:1583,27,253,229
+offsets:1,1,255,231
+thread to needle
+bounds:2,258,100,661
+offsets:28,8,163,679
+rotate:90
+thread to scissors
+bounds:2,360,875,167
+offsets:37,511,1026,755
+torso
+bounds:2,2,254,342
+offsets:173,0,637,665
+rotate:90
+upper left arm
+bounds:1191,46,390,298
+offsets:0,0,391,298
+upper left hand
+bounds:1758,664,163,421
+offsets:1,2,165,424
+upper right arm
+bounds:1207,346,391,286
+offsets:0,0,391,405
+upper right hand
+bounds:864,5,184,280
+offsets:22,10,207,291
+rotate:90
