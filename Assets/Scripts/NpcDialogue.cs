@@ -10,6 +10,7 @@ public class NpcDialogue : MonoBehaviour
     public string npcDialogue;
     public GameObject dialogueCanvas;
     public static bool isActive = false;
+    public bool giveShoot;
 
     //all'interazione do l'immagine e la stringa al canvas del dialogo e lo accendo fermando il tempo
     //premendo di nuovo lo spengo e il tempo riparte
@@ -29,17 +30,22 @@ public class NpcDialogue : MonoBehaviour
             dialogueCanvas.SetActive(true);
             isActive = true;
         }
+
+        if(Player.canShoot == false && giveShoot == true)
+        {
+            Player.canShoot = true;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponentInParent<Player>() && !collision.GetComponentInParent<Adult>().hasCrate)
+        if (collision.GetComponentInParent<Child>() || collision.GetComponentInParent<Adult>() && !collision.GetComponentInParent<Adult>().hasCrate)
         {
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponentInParent<Player>() && !collision.GetComponentInParent<Adult>().hasCrate)
+        if (collision.GetComponentInParent<Child>() || collision.GetComponentInParent<Adult>() && !collision.GetComponentInParent<Adult>().hasCrate)
         {
             collision.GetComponentInParent<Player>().interactableObject = null;
         }

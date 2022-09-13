@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2835967388850366654}
   - component: {fileID: 4502627757364437389}
   - component: {fileID: 2101154680809445199}
+  - component: {fileID: 3252224609799920254}
+  - component: {fileID: -6168588189754832304}
   m_Layer: 0
   m_Name: MazeoAdult
   m_TagString: Untagged
@@ -120,3 +122,45 @@ MonoBehaviour:
   _animationName: animation
   loop: 1
   timeScale: 1
+--- !u!114 &3252224609799920254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980849746609343031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b6466df85786243ad6c0cf27547f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcImage: {fileID: 21300000, guid: cbe66e6391b72864992f061d9d520f3a, type: 3}
+  npcDialogue: 
+  dialogueCanvas: {fileID: 0}
+  giveShoot: 0
+--- !u!61 &-6168588189754832304
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980849746609343031}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.11403179, y: 1.2706652}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4189343, y: 2.3148422}
+  m_EdgeRadius: 0

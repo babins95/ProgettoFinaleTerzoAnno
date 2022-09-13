@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public CrateShadow crateShadow;
 
+    public static bool canShoot;
+
     //debug, da togliere poi
     public NextLevel nextLevel;
 
@@ -41,7 +43,15 @@ public class Player : MonoBehaviour
         playerEye = GetComponentInChildren<PlayerEye>();
         obstacleCheck = GetComponentInChildren<ObstacleCheck>();
         crateShadow = GetComponentInChildren<CrateShadow>();
-        
+
+        if (PlayerPrefs.GetInt("canShoot") == 1)
+        {
+            canShoot = true;
+        }
+        else
+        {
+            canShoot = false;
+        }
     }
 
     // Update is called once per frame
@@ -259,6 +269,7 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetFloat("yChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(0).position.y);
             PlayerPrefs.SetFloat("xAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(1).position.x);
             PlayerPrefs.SetFloat("yAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(1).position.y);
+            PlayerPrefs.SetInt("canShoot", canShoot == true ? 1 : 0);
             PlayerPrefs.Save();
             gameManager.ResetRoom();
         }
@@ -277,6 +288,7 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetFloat("yChild", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(0).position.y);
             PlayerPrefs.SetFloat("xAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(1).position.x);
             PlayerPrefs.SetFloat("yAdult", gameManager.nextLevelGroup.transform.GetChild(skipLevel - 1).GetChild(1).GetChild(1).position.y);
+            PlayerPrefs.SetInt("canShoot", canShoot == true ? 1 : 0);
             PlayerPrefs.Save();
             gameManager.ResetRoom();
         }
@@ -290,6 +302,7 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetFloat("xChild", gameManager.childSpawnPos.position.x);
             PlayerPrefs.SetFloat("xAdult", gameManager.adultSpawnPos.position.x);
             PlayerPrefs.SetFloat("yAdult", gameManager.adultSpawnPos.position.y);
+            PlayerPrefs.SetInt("canShoot", canShoot == true ? 1 : 0);
             PlayerPrefs.Save();
             gameManager.ResetRoom();
         }

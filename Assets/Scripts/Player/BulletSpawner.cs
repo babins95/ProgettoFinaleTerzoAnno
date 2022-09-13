@@ -34,11 +34,14 @@ public class BulletSpawner : MonoBehaviour
     {
         if (!GameManager.swap)
         {
-            if (timer >= bulletFireRate)
+            if (Player.canShoot)
             {
-                timer = 0;
+                if (timer >= bulletFireRate)
+                {
+                    timer = 0;
 
-                animator.SetBool("shooting", true);
+                    animator.SetBool("shooting", true);
+                }
             }
         }
     }

@@ -51,8 +51,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetString("lastScene", currentScene.name);
         PlayerPrefs.Save();
 
- 
-
         pauseMenu = PauseMenu.thisPauseMenu;
         //se è presente un file di salvataggio
         if (PlayerPrefs.GetInt("saved") == 1)
@@ -99,6 +97,15 @@ public class GameManager : MonoBehaviour
 
         child.transform.position = new Vector3(childX, childY, 0);
         adult.transform.position = new Vector3(adultX, adultY, 0);
+
+        if(PlayerPrefs.GetInt("canShoot") == 1)
+        {
+            Player.canShoot = true;
+        }
+        else
+        {
+            Player.canShoot = false;
+        }
 
         //debug, da togliere poi
         child.GetComponentInParent<Player>().nextLevel = nextLevelGroup.transform.GetChild(currentLevel).GetComponent<NextLevel>();

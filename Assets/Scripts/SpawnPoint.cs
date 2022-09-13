@@ -25,6 +25,8 @@ public class SpawnPoint : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         PlayerPrefs.SetString("lastScene", currentScene.name);
 
+        PlayerPrefs.SetInt("canShoot", Player.canShoot == true ? 1 : 0);
+
         PlayerPrefs.SetInt("saved", 1);
         PlayerPrefs.Save();
     }

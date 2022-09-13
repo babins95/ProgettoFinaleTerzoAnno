@@ -34,7 +34,7 @@ public class Child : MonoBehaviour
 
     public void ActualShoot()
     {
-        spawner.ActualShoot();
+         spawner.ActualShoot();
         //spawner.BulletPrefab.bulletAngle = spawner.bulletDirection;
         //ChildBullet newBullet = Instantiate(spawner.BulletPrefab);
         //newBullet.transform.position = spawner.transform.position;

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4651928183140210462}
   - component: {fileID: 5185394004458978167}
   - component: {fileID: 2291858082873212808}
+  - component: {fileID: 1561781261883151407}
+  - component: {fileID: 2968869973935908880}
   m_Layer: 0
   m_Name: Weaver
   m_TagString: Untagged
@@ -120,3 +122,45 @@ MonoBehaviour:
   _animationName: animation
   loop: 1
   timeScale: 1
+--- !u!114 &1561781261883151407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8064011801858397776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b6466df85786243ad6c0cf27547f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcImage: {fileID: 0}
+  npcDialogue: 
+  dialogueCanvas: {fileID: 0}
+  giveShoot: 0
+--- !u!61 &2968869973935908880
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8064011801858397776}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.15100479, y: 1.5415558}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.1027646, y: 2.8642316}
+  m_EdgeRadius: 0
