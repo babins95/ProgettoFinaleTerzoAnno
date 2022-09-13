@@ -96,8 +96,6 @@ public class Adult : MonoBehaviour
     {
         if (player.interactableObject.GetComponent<Crate>() != null)
         {
-            //stopRotation poi sarà per bloccare l'animazione sul personaggio che
-            //spinge la cassa, per ora blocca la rotazione
             if (!hasCrate || hasCrate && !player.obstacleAhead && !Platforms.onPlatform)
             {
                 player.interactableObject.GetComponent<Crate>().CrateInteraction(gameObject);
@@ -107,7 +105,6 @@ public class Adult : MonoBehaviour
                 //suono del "non puoi"
                 Debug.Log("NO!");
             }
-            //player.stopAnimation = !player.stopAnimation;
         }
     }
 }

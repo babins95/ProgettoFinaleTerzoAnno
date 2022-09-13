@@ -107,6 +107,48 @@ public class Player : MonoBehaviour
         MoveCollider();
     }
 
+    public void PickUpCrateSprite()
+    {
+        if (interactableObject != null)
+        {
+            interactableObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
+    }
+
+    public void PutDownCrateSprite()
+    {
+        if (interactableObject != null)
+        {
+            interactableObject.GetComponent<SpriteRenderer>().enabled = true;
+        }
+    }
+
+    public void ActualCratePickUp()
+    {
+        if (interactableObject != null)
+        {
+            interactableObject.GetComponent<Crate>().ActualPickUp(gameObject);
+        }
+    }    
+    public void ActualCratePutDown()
+    {
+        if (interactableObject != null)
+        {
+            interactableObject.GetComponent<Crate>().ActualPutDown(gameObject);
+        }
+    }
+
+    public void Freeze()
+    {
+        moveVector = Vector2.zero;
+        gameObject.GetComponent<PlayerInput>().DeactivateInput();
+    }
+
+    public void UnFreeze()
+    {
+        gameObject.GetComponent<PlayerInput>().ActivateInput();
+    }
+
     void MoveCollider()
     {
         if (animator.GetFloat("moveY") == 1)
