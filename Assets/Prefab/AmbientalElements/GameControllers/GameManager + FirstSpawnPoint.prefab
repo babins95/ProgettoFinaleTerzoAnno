@@ -215,6 +215,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5677621785143398741}
     m_Modifications:
+    - target: {fileID: 1290340656485958694, guid: f77f4343419d97d4e9281af38432cd93, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1476221527029877733, guid: f77f4343419d97d4e9281af38432cd93, type: 3}
       propertyPath: m_Name
       value: Spawn
