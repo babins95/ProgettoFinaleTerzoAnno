@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2376311320979605082}
   - component: {fileID: 7574465820855058837}
   m_Layer: 0
-  m_Name: AntrhopoAdult
+  m_Name: AdultAntrhopo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
