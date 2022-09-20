@@ -7,7 +7,9 @@ using TMPro;
 public class NpcDialogue : MonoBehaviour
 {
     public Sprite npcImage;
+    public Sprite dialogueBox;
     public string npcDialogue;
+    public string npcName;
     public GameObject dialogueCanvas;
     public static bool isActive = false;
     public bool giveShoot;
@@ -17,8 +19,11 @@ public class NpcDialogue : MonoBehaviour
     public void DialogueInteraction()
     {
         dialogueCanvas.transform.GetChild(1).GetComponent<Image>().sprite = npcImage;
+        dialogueCanvas.transform.GetChild(2).GetComponent<Image>().sprite = dialogueBox;
         dialogueCanvas.transform.GetChild(3).GetComponent<TMP_Text>().text = npcDialogue;
-        if(isActive == true)
+        dialogueCanvas.transform.GetChild(4).GetComponent<TMP_Text>().text = npcName.ToUpper();
+            ;
+        if (isActive == true)
         {
             Time.timeScale = 1;
             dialogueCanvas.SetActive(false);

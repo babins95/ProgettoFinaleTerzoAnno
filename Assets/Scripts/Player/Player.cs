@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public bool isFacing;
     [HideInInspector]
     public bool stopAnimation;
-    [HideInInspector]
+    //[HideInInspector]
     public GameObject interactableObject;
 
     Animator animator;
