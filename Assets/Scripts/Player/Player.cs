@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void DialogueInteraction()
+    void DialogueInteraction()
     {
         //se il gioco è in pausa non puoi interagire con l'npc
         if (interactableObject != null && interactableObject.GetComponent<NpcDialogue>() != null && !GameManager.pauseMenu.isActiveAndEnabled)
