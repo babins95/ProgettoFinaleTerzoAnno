@@ -136,7 +136,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcImage: {fileID: 0}
+  dialogueBox: {fileID: 0}
   npcDialogue: 
+  npcName: 
   dialogueCanvas: {fileID: 0}
   giveShoot: 0
 --- !u!61 &2968869973935908880
@@ -189,5 +191,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.1027646, y: 2.8642316}
+  m_Size: {x: 5, y: 4.5}
   m_EdgeRadius: 0
