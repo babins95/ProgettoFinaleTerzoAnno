@@ -162,7 +162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7694961972829773245, guid: 7cf97e97695f26a45959fad77ecf421b, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8357127473817739858, guid: 7cf97e97695f26a45959fad77ecf421b, type: 3}
       propertyPath: nextVCam
