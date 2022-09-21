@@ -13,10 +13,12 @@ public class FloorButton : MonoBehaviour
     SpriteRenderer renderer;
     public Sprite on;
     Sprite off;
+    AudioSource sound;
 
     private void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
+        sound = GetComponent<AudioSource>();
         off = renderer.sprite;
     }
 
@@ -56,6 +58,10 @@ public class FloorButton : MonoBehaviour
                 objectToChange.GetComponent<RotatingPlatform>().IsConnectedWithButton = !switchForActivatingPlatform;
             }
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        sound.Play();
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
