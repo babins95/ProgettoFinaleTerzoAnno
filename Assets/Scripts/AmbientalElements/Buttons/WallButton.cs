@@ -9,9 +9,15 @@ public class WallButton : MonoBehaviour
     public bool switchForActivatingPlatform;
     public GameObject objectToChange;
     public WallButton SwappedButton;
+    public Sprite eyeClosed;
+    private Sprite eyeOpen;
     private void OnEnable()
     {
         buttonON = SwappedButton.buttonON;
+    }
+    private void Start()
+    {
+        eyeOpen = GetComponent<SpriteRenderer>().sprite;
     }
     void Update()
     {
@@ -39,12 +45,14 @@ public class WallButton : MonoBehaviour
         if (collision.gameObject.GetComponent<LaserCollision>())
         {
             buttonON = !buttonON;
+            GetComponent<SpriteRenderer>().sprite = eyeClosed;
             //con la piattaforma che si muove attivo semplicemente il movimento per poi disattivarlo nel MovingPlatform
             objectToChange.GetComponent<MovingPlatform>().MovePlatformToNextPos(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        GetComponent<SpriteRenderer>().sprite = eyeOpen;
         objectToChange.GetComponent<MovingPlatform>().MovePlatformToNextPos(false);
     }
 }
