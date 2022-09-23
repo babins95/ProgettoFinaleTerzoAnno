@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class LaserPointer : MonoBehaviour
@@ -37,7 +34,18 @@ public class LaserPointer : MonoBehaviour
     {
         foreach (GameObject laser in lasersShooting)
         {
-            laser.GetComponent<ShootLaser>().GoNextLaser();
+            laser.GetComponent<ShootLaser>().laserOn = false;
+        }
+        foreach (GameObject laser in lasersShooting)
+        {
+            laser.GetComponent<ShootLaser>().nextLaser.laserOn = true;
+        }
+        foreach (GameObject laser in lasersShooting)
+        {
+            if(laser.GetComponent<ShootLaser>().laserOn == true)
+            {
+                laser.GetComponent<ShootLaser>().nextLaser.laser = Instantiate(laser.GetComponent<ShootLaser>().nextLaser.Laser, laser.GetComponent<ShootLaser>().nextLaser.GetComponentInParent<Transform>()).GetComponent<LaserBeam>();
+            }
         }
         lasersShooting = new List<GameObject>();
     }
@@ -46,7 +54,7 @@ public class LaserPointer : MonoBehaviour
     {
         if (collision.GetComponent<ChildBullet>())
         {
-            Rotate();
+            GetLaserActive();
         }
     }
 }

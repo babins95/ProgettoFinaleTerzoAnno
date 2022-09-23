@@ -1,87 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &790515141848346520
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3317310169192051755}
-  - component: {fileID: 3278703133416926695}
-  m_Layer: 0
-  m_Name: torretta laser tutto sinistra
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3317310169192051755
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790515141848346520}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.79, z: 0}
-  m_LocalScale: {x: 1, y: 3.0656037, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8139801830843575198}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3278703133416926695
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790515141848346520}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 05b339319a4a28c4fbf3ae7d9ba1ac34, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.81647056, y: 0.85882354}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &969976674772191285
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8741574649882612844}
-  - component: {fileID: 8862568495817028573}
   - component: {fileID: 3848390965154556548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LaserLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,19 +25,68 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969976674772191285}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.351, y: 0, z: 0}
-  m_LocalScale: {x: 0.35, y: 1, z: 1}
-  m_Children: []
+  m_LocalPosition: {x: -0.486, y: 0.352, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5542897324515278037}
   m_Father: {fileID: 8139801830843575198}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!212 &8862568495817028573
-SpriteRenderer:
+--- !u!114 &3848390965154556548
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969976674772191285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cb6b342e2160f449f5163f16f4427e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Laser: {fileID: 5184949938637477047, guid: 146b8ef47251cb74b95264c7c91d3846, type: 3}
+  laser: {fileID: 0}
+  nextLaser: {fileID: 5253791281754577485}
+  laserOn: 0
+--- !u!1 &1499097245427639677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8201366828400107655}
+  - component: {fileID: 408164781609884337}
+  - component: {fileID: 5366019354165035}
+  m_Layer: 6
+  m_Name: LaserLightSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8201366828400107655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499097245427639677}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.13, y: -0.007, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 337520514281637794}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!212 &408164781609884337
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499097245427639677}
   m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -153,8 +119,103 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1311366119
   m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 2121579180360234830, guid: 5b9013ae0ca252347854e4b91421a871, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 1
+--- !u!114 &5366019354165035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499097245427639677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcff01bdf69beaf48a3d1a42e6c3c77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2405120080500616601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7544066081386673273}
+  - component: {fileID: 6628092582204641493}
+  - component: {fileID: 8035610206601697784}
+  m_Layer: 6
+  m_Name: LaserLightSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7544066081386673273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405120080500616601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.029, y: -0.357, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3475115377816234160}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &6628092582204641493
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405120080500616601}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1311366119
+  m_SortingLayer: 4
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -6551107007536154158, guid: 4f8b97f681f92f34cadabad42ac84745, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -165,21 +226,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3848390965154556548
+--- !u!114 &8035610206601697784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969976674772191285}
+  m_GameObject: {fileID: 2405120080500616601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5cb6b342e2160f449f5163f16f4427e, type: 3}
+  m_Script: {fileID: 11500000, guid: fcff01bdf69beaf48a3d1a42e6c3c77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Laser: {fileID: 5184949938637477047, guid: effd50e71b2ccc74889c326aa454f849, type: 3}
-  nextLaser: {fileID: 5253791281754577485}
-  laserOn: 0
 --- !u!1 &2415447356380252996
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,9 +247,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8139801830843575198}
-  - component: {fileID: 4270516035626611317}
   - component: {fileID: 7606568264341235135}
-  m_Layer: 0
+  - component: {fileID: 486608889510410437}
+  - component: {fileID: 552069409362494249}
+  m_Layer: 6
   m_Name: LaserPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,42 +266,15 @@ Transform:
   m_GameObject: {fileID: 2415447356380252996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.144, y: -0.677, z: 0}
-  m_LocalScale: {x: 1, y: 0.3262, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4052680853664623191}
   - {fileID: 3475115377816234160}
   - {fileID: 337520514281637794}
   - {fileID: 8741574649882612844}
-  - {fileID: 3317310169192051755}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &4270516035626611317
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2415447356380252996}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 3}
-  m_EdgeRadius: 0
 --- !u!114 &7606568264341235135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,46 +288,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lasersShooting: []
---- !u!1 &2438336068691316351
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 337520514281637794}
-  - component: {fileID: 199631242265337887}
-  - component: {fileID: 6768944073997882830}
-  m_Layer: 0
-  m_Name: LaserDown
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &337520514281637794
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2438336068691316351}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.52, z: 0}
-  m_LocalScale: {x: 1, y: 0.35, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8139801830843575198}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!212 &199631242265337887
+--- !u!212 &486608889510410437
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2438336068691316351}
-  m_Enabled: 0
+  m_GameObject: {fileID: 2415447356380252996}
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -328,7 +328,180 @@ SpriteRenderer:
   m_SortingLayerID: -1311366119
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 68e41e1a9b19f1d408fa9e716a49034d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.2392857, y: 1.3035715}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!60 &552069409362494249
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415447356380252996}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2392857, y: 1.3035715}
+    newSize: {x: 1.2392857, y: 1.3035715}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.19107144, y: -0.6482143}
+      - {x: 0.33035713, y: -0.5517857}
+      - {x: 0.37321427, y: -0.51607144}
+      - {x: 0.37321427, y: -0.36964285}
+      - {x: 0.3875, y: -0.2875}
+      - {x: 0.4232143, y: -0.17678572}
+      - {x: 0.48392856, y: -0.05892857}
+      - {x: 0.54464287, y: 0.023214286}
+      - {x: 0.56964284, y: 0.026785715}
+      - {x: 0.5946429, y: 0.04464286}
+      - {x: 0.61964285, y: 0.08035714}
+      - {x: 0.61964285, y: 0.14821428}
+      - {x: 0.6160714, y: 0.16607143}
+      - {x: 0.5482143, y: 0.24821429}
+      - {x: 0.55892855, y: 0.27321428}
+      - {x: 0.56964284, y: 0.30892858}
+      - {x: 0.55892855, y: 0.37321427}
+      - {x: 0.5482143, y: 0.39107144}
+      - {x: 0.5125, y: 0.4267857}
+      - {x: 0.46607143, y: 0.44464287}
+      - {x: 0.40892857, y: 0.44107142}
+      - {x: 0.3232143, y: 0.49107143}
+      - {x: 0.30892858, y: 0.5125}
+      - {x: 0.2625, y: 0.55892855}
+      - {x: 0.20178571, y: 0.5732143}
+      - {x: 0.17321429, y: 0.5946429}
+      - {x: 0.11607143, y: 0.6267857}
+      - {x: 0.073214285, y: 0.6375}
+      - {x: 0.048214287, y: 0.6446429}
+      - {x: -0.0625, y: 0.6446429}
+      - {x: -0.11964286, y: 0.6232143}
+      - {x: -0.18392858, y: 0.5875}
+      - {x: -0.21964286, y: 0.56964284}
+      - {x: -0.25892857, y: 0.55535716}
+      - {x: -0.28392857, y: 0.5375}
+      - {x: -0.3017857, y: 0.51607144}
+      - {x: -0.33392859, y: 0.48035714}
+      - {x: -0.3625, y: 0.4732143}
+      - {x: -0.40178573, y: 0.4375}
+      - {x: -0.4232143, y: 0.44464287}
+      - {x: -0.48035714, y: 0.44107142}
+      - {x: -0.5339286, y: 0.40892857}
+      - {x: -0.55892855, y: 0.36964285}
+      - {x: -0.5625, y: 0.34107143}
+      - {x: -0.5625, y: 0.29464287}
+      - {x: -0.55892855, y: 0.22678572}
+      - {x: -0.59821427, y: 0.18392858}
+      - {x: -0.6160714, y: 0.14821428}
+      - {x: -0.6160714, y: 0.07678571}
+      - {x: -0.56964284, y: 0.023214286}
+      - {x: -0.5303571, y: 0.008928572}
+      - {x: -0.46964285, y: -0.08035714}
+      - {x: -0.4375, y: -0.14821428}
+      - {x: -0.40535715, y: -0.23392858}
+      - {x: -0.37678573, y: -0.33392859}
+      - {x: -0.37321427, y: -0.36607143}
+      - {x: -0.36964285, y: -0.46964285}
+      - {x: -0.37678573, y: -0.46964285}
+      - {x: -0.37321427, y: -0.5196429}
+      - {x: -0.26964286, y: -0.5875}
+      - {x: -0.18035714, y: -0.6482143}
+      - {x: -0.10892857, y: -0.6482143}
+      - {x: -0.0125, y: -0.64107144}
+      - {x: 0.0625, y: -0.6446429}
+      - {x: 0.0875, y: -0.6482143}
+--- !u!1 &2424520029393520084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5542897324515278037}
+  - component: {fileID: 5376120780311073151}
+  - component: {fileID: 5329366213265163204}
+  m_Layer: 6
+  m_Name: LaserLightSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5542897324515278037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424520029393520084}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: -0.016, y: 0.351, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8741574649882612844}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!212 &5376120780311073151
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424520029393520084}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1311366119
+  m_SortingLayer: 4
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -6169504805751658898, guid: 4f8b97f681f92f34cadabad42ac84745, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -339,6 +512,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5329366213265163204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2424520029393520084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcff01bdf69beaf48a3d1a42e6c3c77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2438336068691316351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 337520514281637794}
+  - component: {fileID: 6768944073997882830}
+  m_Layer: 6
+  m_Name: LaserDown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &337520514281637794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438336068691316351}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.196, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8201366828400107655}
+  m_Father: {fileID: 8139801830843575198}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &6768944073997882830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Laser: {fileID: 5184949938637477047, guid: effd50e71b2ccc74889c326aa454f849, type: 3}
+  laser: {fileID: 0}
   nextLaser: {fileID: 3848390965154556548}
   laserOn: 0
 --- !u!1 &2673098097202631114
@@ -365,7 +583,7 @@ GameObject:
   - component: {fileID: 4052680853664623191}
   - component: {fileID: 5569637446133554333}
   - component: {fileID: 5253791281754577485}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LaserUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,8 +598,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2673098097202631114}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.38, z: 0}
-  m_LocalScale: {x: 1, y: 0.35, z: 1}
+  m_LocalPosition: {x: 0, y: 0.539, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8139801830843575198}
   m_RootOrder: 0
@@ -449,7 +667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cb6b342e2160f449f5163f16f4427e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Laser: {fileID: 5184949938637477047, guid: effd50e71b2ccc74889c326aa454f849, type: 3}
+  Laser: {fileID: 5184949938637477047, guid: 146b8ef47251cb74b95264c7c91d3846, type: 3}
+  laser: {fileID: 0}
   nextLaser: {fileID: 5325489100109121838}
   laserOn: 0
 --- !u!1 &5993666579951374308
@@ -463,7 +682,7 @@ GameObject:
   - component: {fileID: 3475115377816234160}
   - component: {fileID: 978621935643288526}
   - component: {fileID: 5325489100109121838}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LaserRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,9 +697,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5993666579951374308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.335, y: -0.06, z: 0}
-  m_LocalScale: {x: 0.35, y: 1, z: 1}
-  m_Children: []
+  m_LocalPosition: {x: 0.481, y: 0.36, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7544066081386673273}
   m_Father: {fileID: 8139801830843575198}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -547,6 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5cb6b342e2160f449f5163f16f4427e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Laser: {fileID: 5184949938637477047, guid: effd50e71b2ccc74889c326aa454f849, type: 3}
+  Laser: {fileID: 5184949938637477047, guid: 146b8ef47251cb74b95264c7c91d3846, type: 3}
+  laser: {fileID: 0}
   nextLaser: {fileID: 6768944073997882830}
   laserOn: 0

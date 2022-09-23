@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShootLaser : MonoBehaviour
 {
     public GameObject Laser;
-    LaserBeam laser;
+    public LaserBeam laser;
 
     public ShootLaser nextLaser;
     public bool laserOn;
@@ -18,7 +18,11 @@ public class ShootLaser : MonoBehaviour
     }
     public void CreateLaser()
     {
-        if (laser == null)
+        if (laser != null)
+        {
+            Destroy(laser.gameObject);
+        }
+        else if (laser == null)
         {
             laser = Instantiate(Laser, GetComponentInParent<Transform>()).GetComponent<LaserBeam>();
         }
@@ -26,12 +30,9 @@ public class ShootLaser : MonoBehaviour
 
     public void GoNextLaser()
     {
-        laserOn = false;
-        if (laser != null)
+        if(laserOn == true)
         {
-            Destroy(laser.gameObject);
+            laser = Instantiate(Laser, GetComponentInParent<Transform>()).GetComponent<LaserBeam>();
         }
-        nextLaser.laserOn = true;
-        nextLaser.CreateLaser();
     }
 }

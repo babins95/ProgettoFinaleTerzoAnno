@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4598388132584286318}
   - component: {fileID: 1220327518261541394}
   - component: {fileID: 7368931294164499719}
-  m_Layer: 13
-  m_Name: Circle (1)
+  m_Layer: 0
+  m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -889,7 +889,7 @@ GameObject:
   - component: {fileID: 2992115512458716208}
   - component: {fileID: 7830261077360289211}
   - component: {fileID: 610367269499605198}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: WallButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1157,7 +1157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2992115513443113751
 Transform:
   m_ObjectHideFlags: 0

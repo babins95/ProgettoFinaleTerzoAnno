@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5427376505827508649}
   - component: {fileID: 5290002022198048943}
   m_Layer: 0
-  m_Name: Laser
+  m_Name: LaserBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1311366119
   m_SortingLayer: 4
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Positions: []
   m_Parameters:
     serializedVersion: 3

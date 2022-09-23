@@ -24,6 +24,10 @@ public class LaserBeam : MonoBehaviour
     private void Update()
     {
         CastRay(transform.position, direction, laserRenderer);
+        if(GetComponentInParent<ShootLaser>().laserOn == false)
+        {
+            Destroy(this.gameObject);
+        }
     }
     void CastRay(Vector2 pos, Vector2 dir, LineRenderer laser)
     {
