@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     PlayerEye playerEye;
     public BulletSpawner bulletSpawner;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool obstacleAhead;    
     [HideInInspector]
     public int eyePosCounter;

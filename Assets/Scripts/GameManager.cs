@@ -127,10 +127,10 @@ public class GameManager : MonoBehaviour
             }
             else if (swap == false)
             {
-                if (adult.GetComponent<Adult>().hasCrate)
-                {
-                    PutDownCrate(adult);
-                }
+                //if (adult.GetComponent<Adult>().hasCrate)
+                //{
+                //    PutDownCrate(adult);
+                //}
                 TurnOff(adult);
                 TurnOn(child);
             }
