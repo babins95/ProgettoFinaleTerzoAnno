@@ -11,10 +11,6 @@ public class WallButton : MonoBehaviour
     public WallButton SwappedButton;
     public Sprite eyeClosed;
     private Sprite eyeOpen;
-    private void OnEnable()
-    {
-        buttonON = SwappedButton.buttonON;
-    }
     private void Start()
     {
         eyeOpen = GetComponent<SpriteRenderer>().sprite;
