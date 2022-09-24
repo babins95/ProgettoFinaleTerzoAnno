@@ -168,11 +168,11 @@ public class Crate : MonoBehaviour
                 break;
 
             case 3:
-                transform.position = new Vector2(eyePos.x + range, eyePos.y);
+                transform.position = new Vector2(eyePos.x + range, eyePos.y - range/2);
                 break;
 
             case 4:
-                transform.position = new Vector2(eyePos.x - range, eyePos.y);
+                transform.position = new Vector2(eyePos.x - range, eyePos.y - range/2);
                 break;
         }
 
@@ -193,7 +193,14 @@ public class Crate : MonoBehaviour
     {
         if (!pickingUp.GetComponent<Adult>().hasCrate)
         {
-            pickingUp.GetComponent<Animator>().SetBool("hasBox", true);
+            if (isMirror)
+            {
+                pickingUp.GetComponent<Animator>().SetBool("hasMirrorBox", true);
+            }
+            else
+            {
+                pickingUp.GetComponent<Animator>().SetBool("hasBox", true);
+            }
 
         }
         else
@@ -206,7 +213,14 @@ public class Crate : MonoBehaviour
     //stacco la cassa e riattivo i constraint al rigidbody
     private void PutDownCrate(GameObject puttingDown)
     {
-        puttingDown.GetComponent<Animator>().SetBool("hasBox", false);
-        
+        if (isMirror)
+        {
+            puttingDown.GetComponent<Animator>().SetBool("hasMirrorBox", false);
+        }
+        else
+        {
+            puttingDown.GetComponent<Animator>().SetBool("hasBox", false);
+        }
+
     }
 }
