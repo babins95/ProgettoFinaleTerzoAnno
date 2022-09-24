@@ -16,13 +16,6 @@ public class GameManager : MonoBehaviour
     public Transform adultSpawnPos;
 
     Vector3 playerScale;
-    //scale del giocatore alla fine della caduta
-    //float scaleTarget = 0.5f;
-
-    //[HideInInspector]
-    //public bool falling;
-    //[SerializeField] int fallTimer = 5;
-
 
     public GameObject child;
     public GameObject adult;
@@ -127,10 +120,6 @@ public class GameManager : MonoBehaviour
             }
             else if (swap == false)
             {
-                //if (adult.GetComponent<Adult>().hasCrate)
-                //{
-                //    PutDownCrate(adult);
-                //}
                 TurnOff(adult);
                 TurnOn(child);
             }

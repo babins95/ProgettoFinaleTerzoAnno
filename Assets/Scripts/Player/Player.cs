@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     PlayerEye playerEye;
     public BulletSpawner bulletSpawner;
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool obstacleAhead;    
     [HideInInspector]
     public int eyePosCounter;
@@ -166,10 +166,7 @@ public class Player : MonoBehaviour
             playerEye.transform.localPosition = Vector3.zero;
             obstacleCheck.transform.localPosition = new Vector3(0, 0.15f, 0);
             obstacleCheck.transform.rotation = Quaternion.Euler(new Vector3(0,0,1)*90);
-            //if (obstacleCheck.transform.rotation.z == 0)
-            //{
-            //    obstacleCheck.transform.Rotate(new Vector3(0, 0, 1), 90);
-            //}
+
             if (bulletSpawner != null)
             {
                 bulletSpawner.transform.localPosition = new Vector3(0, playerEye.posY, 0);
