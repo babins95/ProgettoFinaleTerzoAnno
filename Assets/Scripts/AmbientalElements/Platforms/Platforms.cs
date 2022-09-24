@@ -4,6 +4,7 @@ public class Platforms : MonoBehaviour
 {
     public static bool onPlatform;
     private LayerMask collisionLayer;
+    private bool swap;
 
     //Quando il player entra a contatto con la piattaforma cambio il suo layer in modo che non senta il collider della tilemap,
     //Quando esce resetto tutto
@@ -11,6 +12,16 @@ public class Platforms : MonoBehaviour
     private void Start()
     {
         collisionLayer = 8;
+        swap = GameManager.swap;
+    }
+    private void Update()
+    {
+        if(GameManager.swap != swap)
+        {
+            swap = GameManager.swap;
+            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = true;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

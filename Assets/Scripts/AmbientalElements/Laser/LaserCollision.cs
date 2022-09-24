@@ -7,9 +7,10 @@ using UnityEngine;
 public class LaserCollision : MonoBehaviour
 {
 
-    LaserBeam laserBeam;
-    PolygonCollider2D polygonCollider;
-    private Vector3[] positions;
+    public LaserBeam laserBeam;
+    public PolygonCollider2D polygonCollider;
+    public Vector3[] positions;
+    public int numberOfLines;
 
     private void Awake()
     {
@@ -29,7 +30,7 @@ public class LaserCollision : MonoBehaviour
             {
 
                 //Get the number of line between two points
-                int numberOfLines = positions.Length - 1;
+                numberOfLines = positions.Length - 1;
 
                 //Make as many paths for each different line as we have lines
                 polygonCollider.pathCount = numberOfLines;

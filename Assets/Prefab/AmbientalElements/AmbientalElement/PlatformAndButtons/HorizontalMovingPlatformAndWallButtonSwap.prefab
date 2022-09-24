@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4598388132584286318}
   - component: {fileID: 1220327518261541394}
   - component: {fileID: 7368931294164499719}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1311366119
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 75200c13355c58d40932e431007cb129, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 345152300654926319}
   - component: {fileID: 2202023326240084037}
   - component: {fileID: 3025096442281569862}
-  m_Layer: 13
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1311366119
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 75200c13355c58d40932e431007cb129, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -686,7 +686,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.012495518, y: 0.4074974}
@@ -830,7 +830,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.012495518, y: 0.4074974}
@@ -889,7 +889,7 @@ GameObject:
   - component: {fileID: 2992115512458716208}
   - component: {fileID: 7830261077360289211}
   - component: {fileID: 610367269499605198}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: WallButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}

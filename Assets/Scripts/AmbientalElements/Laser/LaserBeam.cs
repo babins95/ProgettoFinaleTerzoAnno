@@ -19,15 +19,15 @@ public class LaserBeam : MonoBehaviour
     {
         laserRenderer = GetComponent<LineRenderer>();
         direction = GetComponentInParent<Transform>().right;
-        layer = LayerMask.GetMask("Mirror", "Player", "BlockLaser");
+        layer = LayerMask.GetMask("Mirror", "Player", "BlockLaser","Default");
     }
     private void Update()
     {
+        //if (GetComponentInParent<ShootLaser>().laserOn == false)
+        //{
+        //    Destroy(this.gameObject);
+        //}
         CastRay(transform.position, direction, laserRenderer);
-        if(GetComponentInParent<ShootLaser>().laserOn == false)
-        {
-            Destroy(this.gameObject);
-        }
     }
     void CastRay(Vector2 pos, Vector2 dir, LineRenderer laser)
     {

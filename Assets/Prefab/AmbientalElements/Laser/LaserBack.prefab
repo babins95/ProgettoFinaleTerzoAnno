@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4143645041109725205}
   - component: {fileID: 5427376505827508649}
   - component: {fileID: 5290002022198048943}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LaserBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,3 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121ee5b9c571eb1499989decddcf15a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laserBeam: {fileID: 0}
+  polygonCollider: {fileID: 0}
+  positions: []
+  numberOfLines: 0

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShootLaser : MonoBehaviour
@@ -18,19 +16,22 @@ public class ShootLaser : MonoBehaviour
     }
     public void CreateLaser()
     {
-        if (laser != null)
+        laser = Instantiate(Laser, GetComponentInParent<Transform>()).GetComponent<LaserBeam>();
+    }
+    private void Update()
+    {
+        if (laserOn == false)
         {
-            Destroy(laser.gameObject);
-        }
-        else if (laser == null)
-        {
-            laser = Instantiate(Laser, GetComponentInParent<Transform>()).GetComponent<LaserBeam>();
+            if (GetComponentInChildren<LaserBeam>())
+            {
+                Destroy(GetComponentInChildren<LaserBeam>().gameObject);
+            }
         }
     }
 
     public void GoNextLaser()
     {
-        if(laserOn == true)
+        if (laserOn == true)
         {
             laser = Instantiate(Laser, GetComponentInParent<Transform>()).GetComponent<LaserBeam>();
         }

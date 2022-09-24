@@ -22,7 +22,7 @@ public class NpcDialogue : MonoBehaviour
         dialogueCanvas.transform.GetChild(2).GetComponent<Image>().sprite = dialogueBox;
         dialogueCanvas.transform.GetChild(3).GetComponent<TMP_Text>().text = npcDialogue;
         dialogueCanvas.transform.GetChild(4).GetComponent<TMP_Text>().text = npcName.ToUpper();
-            ;
+
         if (isActive == true)
         {
             Time.timeScale = 1;

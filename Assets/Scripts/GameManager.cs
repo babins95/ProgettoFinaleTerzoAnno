@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
     //tolgo anche il playerEye della versione spenta
     public void Swap()
     {
-        if (!cantSwap)
+        if (!cantSwap && !NpcDialogue.isActive)
         {
             swap = !swap;
             if (swap)
