@@ -100,7 +100,6 @@ MonoBehaviour:
   newChildSpawn: {fileID: 0}
   newAdultSpawn: {fileID: 0}
   nextVCam: {fileID: 0}
-  mainCamera: {fileID: 8882406860510391333, guid: 06e00fb76d6727f4b852c78638279fa1, type: 3}
 --- !u!61 &2571254975803200404
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -114,7 +113,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0044959784, y: 0.0010154843}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -125,5 +124,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.6891239, y: 2.7420125}
   m_EdgeRadius: 0
