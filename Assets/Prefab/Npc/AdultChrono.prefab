@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcImage: {fileID: 21300000, guid: 1be73aee1ee2c64408a028a7157b0de3, type: 3}
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 21300000, guid: c50406dadab64e947b4ebe0a29a71118, type: 3}
   npcDialogue: 
   npcName: 
   dialogueCanvas: {fileID: 0}
