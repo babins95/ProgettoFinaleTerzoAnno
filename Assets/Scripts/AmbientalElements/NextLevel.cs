@@ -9,7 +9,7 @@ public class NextLevel : MonoBehaviour
     bool childIn;
     bool adultIn;
     public bool endScene;
-    public bool changeScene;
+    //public bool changeScene;
 
     public Transform newChildSpawn;
     public Transform newAdultSpawn;
@@ -86,27 +86,15 @@ public class NextLevel : MonoBehaviour
 
     public void GoNextLevel()
     {
-        if (changeScene)
+        if (childIn && adultIn)
         {
-            //se entrambi i giocatori sono sul trigger l'interazione ti manda al prossimo livello
-            if (childIn && adultIn)
+            if (endScene == true)
             {
-                if (endScene == true)
-                {
-                    SceneManager.LoadScene(2);
-                }
-                else
-                {
-                    //eventuale animazione? non so come lo vogliono fare di preciso
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                }
+                SceneManager.LoadScene(2);
             }
-        }
-        else
-        {
-            if (childIn && adultIn)
+            else
             {
-                if(child.GetComponentInParent<Player>().gameManager.mainCamera.GetComponent<CinemachineBrain>().m_DefaultBlend.m_Time == 0f)
+                if (child.GetComponentInParent<Player>().gameManager.mainCamera.GetComponent<CinemachineBrain>().m_DefaultBlend.m_Time == 0f)
                 {
                     child.GetComponentInParent<Player>().gameManager.mainCamera.GetComponent<CinemachineBrain>().m_DefaultBlend.m_Time = 2f;
                 }
@@ -124,7 +112,7 @@ public class NextLevel : MonoBehaviour
                 PlayerPrefs.Save();
                 ChangeSpawnPoint();
             }
-        }
+        }     
     }
 
     //cambia lo spawnPoint del giocatore e tutti i suoi riferimenti al nuovo checkpoint raggiunto
