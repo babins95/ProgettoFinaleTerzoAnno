@@ -1076,7 +1076,7 @@ TextureImporter:
       name: tilemap terreno base bambino v5_18
       rect:
         serializedVersion: 2
-        x: 3600
+        x: 3602
         y: 4320
         width: 720
         height: 720
@@ -1101,7 +1101,7 @@ TextureImporter:
       name: tilemap terreno base bambino v5_19
       rect:
         serializedVersion: 2
-        x: 4320
+        x: 4318
         y: 4320
         width: 720
         height: 720
