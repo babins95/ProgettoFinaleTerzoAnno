@@ -2763,6 +2763,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1776455636}
     m_Modifications:
+    - target: {fileID: 1561781261883151407, guid: e2901b891dfc60149af14af2ec3a36da, type: 3}
+      propertyPath: dialogueCanvas
+      value: 
+      objectReference: {fileID: 1839638695}
     - target: {fileID: 2688607356736056803, guid: e2901b891dfc60149af14af2ec3a36da, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -46807,6 +46811,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 861467161}
     m_Modifications:
+    - target: {fileID: 280717752791896803, guid: 8aefc9fbc06f32749a55b1069c6cc7b4, type: 3}
+      propertyPath: dialogueCanvas
+      value: 
+      objectReference: {fileID: 1839638695}
     - target: {fileID: 2418978119496325321, guid: 8aefc9fbc06f32749a55b1069c6cc7b4, type: 3}
       propertyPath: m_Name
       value: ChronoC+A
@@ -46815,6 +46823,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4158377408949174136, guid: 8aefc9fbc06f32749a55b1069c6cc7b4, type: 3}
+      propertyPath: dialogueCanvas
+      value: 
+      objectReference: {fileID: 1839638695}
     - target: {fileID: 4933771946270162092, guid: 8aefc9fbc06f32749a55b1069c6cc7b4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -83892,6 +83904,18 @@ PrefabInstance:
       propertyPath: laserOn
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4052680853664623191, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7009094
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052680853664623191, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7132504
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052680853664623191, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 91
+      objectReference: {fileID: 0}
     - target: {fileID: 4270516035626611317, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -83906,7 +83930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6768944073997882830, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
       propertyPath: laserOn
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8139801830843575198, guid: c7aef105960b050479cfd2ee0c6155c4, type: 3}
       propertyPath: m_RootOrder
@@ -84617,6 +84641,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5470827494363007225, guid: 31922cb64034cd84f94a5292f9fd8020, type: 3}
+      propertyPath: dialogueCanvas
+      value: 
+      objectReference: {fileID: 1839638695}
     - target: {fileID: 5503503409113893102, guid: 31922cb64034cd84f94a5292f9fd8020, type: 3}
       propertyPath: m_Name
       value: MazeoC+A
@@ -84625,6 +84653,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7547673210400060133, guid: 31922cb64034cd84f94a5292f9fd8020, type: 3}
+      propertyPath: dialogueCanvas
+      value: 
+      objectReference: {fileID: 1839638695}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31922cb64034cd84f94a5292f9fd8020, type: 3}
 --- !u!4 &1478333299 stripped
@@ -87638,40 +87670,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5720564457035708745, guid: e8734310b2ad3f245862c5e2b21c0cb1, type: 3}
-      propertyPath: npcName
-      value: Barbalbero
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720564457035708745, guid: e8734310b2ad3f245862c5e2b21c0cb1, type: 3}
-      propertyPath: giveShoot
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720564457035708745, guid: e8734310b2ad3f245862c5e2b21c0cb1, type: 3}
-      propertyPath: dialogueBox
-      value: 
-      objectReference: {fileID: 21300000, guid: 3f664f5010c609945b07d657f18be2ec, type: 3}
-    - target: {fileID: 5720564457035708745, guid: e8734310b2ad3f245862c5e2b21c0cb1, type: 3}
-      propertyPath: npcDialogue
-      value: beccati sto sparo
-      objectReference: {fileID: 0}
-    - target: {fileID: 5720564457035708745, guid: e8734310b2ad3f245862c5e2b21c0cb1, type: 3}
       propertyPath: dialogueCanvas
       value: 
       objectReference: {fileID: 1839638695}
     - target: {fileID: 6524448220239135689, guid: e8734310b2ad3f245862c5e2b21c0cb1, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7469851745240733421, guid: e8734310b2ad3f245862c5e2b21c0cb1, type: 3}
-      propertyPath: npcName
-      value: Barbalbero
-      objectReference: {fileID: 0}
-    - target: {fileID: 7469851745240733421, guid: e8734310b2ad3f245862c5e2b21c0cb1, type: 3}
-      propertyPath: giveShoot
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7469851745240733421, guid: e8734310b2ad3f245862c5e2b21c0cb1, type: 3}
-      propertyPath: npcDialogue
-      value: beccati sto sparo
       objectReference: {fileID: 0}
     - target: {fileID: 7469851745240733421, guid: e8734310b2ad3f245862c5e2b21c0cb1, type: 3}
       propertyPath: dialogueCanvas
@@ -96214,6 +96218,42 @@ PrefabInstance:
     - target: {fileID: 675387340118898357, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 675387340982446140, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
+      propertyPath: m_fontSize
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 675387340982446140, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
+      propertyPath: m_margin.w
+      value: 7.0372043
+      objectReference: {fileID: 0}
+    - target: {fileID: 675387340982446140, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
+      propertyPath: m_margin.x
+      value: 31.294357
+      objectReference: {fileID: 0}
+    - target: {fileID: 675387340982446140, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
+      propertyPath: m_margin.z
+      value: 30.042542
+      objectReference: {fileID: 0}
+    - target: {fileID: 675387340982446140, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748644001315963139, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -41.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4748644001315963139, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -93.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336354058202259926, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 6336354058202259926, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}

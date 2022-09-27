@@ -136,8 +136,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcImage: {fileID: 21300000, guid: 1be73aee1ee2c64408a028a7157b0de3, type: 3}
   dialogueBox: {fileID: 21300000, guid: c50406dadab64e947b4ebe0a29a71118, type: 3}
-  npcDialogue: 
-  npcName: 
+  npcDialogue: "Benarrivato viaggiatore, vedo che te la sei presa con calma eh! Hai
+    fatto bene perch\xE9 d\u2019ora in avanti avrai bisogno di tutto il fiato che
+    hai risparmiato"
+  npcName: chrono
   dialogueCanvas: {fileID: 0}
   giveShoot: 0
 --- !u!61 &-5850264320050970875
