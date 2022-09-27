@@ -8,6 +8,7 @@ public class NextLevel : MonoBehaviour
 {
     bool childIn;
     bool adultIn;
+    public bool endScene;
     public bool changeScene;
 
     public Transform newChildSpawn;
@@ -84,8 +85,15 @@ public class NextLevel : MonoBehaviour
             //se entrambi i giocatori sono sul trigger l'interazione ti manda al prossimo livello
             if (childIn && adultIn)
             {
-                //eventuale animazione? non so come lo vogliono fare di preciso
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                if (endScene == true)
+                {
+                    SceneManager.LoadScene(2);
+                }
+                else
+                {
+                    //eventuale animazione? non so come lo vogliono fare di preciso
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
             }
         }
         else
