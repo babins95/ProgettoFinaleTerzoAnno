@@ -51,7 +51,10 @@ public class NextLevel : MonoBehaviour
         {
             adultIn = true;
             adult = collision.GetComponentInParent<Adult>();
-            collision.GetComponentInParent<Player>().interactableObject = gameObject;
+            if (collision.GetComponentInParent<Adult>().hasCrate == false)
+            {
+                collision.GetComponentInParent<Player>().interactableObject = gameObject;
+            }
         }
     }
 
@@ -74,7 +77,10 @@ public class NextLevel : MonoBehaviour
             {
                 adultIn = false;
             }
-            collision.GetComponentInParent<Player>().interactableObject = null;
+            if (!collision.GetComponentInParent<Animator>().GetBool("hasBox") && !collision.GetComponentInParent<Animator>().GetBool("hasMirrorBox"))
+            {
+                collision.GetComponentInParent<Player>().interactableObject = null;
+            }
         }
     }
 
