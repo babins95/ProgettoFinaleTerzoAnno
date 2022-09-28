@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class BulletSpawner : MonoBehaviour
 {
+    public bool bulletShotDown = false;
     public ChildBullet BulletPrefab;
     public float bulletFireRate = 2;
     private float timer;
@@ -48,6 +49,14 @@ public class BulletSpawner : MonoBehaviour
 
     public void ActualShoot()
     {
+        if (bulletShotDown == true)
+        {
+            BulletPrefab.GetComponent<SpriteRenderer>().sortingOrder = 2;
+        }
+        else
+        {
+            BulletPrefab.GetComponent<SpriteRenderer>().sortingOrder = 0;
+        }
         BulletPrefab.bulletAngle = bulletDirection;
         ChildBullet newBullet = Instantiate(BulletPrefab);
         newBullet.transform.position = this.transform.position;

@@ -169,6 +169,7 @@ public class Player : MonoBehaviour
 
             if (bulletSpawner != null)
             {
+                bulletSpawner.bulletShotDown = false;
                 bulletSpawner.transform.localPosition = new Vector3(0, playerEye.posY, 0);
                 bulletSpawner.bulletDirection = Vector2.up;
             }
@@ -187,7 +188,8 @@ public class Player : MonoBehaviour
             obstacleCheck.transform.rotation = Quaternion.Euler(Vector3.zero);
             if (bulletSpawner != null)
             {
-                bulletSpawner.transform.localPosition = new Vector3(0, -playerEye.posY, 0);
+                bulletSpawner.bulletShotDown = true;
+                bulletSpawner.transform.localPosition = new Vector3(-0.05f, -playerEye.posY+0.5f, 0);
                 bulletSpawner.bulletDirection = Vector2.down;
             }
             if (crateShadow != null)
