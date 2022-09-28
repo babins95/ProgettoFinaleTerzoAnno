@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childBulletSpeed: 5
-  bulletAngle: {x: 0, y: -1, z: 0}
+  bulletAngle: {x: 1, y: 0, z: 0}
   bulletDeathTimer: 2
   left: 0
   right: 1

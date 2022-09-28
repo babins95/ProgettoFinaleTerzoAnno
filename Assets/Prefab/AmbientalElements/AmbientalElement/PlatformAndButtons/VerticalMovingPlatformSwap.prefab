@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pos1: {fileID: 716629516076788160}
   pos2: {fileID: 716629514582604030}
-  speed: 5
+  speed: 4
   startPosition: {fileID: 716629516076788160}
   timer: 1
   isConnectedWithFloorButton: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pos1: {fileID: 716629514820206895}
   pos2: {fileID: 716629515777679454}
-  speed: 5
+  speed: 4
   startPosition: {fileID: 716629514820206895}
   timer: 1
   isConnectedWithFloorButton: 0

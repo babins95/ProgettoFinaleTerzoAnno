@@ -115,14 +115,18 @@ public class GameManager : MonoBehaviour
             swap = !swap;
             if (swap)
             {
+                child.gameObject.transform.GetComponent<Player>().DeactiveE();
                 TurnOff(child);
                 TurnOn(adult);
             }
             else if (swap == false)
             {
+                adult.gameObject.transform.GetComponent<Player>().DeactiveE();
                 TurnOff(adult);
                 TurnOn(child);
             }
+
+
         }
     }
 

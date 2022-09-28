@@ -65,6 +65,16 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void ActiveE()
+    {
+        gameObject.transform.GetChild(4).gameObject.SetActive(true);
+    }
+
+    public void DeactiveE()
+    {
+        gameObject.transform.transform.GetChild(4).gameObject.SetActive(false);
+    }
+
     void OnMove(InputValue moveValue)
     {
         moveVector = moveValue.Get<Vector2>();

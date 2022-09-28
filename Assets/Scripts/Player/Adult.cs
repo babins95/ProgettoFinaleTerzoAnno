@@ -18,6 +18,8 @@ public class Adult : MonoBehaviour
     float lerpDuration;
     float currentY;
 
+    [SerializeField]
+    AudioSource negSound;
 
     private void Start()
     {
@@ -61,7 +63,6 @@ public class Adult : MonoBehaviour
 
     void Climb()
     {
-        //animazione del climb
         if (player.interactableObject.GetComponent<ClimbableWall>() != null && !hasCrate)
         {
             ClimbableWall wallToClimb = player.interactableObject.GetComponent<ClimbableWall>();
@@ -102,8 +103,7 @@ public class Adult : MonoBehaviour
             }
             else
             {
-                //suono del "non puoi"
-                Debug.Log("NO!");
+                negSound.Play();
             }
         }
     }

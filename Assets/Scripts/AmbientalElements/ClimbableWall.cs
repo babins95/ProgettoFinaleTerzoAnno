@@ -15,6 +15,7 @@ public class ClimbableWall : MonoBehaviour
         if(collision.GetComponentInParent<Adult>() && collision.GetComponentInParent<Adult>().hasCrate == false)
         {
             SetPos(collision);
+            collision.GetComponentInParent<Player>().ActiveE();
         }
     }
 
@@ -23,6 +24,7 @@ public class ClimbableWall : MonoBehaviour
         if (collision.GetComponentInParent<Adult>() && collision.GetComponentInParent<Adult>().hasCrate == false)
         {
             collision.GetComponentInParent<Player>().interactableObject = null;
+            collision.GetComponentInParent<Player>().DeactiveE();
         }
     }
 

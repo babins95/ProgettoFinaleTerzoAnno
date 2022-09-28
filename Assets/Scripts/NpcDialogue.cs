@@ -46,6 +46,7 @@ public class NpcDialogue : MonoBehaviour
         if (collision.GetComponentInParent<Child>() || collision.GetComponentInParent<Adult>() && !collision.GetComponentInParent<Adult>().hasCrate)
         {
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
+            collision.GetComponentInParent<Player>().ActiveE();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -53,6 +54,7 @@ public class NpcDialogue : MonoBehaviour
         if (collision.GetComponentInParent<Child>() || collision.GetComponentInParent<Adult>() && !collision.GetComponentInParent<Adult>().hasCrate)
         {
             collision.GetComponentInParent<Player>().interactableObject = null;
+            collision.GetComponentInParent<Player>().DeactiveE();
         }
     }
 

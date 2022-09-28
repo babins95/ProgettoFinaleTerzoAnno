@@ -11,6 +11,7 @@ public class NarrowPassage : MonoBehaviour
         if(collision.GetComponentInParent<Child>())
         {
             SetPos(collision);
+            collision.GetComponentInParent<Player>().ActiveE();
         }
     }
 
@@ -19,6 +20,7 @@ public class NarrowPassage : MonoBehaviour
         if (collision.GetComponentInParent<Child>())
         {
             collision.GetComponentInParent<Player>().interactableObject = null;
+            collision.GetComponentInParent<Player>().DeactiveE();
         }
     }
 

@@ -3271,6 +3271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 675387340982446140, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
+      propertyPath: m_text
+      value: Wow Funziona
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13da7be76f28f59448ffc9b88c9274f4, type: 3}
 --- !u!1001 &716629514914646063

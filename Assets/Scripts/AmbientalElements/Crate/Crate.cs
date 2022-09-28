@@ -79,6 +79,7 @@ public class Crate : MonoBehaviour
             if (collision.GetComponent<PlayerEye>() && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
             {
                 collision.GetComponentInParent<Player>().interactableObject = gameObject;
+                collision.GetComponentInParent<Player>().ActiveE();
             }
         }
         if (collision.GetComponent<CrateTransparentTile>())
@@ -95,6 +96,7 @@ public class Crate : MonoBehaviour
             if (collision.GetComponent<PlayerEye>() && !pickedUp && !ignoreCollision && !collision.GetComponentInParent<Adult>().hasCrate)
             {
                 collision.GetComponentInParent<Player>().interactableObject = null;
+                collision.GetComponentInParent<Player>().DeactiveE();
             }
         }
         if (collision.GetComponent<CrateTransparentTile>())
@@ -155,6 +157,7 @@ public class Crate : MonoBehaviour
         eyePos = puttingDown.GetComponentInChildren<PlayerEye>().gameObject.transform.position;
         puttingDown.GetComponent<Adult>().hasCrate = false;
         puttingDown.GetComponent<Player>().crateShadow.TurnOffShadow();
+        puttingDown.GetComponent<Player>().DeactiveE();
 
 
         switch (puttingDown.GetComponent<Player>().eyePosCounter)

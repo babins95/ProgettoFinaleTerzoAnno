@@ -47,6 +47,7 @@ public class NextLevel : MonoBehaviour
             child = collision.GetComponentInParent<Child>();
             collision.GetComponentInParent<Player>().interactableObject = gameObject;
         }
+
         if (collision.GetComponentInParent<Adult>())
         {
             adultIn = true;
@@ -55,6 +56,11 @@ public class NextLevel : MonoBehaviour
             {
                 collision.GetComponentInParent<Player>().interactableObject = gameObject;
             }
+        }
+
+        if(childIn && adultIn)
+        {
+            collision.GetComponentInParent<Player>().ActiveE();
         }
     }
 
@@ -82,6 +88,8 @@ public class NextLevel : MonoBehaviour
                 collision.GetComponentInParent<Player>().interactableObject = null;
             }
         }
+
+        collision.GetComponentInParent<Player>().DeactiveE();
     }
 
     public void GoNextLevel()
