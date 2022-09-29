@@ -102,11 +102,6 @@ public class NextLevel : MonoBehaviour
             }
             else
             {
-                if (child.GetComponentInParent<Player>().gameManager.mainCamera.GetComponent<CinemachineBrain>().m_DefaultBlend.m_Time == 0f)
-                {
-                    child.GetComponentInParent<Player>().gameManager.mainCamera.GetComponent<CinemachineBrain>().m_DefaultBlend.m_Time = 2f;
-                }
-
                 //attiva il prossimo prefab NextLevel
                 gameObject.transform.parent.transform.parent.GetChild(levelReached + 1).gameObject.SetActive(true);
                 //e la NewCameraPosition legata al livello attuale

@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        mainCamera.GetComponent<CinemachineBrain>().m_DefaultBlend.m_Time = 0f;
         currentLevel = PlayerPrefs.GetInt("levelReached");
         currentScene = SceneManager.GetActiveScene();
         playerScale.x = child.transform.localScale.x;
