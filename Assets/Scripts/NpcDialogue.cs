@@ -41,14 +41,19 @@ public class NpcDialogue : MonoBehaviour
             Player.canShoot = true;
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponentInParent<Child>() || collision.GetComponentInParent<Adult>() && !collision.GetComponentInParent<Adult>().hasCrate)
         {
-            collision.GetComponentInParent<Player>().interactableObject = gameObject;
-            collision.GetComponentInParent<Player>().ActiveE();
+            if (collision.GetComponentInParent<Player>().gameObject.GetComponent<SpriteRenderer>().color.a != 0.5f)
+            {
+                collision.GetComponentInParent<Player>().interactableObject = gameObject;
+                collision.GetComponentInParent<Player>().ActiveE();
+            }
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.GetComponentInParent<Child>() || collision.GetComponentInParent<Adult>() && !collision.GetComponentInParent<Adult>().hasCrate)
