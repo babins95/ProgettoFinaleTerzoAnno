@@ -42,5 +42,6 @@ public class Hole : MonoBehaviour
     {
         collider.isTrigger = true;
         GetComponentInParent<Swap>().isFilled = true;
+        filled = true;
     }
 }
