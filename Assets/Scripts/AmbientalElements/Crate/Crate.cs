@@ -219,10 +219,12 @@ public class Crate : MonoBehaviour
         if (isMirror)
         {
             puttingDown.GetComponent<Animator>().SetBool("hasMirrorBox", false);
+            gameObject.layer = LayerMask.NameToLayer("Mirror");
         }
         else
         {
             puttingDown.GetComponent<Animator>().SetBool("hasBox", false);
+            gameObject.layer = LayerMask.NameToLayer("Default");
         }
 
     }
