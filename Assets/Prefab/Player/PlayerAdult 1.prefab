@@ -441,7 +441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5078085347241507473}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.782, y: -0.403, z: 0}
+  m_LocalPosition: {x: 0.65, y: -0.403, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2809936748503328944}
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posX: 0
-  posY: 1
+  posY: 1.15
 --- !u!1 &7487502777890434782
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,8 +640,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8054293552866351383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2809936748503328944}
   m_RootOrder: 2
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posX: 0
   posY: 1.25
-  defaultY: -0.5
+  defaultY: -0.3
   crateSprite: {fileID: 21300000, guid: 320311d4e3b40b747a725dcfe1739071, type: 3}
   mirrorCrateSprite: {fileID: 21300000, guid: f7d4a94d49324894bbdcecc4607a441f, type: 3}
 --- !u!1 &8248092238344826015

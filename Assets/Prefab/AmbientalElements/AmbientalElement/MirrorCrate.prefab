@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickedUp: 0
   isMirror: 1
-  range: 1
+  range: 0.5
 --- !u!255 &4174446477426299615
 FixedJoint2D:
   m_ObjectHideFlags: 0

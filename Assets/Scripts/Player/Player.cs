@@ -185,7 +185,7 @@ public class Player : MonoBehaviour
             }
             if(crateShadow != null)
             {
-                crateShadow.transform.localPosition = new Vector3(0, crateShadow.posY - 0.25f, 0);
+                crateShadow.transform.localPosition = new Vector3(0, crateShadow.posY - 1f, 0);
             }
             eyePosCounter = 1;
             //up
@@ -195,7 +195,7 @@ public class Player : MonoBehaviour
         {
             playerEye.transform.localPosition = new Vector3(0, -playerEye.posY, 0);
             obstacleCheck.transform.localPosition = new Vector3(0, -obstacleCheck.posY, 0);
-            obstacleCheck.transform.rotation = Quaternion.Euler(Vector3.zero);
+            obstacleCheck.transform.rotation = Quaternion.Euler(new Vector3(0,0,1) *90);
             if (bulletSpawner != null)
             {
                 bulletSpawner.bulletShotDown = true;
@@ -222,7 +222,7 @@ public class Player : MonoBehaviour
             }
             if (crateShadow != null)
             {
-                crateShadow.transform.localPosition = new Vector3(crateShadow.posX, crateShadow.defaultY, 0);
+                crateShadow.transform.localPosition = new Vector3(crateShadow.posX - 0.25f, crateShadow.defaultY, 0);
             }
             eyePosCounter = 3;
             //right
@@ -240,7 +240,7 @@ public class Player : MonoBehaviour
             }
             if (crateShadow != null)
             {
-                crateShadow.transform.localPosition = new Vector3(-crateShadow.posX, crateShadow.defaultY, 0);
+                crateShadow.transform.localPosition = new Vector3(-crateShadow.posX + 0.25f, crateShadow.defaultY, 0);
             }
             eyePosCounter = 4;
             //left

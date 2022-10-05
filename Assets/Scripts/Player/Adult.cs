@@ -18,8 +18,7 @@ public class Adult : MonoBehaviour
     float lerpDuration;
     float currentY;
 
-    [SerializeField]
-    AudioSource negSound;
+    public AudioSource negSound;
 
     private void Start()
     {

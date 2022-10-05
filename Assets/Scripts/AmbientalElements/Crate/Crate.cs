@@ -167,11 +167,11 @@ public class Crate : MonoBehaviour
                 break;
 
             case 2:
-                transform.position = new Vector2(eyePos.x, eyePos.y - range);
+                transform.position = new Vector2(eyePos.x, eyePos.y - range *1.75f);
                 break;
 
             case 3:
-                transform.position = new Vector2(eyePos.x + range, eyePos.y - range/2);
+                transform.position = new Vector2(eyePos.x + range *1.25f, eyePos.y - range/2);
                 break;
 
             case 4:
@@ -218,8 +218,15 @@ public class Crate : MonoBehaviour
     {
         if (isMirror)
         {
-            puttingDown.GetComponent<Animator>().SetBool("hasMirrorBox", false);
-            gameObject.layer = LayerMask.NameToLayer("Mirror");
+            if (puttingDown.GetComponentInChildren<PlayerEye>().onHole && !puttingDown.GetComponentInChildren<PlayerEye>().holeColliding.GetComponent<Hole>().filled)
+            {
+                puttingDown.GetComponent<Adult>().negSound.Play();
+            }
+            else
+            {
+                puttingDown.GetComponent<Animator>().SetBool("hasMirrorBox", false);
+                gameObject.layer = LayerMask.NameToLayer("Mirror");
+            }
         }
         else
         {
