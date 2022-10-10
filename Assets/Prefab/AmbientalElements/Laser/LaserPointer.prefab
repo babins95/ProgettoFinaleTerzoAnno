@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 7606568264341235135}
   - component: {fileID: 486608889510410437}
   - component: {fileID: 5090545547784645549}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: LaserPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

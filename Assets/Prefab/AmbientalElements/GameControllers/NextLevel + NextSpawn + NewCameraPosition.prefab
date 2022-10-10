@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NextLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 3615006817905191667, guid: 7cf97e97695f26a45959fad77ecf421b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7694961972829773245, guid: 7cf97e97695f26a45959fad77ecf421b, type: 3}
       propertyPath: m_Size.x
       value: 3
