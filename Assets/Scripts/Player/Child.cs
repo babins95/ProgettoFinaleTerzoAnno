@@ -7,6 +7,7 @@ public class Child : MonoBehaviour
     Player player;
     Animator animator;
     BulletSpawner spawner;
+    public Fade fader;
 
     private void Start()
     {
@@ -25,19 +26,20 @@ public class Child : MonoBehaviour
 
     void PassThrough()
     {
-        //animazione del passaggio
         if (player.interactableObject.GetComponent<NarrowPassage>() != null && player.isFacing)
         {
-            transform.position = player.interactableObject.transform.position;
+            fader.GetComponent<Animator>().SetBool("Fading", true);
         }
+    }
+
+    public void ActualPassThrough()
+    {
+        transform.position = player.interactableObject.transform.position;
     }
 
     public void ActualShoot()
     {
          spawner.ActualShoot();
-        //spawner.BulletPrefab.bulletAngle = spawner.bulletDirection;
-        //ChildBullet newBullet = Instantiate(spawner.BulletPrefab);
-        //newBullet.transform.position = spawner.transform.position;
     }
 
     public void EndShoot()
