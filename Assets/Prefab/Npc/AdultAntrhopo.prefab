@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b6466df85786243ad6c0cf27547f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcImage: {fileID: 21300000, guid: c072f3ee7472dff4780cbfa13a00378f, type: 3}
+  npcImage: {fileID: 11400000, guid: c8a9d1507314bad4c90fa048504414b7, type: 2}
   dialogueBox: {fileID: 21300000, guid: c50406dadab64e947b4ebe0a29a71118, type: 3}
   npcDialogue: "Non parlo con gli umani\u2026 o almeno non con gli adulti"
   npcName: Anthropo
