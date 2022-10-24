@@ -101,6 +101,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8476207096846549977, guid: ec41d54c74fc6d54993ed8028526a873, type: 3}
+      propertyPath: npcDialogue
+      value: Vedi quella strana cassa? Fissandola sono riuscito a vedere me stesso,
+        sono bellissimo!
+      objectReference: {fileID: 0}
     - target: {fileID: 8789135962795921984, guid: ec41d54c74fc6d54993ed8028526a873, type: 3}
       propertyPath: m_Name
       value: AntrhopoAdult
@@ -119,6 +124,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2808837917178396586}
     m_Modifications:
+    - target: {fileID: -8137561432077838570, guid: 61ab8ca498d41604580aa0bffe5f8fda, type: 3}
+      propertyPath: npcDialogue
+      value: "Eh vuoi essere mio amico? Davvero? Ti svelo una cosa, se punti le dita
+        a quei cristalli a forma di muffin ruoteranno, non \xE8 divertentissimo?"
+      objectReference: {fileID: 0}
     - target: {fileID: 6447457551878232197, guid: 61ab8ca498d41604580aa0bffe5f8fda, type: 3}
       propertyPath: m_Name
       value: AntrhopoChild

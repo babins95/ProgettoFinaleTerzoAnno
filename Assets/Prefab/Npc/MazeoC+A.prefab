@@ -53,6 +53,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4166296491956409092}
     m_Modifications:
+    - target: {fileID: -2295852693519415118, guid: 4aa59aa06c6ab8047a785f53f28684ea, type: 3}
+      propertyPath: npcDialogue
+      value: "Vuoi sapere un segreto? Quel portale in alto vi servir\xE0 a proseguire,
+        ma dovrete aiutarvi a vicenda o rimarrete bloccati qui per sempre. Come noi."
+      objectReference: {fileID: 0}
     - target: {fileID: 2472419703865765177, guid: 4aa59aa06c6ab8047a785f53f28684ea, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -126,6 +131,12 @@ PrefabInstance:
     - target: {fileID: 2835967388850366654, guid: 17b7e6ef63be1fe4c95fd45e12984dd0, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252224609799920254, guid: 17b7e6ef63be1fe4c95fd45e12984dd0, type: 3}
+      propertyPath: npcDialogue
+      value: "Benvenuto, noi siamo delle entit\xE0 bloccate in questo mondo. Usa
+        la tua forza altrimenti subirai il nostro stesso fato, ricordatelo e buona
+        fortuna."
       objectReference: {fileID: 0}
     - target: {fileID: 6425543469414091928, guid: 17b7e6ef63be1fe4c95fd45e12984dd0, type: 3}
       propertyPath: m_RootOrder
