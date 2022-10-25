@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 7694961972829773245, guid: 7cf97e97695f26a45959fad77ecf421b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 120ee4e97ba3e8e4abc5e1a9f56b1b6b, type: 3}
+      objectReference: {fileID: 21300000, guid: ccc2d2c7c55098c43b678308b386f182, type: 3}
     - target: {fileID: 7694961972829773245, guid: 7cf97e97695f26a45959fad77ecf421b, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -156,6 +156,10 @@ PrefabInstance:
       propertyPath: nextVCam
       value: 
       objectReference: {fileID: 250766958648531264}
+    - target: {fileID: 8357127473817739858, guid: 7cf97e97695f26a45959fad77ecf421b, type: 3}
+      propertyPath: platformOn
+      value: 
+      objectReference: {fileID: 21300000, guid: 014b513b42acedc4581e10bca7879246, type: 3}
     - target: {fileID: 8357127473817739858, guid: 7cf97e97695f26a45959fad77ecf421b, type: 3}
       propertyPath: gameManager
       value: 

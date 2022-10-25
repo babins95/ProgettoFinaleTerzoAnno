@@ -3091,6 +3091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NextLevel + NextSpawn + NewCameraPosition
       objectReference: {fileID: 0}
+    - target: {fileID: 8832822369665456605, guid: 19b5c32f1ba6edc4da0f9fad1d631860, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19b5c32f1ba6edc4da0f9fad1d631860, type: 3}
 --- !u!4 &438844258 stripped
@@ -3651,7 +3655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.87, y: -3.47, z: -100}
+  m_LocalPosition: {x: -5.891656, y: -3.4613094, z: -17.892498}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 530217778}

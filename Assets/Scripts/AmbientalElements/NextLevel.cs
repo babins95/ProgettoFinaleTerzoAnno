@@ -9,7 +9,9 @@ public class NextLevel : MonoBehaviour
     bool childIn;
     bool adultIn;
     public bool endScene;
-    //public bool changeScene;
+    SpriteRenderer renderer;
+    Sprite platformOff;
+    public Sprite platformOn;
 
     public Transform newChildSpawn;
     public Transform newAdultSpawn;
@@ -23,6 +25,8 @@ public class NextLevel : MonoBehaviour
 
     private void Start()
     {
+        renderer = GetComponent<SpriteRenderer>();
+        platformOff = renderer.sprite;
         levelReached = PlayerPrefs.GetInt("levelReached");
 
         if (levelReached > 0)
@@ -61,6 +65,7 @@ public class NextLevel : MonoBehaviour
         if(childIn && adultIn)
         {
             collision.GetComponentInParent<Player>().ActiveE();
+            renderer.sprite = platformOn;
         }
     }
 
@@ -90,6 +95,7 @@ public class NextLevel : MonoBehaviour
         }
 
         collision.GetComponentInParent<Player>().DeactiveE();
+        renderer.sprite = platformOff;
     }
 
     public void GoNextLevel()
