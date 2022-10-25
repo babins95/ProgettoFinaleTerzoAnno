@@ -136,8 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcImage: {fileID: 21300000, guid: c53aded759ecf6348b66f4d579c6d776, type: 3}
   dialogueBox: {fileID: 21300000, guid: 3f664f5010c609945b07d657f18be2ec, type: 3}
-  npcDialogue: "Hei tu! Hai smarrito la strada? Anche io ieri\u2026 o era il giorno
-    prima?"
+  npcDialogue: "Vuoi sapere un segreto? Quel portale in alto vi servir\xE0 per proseguire,
+    ma dovrete aiutarvi a vicenda o rimarrete bloccati qui per sempre. Come noi."
   npcName: Mazeo
   dialogueCanvas: {fileID: 0}
   giveShoot: 0

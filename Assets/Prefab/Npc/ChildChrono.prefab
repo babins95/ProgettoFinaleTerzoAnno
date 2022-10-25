@@ -136,8 +136,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcImage: {fileID: 21300000, guid: adfbbf7bb8a30cf4fa1bcc5a228fee81, type: 3}
   dialogueBox: {fileID: 21300000, guid: 3f664f5010c609945b07d657f18be2ec, type: 3}
-  npcDialogue: "Sei venuto a prendermi?! Io non voglio passare di l\xED\u2026 non
-    andare\u2026 rimani con me\u2026"
+  npcDialogue: "Tik Tak, posso chiederti un favore? Pi\xF9 avanti troverai un tipo
+    molto timido, gli piace nascondersi tra gli alberi e credo si senta molto solo...
+    Potresti parlargli? Tik Tak."
   npcName: chrono
   dialogueCanvas: {fileID: 0}
   giveShoot: 0

@@ -53,11 +53,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4933771946270162092}
     m_Modifications:
-    - target: {fileID: -8769374012012607134, guid: 08114ddf8c78f6f48bb41fa58e891752, type: 3}
-      propertyPath: npcDialogue
-      value: Vi stavo aspettando, da qui in poi vi consiglio di essere puntuali.
-        Non vorrete rimanere bloccati proprio ora, no?
-      objectReference: {fileID: 0}
     - target: {fileID: 5636568299634793720, guid: 08114ddf8c78f6f48bb41fa58e891752, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -167,12 +162,6 @@ PrefabInstance:
     - target: {fileID: 1585089560643786077, guid: 3836260b45fdd3d47b6bf30d1a14cedb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1714939348677361089, guid: 3836260b45fdd3d47b6bf30d1a14cedb, type: 3}
-      propertyPath: npcDialogue
-      value: "Tik Tak, posso chiederti un favore? Pi\xF9 avanti troverai un tipo
-        molto timido, gli piace nascondersi tra gli alberi e credo si senta molto
-        solo... Potresti parlargli? Tik Tak."
       objectReference: {fileID: 0}
     - target: {fileID: 1841457497381412568, guid: 3836260b45fdd3d47b6bf30d1a14cedb, type: 3}
       propertyPath: m_Mesh

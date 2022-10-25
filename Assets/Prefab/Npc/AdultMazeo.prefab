@@ -136,8 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcImage: {fileID: 21300000, guid: cbe66e6391b72864992f061d9d520f3a, type: 3}
   dialogueBox: {fileID: 21300000, guid: c50406dadab64e947b4ebe0a29a71118, type: 3}
-  npcDialogue: "Eccone un\u2019altro, hahahahahahah anche tu disperso!? Noi siamo
-    qui da anni\u2026 lo vedi? Se resti qui non ne uscirai mai pi\xFA"
+  npcDialogue: "Benvenuto, noi siamo delle entit\xE0 bloccate in questo mondo. Usa
+    la tua forza altrimenti subirai il nostro stesso fato, ricordatelo e buona fortuna."
   npcName: mazeo
   dialogueCanvas: {fileID: 0}
   giveShoot: 0
