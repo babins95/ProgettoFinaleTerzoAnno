@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Spine.Unity;
 
 public class NpcDialogue : MonoBehaviour
 {
-    public Sprite npcImage;
+    public SkeletonDataAsset npcImage;
     public Sprite dialogueBox;
     public string npcDialogue;
     public string npcName;
@@ -18,7 +19,9 @@ public class NpcDialogue : MonoBehaviour
     //premendo di nuovo lo spengo e il tempo riparte
     public void DialogueInteraction()
     {
-        dialogueCanvas.transform.GetChild(1).GetComponent<Image>().sprite = npcImage;
+        dialogueCanvas.transform.GetChild(1).GetComponent<SkeletonGraphic>().skeletonDataAsset = npcImage;
+        dialogueCanvas.transform.GetChild(1).GetComponent<SkeletonGraphic>().skeletonDataAsset.Clear();
+        dialogueCanvas.transform.GetChild(1).GetComponent<SkeletonGraphic>().Initialize(true);
         dialogueCanvas.transform.GetChild(2).GetComponent<Image>().sprite = dialogueBox;
         dialogueCanvas.transform.GetChild(3).GetComponent<TMP_Text>().text = npcDialogue;
         dialogueCanvas.transform.GetChild(4).GetComponent<TMP_Text>().text = npcName.ToUpper();
